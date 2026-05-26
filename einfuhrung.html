@@ -1,0 +1,1250 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Einführung in Struts 2 anhand von Beispielen">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/de-struts2-janv-2012/einfuhrung.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="ein-erstes-beispiel.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>1. Einführung - Einführung in Struts 2 anhand von Beispielen</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "Einführung in Struts 2 anhand von Beispielen";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-einfuhrung" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Einführung in Struts 2 anhand von Beispielen" class="md-header__button md-logo" aria-label="Einführung in Struts 2 anhand von Beispielen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Einführung in Struts 2 anhand von Beispielen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. Einführung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Zum Dunkelmodus wechseln"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Zum Dunkelmodus wechseln" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Zum hellen Modus wechseln"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Zum hellen Modus wechseln" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/de-struts2-janv-2012" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Einführung in Struts 2 anhand von Beispielen" class="md-nav__button md-logo" aria-label="Einführung in Struts 2 anhand von Beispielen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Einführung in Struts 2 anhand von Beispielen
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/de-struts2-janv-2012" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Willkommen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Einführung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="einfuhrung.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Einführung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-die-rolle-von-struts-2-in-einer-webanwendung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Die Rolle von Struts 2 in einer Webanwendung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-das-struts-2-mvc-entwicklungsmodell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Das Struts 2 MVC-Entwicklungsmodell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-die-verwendeten-werkzeuge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Die verwendeten Werkzeuge
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Die verwendeten Werkzeuge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-netbeans-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1. NetBeans IDE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-struts-2-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2. Struts 2-Plugin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-die-struts-2-bibliotheken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.3. Die Struts 2-Bibliotheken
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ein-erstes-beispiel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Ein erstes Beispiel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-02---parameterubergabe-an-die-aktion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Beispiel 02 – Parameterübergabe an die Aktion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-03---navigationsschlussel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Beispiel 03 – Navigationsschlüssel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-04---internationalisierung.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Beispiel 04 – Internationalisierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-05---das-eingabeformular.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Beispiel 05 – Das Eingabeformular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-05b---navigation-in-einem-dateneingabeformular.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Beispiel 05B – Navigation in einem Dateneingabeformular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-06---die-sitzung.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Beispiel 06 – Die Sitzung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-07---formular-tags.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Beispiel 07 – Formular-Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-08---mit-listen-verknupfte-tags.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Beispiel 08 – Mit Listen verknüpfte Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-09---konvertierung-und-validierung-von-ganzzahlen.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Beispiel 09 – Konvertierung und Validierung von Ganzzahlen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-09b---modellvalidierung.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Beispiel 09B – Modellvalidierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-10---konvertierung-und-validierung-von-reellen-zahlen.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Beispiel 10 – Konvertierung und Validierung von reellen Zahlen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-11---datumsumwandlung-und--validierung.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Beispiel 11 – Datumsumwandlung und -validierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-12---verschiedene-konvertierungen-und-validierungen.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Beispiel 12 – Verschiedene Konvertierungen und Validierungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-13---der-kontext-einer-aktion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Beispiel 13 – Der Kontext einer Aktion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="beispiel-15---struts-2--spring-integration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Beispiel 15 – Struts 2 / Spring-Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fallstudie-struts-2--tiles--spring--hibernate--mysql.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Fallstudie: Struts 2 / Tiles / Spring / Hibernate / MySQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fallstudie---version-1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. Fallstudie – Version 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fallstudie---version-2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. Fallstudie – Version 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fazit.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    21. Fazit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="refheading1882601168461456"></a></p>
+<h1 id="1-einfuhrung">1. <span style="color: #365f91">Einführung</span></h1>
+<p>Das PDF des Dokuments ist |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQAZOPXqnZXmTpYpi-5pdk31AW96e69A5ZtNJYscGitS_lY?e=VcRqtA">HIER</a>| verfügbar.</p>
+<p>Beispiele aus dem Dokument finden Sie |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCK8uXeRK2lQKIuSyyRSvDkAfg6UXI793TJqSOkpq0qRVM?e=pRCVl9">HIER</a>|.</p>
+<p>Hier möchten wir die wichtigsten Konzepte von Struts 2 anhand von Beispielen vorstellen. Struts 2 ist ein Web-Framework, das Folgendes bietet:</p>
+<ul>
+<li>eine Reihe von Bibliotheken in Form von JAR-Dateien</li>
+<li>ein Entwicklungsframework: Struts 2 beeinflusst die Art und Weise, wie eine Webanwendung entwickelt wird.</li>
+</ul>
+<p>Die Voraussetzungen zum Verständnis der Beispiele sind wie folgt:</p>
+<ul>
+<li>Grundkenntnisse der Programmiersprache Java</li>
+<li>Grundkenntnisse in der Webentwicklung, insbesondere in HTML.</li>
+</ul>
+<p>Alle Ressourcen, die zur Erfüllung dieser Voraussetzungen benötigt werden, finden Sie auf der Website [<a href="https://developpez.com/"><u><span style="color: #0563c1">https://developpez.com</span></u></a>]. Einige davon habe ich selbst verfasst; diese finden Sie auf der Website [<a href="https://stahe.github.io/"><u><span style="color: #0563c1">https://stahe.github.io</span></u></a>].</p>
+<p>Die Beispiele in diesem Dokument sind unter der URL [<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCK8uXeRK2lQKIuSyyRSvDkAfg6UXI793TJqSOkpq0qRVM?e=pRCVl9"><u><span style="color: #0563c1">https://stahe.github.io/de-struts2-janv-2012/</span></u></a>] verfügbar.</p>
+<p>Um mehr über Struts 2 zu erfahren, können Sie die folgenden Quellen nutzen:</p>
+<ul>
+<li><strong>[ref1]</strong>: die Struts-2-Dokumentation, verfügbar auf der Struts-Website</li>
+<li><strong>[ref2]</strong>: das Buch „Struts 2 in Action“ von Donald Brown, Chad Michael Davis und Scott Stanlick, erschienen bei Manning. Dieses Buch ist besonders lehrreich.</li>
+</ul>
+<p>Wir werden gelegentlich auf [<strong>ref2]</strong> verweisen, um den Leser darauf hinzuweisen, dass er ein Thema mithilfe dieses Buches vertiefen kann.</p>
+<p>Dieses Dokument wurde so verfasst, dass es auch ohne Computer zur Hand gelesen werden kann. Daher haben wir viele Screenshots eingefügt.</p>
+<p><a id="refheading99511454977699"></a></p>
+<h2 id="11-die-rolle-von-struts-2-in-einer-webanwendung">1.1. <span style="color: #4f81bd"><strong>Die Rolle von Struts 2 in einer Webanwendung</strong></span></h2>
+<p>Betrachten wir zunächst die Rolle von Struts 2 bei der Entwicklung einer Webanwendung. Meistens basiert diese auf einer mehrschichtigen Architektur wie der folgenden:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005120000010F52DA01EA.png" width="649" height="135" style="display:inline-block; margin:4px;width:17.171cm;height:3.584cm;" class="odt-zoomable" data-zoom-src="images/10000000000005120000010F52DA01EA.png" /></td></tr></table>
+
+<ul>
+<li>Die [<strong>Web</strong>-]Schicht ist die Schicht, die mit dem Benutzer der Webanwendung in Kontakt steht. Der Benutzer interagiert mit der Webanwendung über Webseiten, die von einem Browser angezeigt werden. <strong>In dieser Schicht befindet sich Struts 2, und zwar ausschließlich in dieser Schicht</strong>.</li>
+<li>Die [<strong>Business</strong>]-Schicht implementiert die Geschäftslogik der Anwendung, wie beispielsweise die Berechnung eines Gehalts oder einer Rechnung. Diese Schicht nutzt Daten vom Benutzer über die [Web]-Schicht und aus dem DBMS über die [DAO]-Schicht.</li>
+<li>Die [<strong>DAO</strong>]-Schicht (Data Access Objects), die [<strong>JPA</strong>]-Schicht (Java Persistence API) und der JDBC-Treiber verwalten den Zugriff auf die DBMS-Daten. Die [JPA]-Schicht dient als ORM (Object-Relational Mapper). Sie fungiert als Brücke zwischen den von der [DAO]-Schicht verwalteten Objekten und den Zeilen und Spalten der Daten in einer relationalen Datenbank.</li>
+<li>Die Integration der Schichten kann mithilfe eines Spring-Containers oder EJB3 (Enterprise JavaBeans) erreicht werden.</li>
+</ul>
+<p>Die meisten der unten aufgeführten Beispiele verwenden nur eine einzige Schicht, die [Web]-Schicht:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000001CB000000DC8F508E6B.png" width="230" height="110" style="display:inline-block; margin:4px;width:6.073cm;height:2.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000001CB000000DC8F508E6B.png" /></td></tr></table>
+
+<p>Dieses Dokument schließt jedoch mit der Erstellung einer mehrschichtigen Webanwendung ab:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000050900000109E756FF33.png" width="645" height="133" style="display:inline-block; margin:4px;width:17.053cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/100000000000050900000109E756FF33.png" /></td></tr></table>
+
+<p>Die Schichten [Business], [DAO] und [JPA/Hibernate] werden uns als JAR-Archiv zur Verfügung gestellt, sodass wir wiederum nur die [Web]-Schicht erstellen müssen.</p>
+<p><a id="refheading99531454977699"></a></p>
+<h2 id="12-das-struts-2-mvc-entwicklungsmodell">1.2. <span style="color: #4f81bd">Das Struts 2 MVC-Entwicklungsmodell</span></h2>
+<p>Struts 2 implementiert das MVC-Architekturmuster (Model–View–Controller) wie folgt:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000046D0000016F5978A320.png" width="567" height="184" style="display:inline-block; margin:4px;width:14.99cm;height:4.856cm;" class="odt-zoomable" data-zoom-src="images/100000000000046D0000016F5978A320.png" /></td></tr></table>
+
+<p>Die Verarbeitung einer Client-Anfrage verläuft wie folgt:</p>
+<p>Die angeforderten URLs haben die Form <em>http://machine:port/contexte/rep1/rep2/.../Action.</em> Der Pfad [<em>/rep1/rep2/.../Action</em>] muss einer in einer Struts-2-Konfigurationsdatei definierten Aktion entsprechen; andernfalls wird er abgelehnt. Eine Aktion wird in einer XML-Datei im folgenden Format definiert:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">&lt;</span><span class="kn">package</span><span class="w"> </span><span class="nn">name</span><span class="o">=</span><span class="s">&quot;actions&quot;</span><span class="w"> </span><span class="n">namespace</span><span class="o">=</span><span class="s">&quot;/actions&quot;</span><span class="w"> </span><span class="kd">extends</span><span class="o">=</span><span class="s">&quot;struts-default&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">action</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">&quot;Action1&quot;</span><span class="w"> </span><span class="kd">class</span><span class="err">=&quot;</span><span class="nc">actions</span><span class="p">.</span><span class="na">Action1</span><span class="s">&quot;&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="s">      &lt;result name=&quot;</span><span class="n">page1</span><span class="s">&quot;&gt;/vues/Page1.jsp&lt;/result&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="s">      &lt;result name=&quot;</span><span class="n">page2</span><span class="s">&quot;&gt;/vues/Page2.jsp&lt;/result&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="s">    &lt;/action&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="s">&lt;/package&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p>Nehmen wir im vorigen Beispiel an, dass die URL [<em>http://machine:port/contexte/actions/Action1]</em> angefordert wird. Dann werden die folgenden Schritte ausgeführt:</p>
+<ol>
+<li><strong>Anfrage</strong> – Der Browser-Client sendet eine Anfrage an den Controller [<strong>FilterDispatcher</strong>]. Der Controller verarbeitet alle Client-Anfragen. Er ist der Einstiegspunkt der Anwendung. Er ist das <strong>C</strong> in MVC.</li>
+</ol>
+<ol start="2">
+  <li>Verarbeitung
+  </li>
+</ol>
+<ul>
+  <li>Der C-Controller konsultiert seine Konfigurationsdatei und stellt fest, dass die Aktion <i>actions/Action1 </i>existiert. Der <i>Namespace </i>(Zeile 1) verkettet mit dem Aktionsnamen (name-Attribut in Zeile 2) definiert die Aktion <i>actions/Action1</i>.
+  </li>
+  <li>Der C-Controller instanziiert [2a] eine Klasse vom Typ [<i>actions.Action1</i>] (class-Attribut in Zeile 2). Der Name und das Paket dieser Klasse können beliebig sein.
+  </li>
+  <li>Wenn die angeforderte URL Parameter der Form [<i>param1=val1&amp;param2=val2&amp;...</i>] enthält, weist Controller <b>C </b>diese Parameter der Klasse [<i>actions.Action1</i>] wie folgt zu:
+  </li>
+</ul>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[actions.Action1].setParami(valeuri) ;
+</code></pre></div>
+<p>Daher muss die Klasse [<em>actions.Action1</em>] für jeden der erwarteten <em>parami</em>-Parameter <em>setParami</em>-Methoden enthalten.</p>
+<ul>
+  <li>Controller <b>C </b>ruft die Methode mit der Signatur [<i>String execute()</i>] der Klasse [<i>actions.Action1</i>] auf, um diese auszuführen. Diese Methode kann dann die parami-Parameter nutzen, die die Klasse abgerufen hat. Bei der Verarbeitung der Benutzeranfrage benötigt er möglicherweise die [business]-Schicht [2b]. Sobald die Anfrage des Clients verarbeitet wurde, kann er verschiedene Antworten generieren. Ein klassisches Beispiel ist:
+  </li>
+  <li>eine Fehlerseite, wenn die Anfrage nicht korrekt verarbeitet werden konnte
+  </li>
+  <li>ansonsten eine Bestätigungsseite
+  </li>
+</ul>
+
+<p>Die Methode <em><code>execute</code></em> gibt ein Ergebnis vom Typ String an den C-Controller zurück, <strong>das als Navigationsschlüssel</strong> bezeichnet wird. Im obigen Beispiel kann <code>[*actions.Action1*].*execute</code><em> zwei Navigationsschlüssel erzeugen: „page1“ (Zeile 3) und „page2“ (Zeile 4). Die Methode [</em>actions.Action1<em>].</em>execute* aktualisiert zudem das M-Modell [2c], das von der JSP-Seite verwendet wird, die als Antwort an den Benutzer gesendet wird. Dieses Modell kann Elemente enthalten von:</p>
+<ul>
+  <li>der instanziierten Klasse [<i>actions.Action1</i>]
+  </li>
+  <li>der Benutzersitzung
+  </li>
+  <li>Daten im Anwendungsbereich
+  </li>
+  <li>...
+  </li>
+</ul>
+<ol>
+  <li><b>Antwort </b>– der C-Controller weist die dem Navigationsschlüssel entsprechende JSP-Seite an, die Anzeige zu übernehmen [3]. Dies ist die Ansicht, das <b>V </b>in MVC. Die JSP-Seite verwendet ein M-Modell, um die dynamischen Teile der Antwort zu initialisieren, die sie an den Client senden muss.
+  </li>
+</ol>
+
+<p>Lassen Sie uns nun die Beziehung zwischen der MVC-Webarchitektur und der Schichtenarchitektur klären. Tatsächlich handelt es sich hierbei um zwei unterschiedliche Konzepte, die manchmal verwechselt werden. Nehmen wir eine einschichtige Struts 2-Webanwendung:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000003E70000016B4696B1A1.png" width="500" height="182" style="display:inline-block; margin:4px;width:13.217cm;height:4.803cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E70000016B4696B1A1.png" /></td></tr></table>
+
+<p>Wenn wir die [Web]-Schicht mit Struts 2 implementieren, erhalten wir zwar eine MVC-Webarchitektur, aber keine mehrschichtige Architektur. Hier übernimmt die [Web]-Schicht alles: Darstellung, Geschäftslogik und Datenzugriff. Bei Struts 2 sind es die [Action]-Klassen, die diese Arbeit verrichten.</p>
+<p>Betrachten wir nun eine mehrschichtige Webarchitektur:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000048C0000010A4681095B.png" width="582" height="133" style="display:inline-block; margin:4px;width:15.399cm;height:3.519cm;" class="odt-zoomable" data-zoom-src="images/100000000000048C0000010A4681095B.png" /></td></tr></table>
+
+<p>Die [Web-]Schicht kann ohne Framework und ohne Befolgung des MVC-Modells implementiert werden. Wir haben dann eine mehrschichtige Architektur, aber die Web-Schicht implementiert das MVC-Modell nicht.</p>
+<p>In MVC haben wir gesagt, dass das M-Modell das der V-Ansicht ist, d. h. die Menge der von der V-Ansicht angezeigten Daten. Manchmal (oft) wird eine andere Definition des M-Modells in MVC angegeben:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004C700000109249566B9.png" width="612" height="133" style="display:inline-block; margin:4px;width:16.18cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C700000109249566B9.png" /></td></tr></table>
+
+<p>Viele Autoren sind der Ansicht, dass das, was sich rechts von der [Web]-Schicht befindet, das M-Modell von MVC bildet. Um Mehrdeutigkeiten zu vermeiden, können wir uns auf Folgendes beziehen:</p>
+<ul>
+  <li>das Domänenmodell, wenn wir uns auf alles rechts von der [Präsentations-]Schicht beziehen
+  </li>
+  <li>das View-Modell, wenn wir uns auf die von einer View V angezeigten Daten beziehen
+  </li>
+</ul>
+
+<p>Im Folgenden bezieht sich der Begriff „M-Modell“ ausschließlich auf das Modell einer Ansicht V.</p>
+<p><a id="refheading99551454977699"></a></p>
+<h2 id="13-die-verwendeten-werkzeuge">1.3. <span style="color: #4f81bd">Die verwendeten Werkzeuge</span></h2>
+<p>Im weiteren Verlauf verwenden wir (Stand: Dezember 2011)</p>
+<ul>
+  <li>die NetBeans 7.01 IDE, verfügbar unter [<a href="http://www.netbeans.org/"><u><span style="color: #0563c1">http://www.netbeans.org</span></u></a>]
+  </li>
+  <li>das Struts 2-Plugin für NetBeans 7.01, verfügbar unter [http://plugins.netbeans.org/plugin/39218]
+  </li>
+  <li>Struts 2 Version 2.2.3, verfügbar unter [<a href="http://struts.apache.org/"><u><span style="color: #0563c1">http://struts.apache.org/</span></u></a>]
+  </li>
+</ul>
+
+<p>Beachten Sie, dass für die Entwicklung der folgenden Beispiele nur die unter [<a href="http://struts.apache.org/"><u><span style="color: #0563c1">http://struts.apache.org/</span></u></a>] verfügbaren Struts 2-Bibliotheken erforderlich sind. NetBeans kann durch eine andere IDE (Eclipse, JDeveloper, IntelliJ usw.) ersetzt werden, und das Struts 2-Plugin dient lediglich dazu, dem Entwickler die Arbeit zu erleichtern. Es ist ebenfalls nicht zwingend erforderlich.</p>
+<p><a id="refheading99571454977699"></a></p>
+<h3 id="131-netbeans-ide">1.3.1. <span style="color: #4f81bd">NetBeans IDE</span></h3>
+<p>Auf der NetBeans-Download-Seite wählen wir die Java EE-Version aus:</p>
+<p><img src="images/100000000000037E00000173C0A73F40.png" width="626" height="260" style="width:16.559cm;height:6.872cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000037E00000173C0A73F40.png" /></p>
+<p><a id="refheading99591454977699"></a></p>
+<h3 id="132-struts-2-plugin">1.3.2. <span style="color: #4f81bd">Struts 2-Plugin</span></h3>
+<p>Je nach NetBeans-Version war dieses Plugin nicht immer verfügbar. Seit Dezember 2011 ist es unter der URL [<a href="http://plugins.netbeans.org/plugin/39218"><u><span style="color: #0563c1">http://plugins.netbeans.org</span></u></a>] zu finden. Diese URL listet die verschiedenen für NetBeans verfügbaren Plugins auf. Sie können Ihre Suche filtern. Unter [1] suchen wir nach Plugins, deren Name das Wort „struts“ enthält.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000042C000001632EB5D944.png" width="534" height="177" style="display:inline-block; margin:4px;width:14.129cm;height:4.695cm;" class="odt-zoomable" data-zoom-src="images/100000000000042C000001632EB5D944.png" /></td></tr></table>
+
+<ul>
+  <li>Folgen Sie dem Link [2]
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000520000003DEAEE6F124.png" width="656" height="495" style="display:inline-block; margin:4px;width:17.357cm;height:13.097cm;" class="odt-zoomable" data-zoom-src="images/1000000000000520000003DEAEE6F124.png" /></td></tr></table>
+
+<p>Laden Sie das Plugin herunter und entpacken Sie es [2]. Um es in NetBeans zu integrieren, gehen Sie wie folgt vor:</p>
+<ul>
+  <li>Starten Sie NetBeans
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000051E000001D69B7E53DF.png" width="655" height="235" style="display:inline-block; margin:4px;width:17.33cm;height:6.218cm;" class="odt-zoomable" data-zoom-src="images/100000000000051E000001D69B7E53DF.png" /></td></tr></table>
+
+<ul>
+  <li>Wählen Sie unter [1] das Menü „Tools/Plugins“
+  </li>
+  <li>Klicken Sie auf der Registerkarte [2] auf die Schaltfläche [3]
+  </li>
+  <li>Wählen Sie unter [4] die <i>.</i>nbm-Dateien für die heruntergeladenen Plugins aus. Hier wählen wir die Struts 2.2.3-Bibliotheken anstelle derjenigen für Struts 2.0.14
+  </li>
+  <li>Kehren Sie zum Reiter [2] zurück und installieren Sie die ausgewählten Plugins über die Schaltfläche [5].
+  </li>
+</ul>
+
+<p>Die Installation von Plugins erfordert oft einen Neustart von NetBeans.</p>
+<p><a id="refheading99611454977699"></a></p>
+<h3 id="133-die-struts-2-bibliotheken">1.3.3. <span style="color: #4f81bd">Die Struts 2-Bibliotheken</span></h3>
+<p>Wenn Sie das Struts 2-Plugin für NetBeans heruntergeladen haben, verfügen Sie über die wichtigsten Struts-Bibliotheken, jedoch nicht über alle. Später benötigen wir bestimmte Bibliotheken, die auf der Struts 2-Website [<a href="http://struts.apache.org/"><u><span style="color: #0563c1">http://struts.apache.org/</span></u></a>] verfügbar sind.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000538000002CF9F9ED3C6.png" width="668" height="360" style="display:inline-block; margin:4px;width:17.674cm;height:9.513cm;" class="odt-zoomable" data-zoom-src="images/1000000000000538000002CF9F9ED3C6.png" /></td></tr></table>
+
+<p>Folgen Sie dem Link [1] und dann dem Link [2], um die ZIP-Datei für Version 2.2.3.1 herunterzuladen. Sobald die Distribution entpackt ist, finden Sie die von Struts benötigten Bibliotheken im Ordner [lib] [3] der Distribution. Da es Dutzende davon gibt, stellt sich die Frage, welche davon unverzichtbar sind. Hier kommt uns das Struts-Plugin zu Hilfe.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        Dieses Tutorial, verfasst von <strong>Serge Tahé</strong>, wird der Öffentlichkeit unter den Bedingungen der
+<em>Creative Commons Namensnennung – Nicht kommerziell –
+ShareAlike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
