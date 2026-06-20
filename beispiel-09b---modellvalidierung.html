@@ -467,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-05b---navigation-in-einem-dateneingabeformular.html" class="md-nav__link">
+      <a href="beispiel-05b---navigation-in-einem-eingabeformular.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Beispiel 05B – Navigation in einem Dateneingabeformular
+    7. Beispiel 05B – Navigation in einem Eingabeformular
   
 
     
@@ -548,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-08---mit-listen-verknupfte-tags.html" class="md-nav__link">
+      <a href="beispiel-08---tags-fur-listen.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Beispiel 08 – Mit Listen verknüpfte Tags
+    10. Beispiel 08 – Tags für Listen
   
 
     
@@ -666,14 +666,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-11---datumsumwandlung-und--validierung.html" class="md-nav__link">
+      <a href="beispiel-11---umwandlung-und-validierung-von-datumsangaben.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Beispiel 11 – Datumsumwandlung und -validierung
+    14. Beispiel 11 – Umwandlung und Validierung von Datumsangaben
   
 
     
@@ -747,14 +747,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-15---struts-2--spring-integration.html" class="md-nav__link">
+      <a href="beispiel-15---integration-von-struts-2-und-spring.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. Beispiel 15 – Struts 2 / Spring-Integration
+    17. Beispiel 15 – Integration von Struts 2 und Spring
   
 
     
@@ -892,48 +892,47 @@
 
 
 
-<p><a id="refheading91674522158564"></a></p>
+<p><span id="refheading91674522158564" name="refheading91674522158564" class="odt-bookmark-anchor"></span></p>
 <h1 id="12-beispiel-09b-modellvalidierung">12. <span style="color: #365f91">Beispiel 09B – Modellvalidierung</span></h1>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Die folgende Anwendung ist eine Variante der vorherigen. Zuvor lautete der Name der Validierungsregeldatei für Aktion </span><strong><span style="color: #000000">A</span></strong><span style="color: #000000">:</span></p>
+<p><span style="color: #000000">Die folgende Anwendung ist eine Variante der vorherigen. Zuvor hieß die Validierungsregeln-Datei für die Aktion </span><strong><span style="color: #000000">A</span></strong><span style="color: #000000">:</span></p>
 <ul>
-  <li>die Validierungsregeldatei den Namen <b>A-validation.xml</b>
+  <li>hieß die Datei mit den Validierungsregeln <b>A-validation.xml</b>
   </li>
-  <li>Die Validierungsfehlermeldungsdatei hieß <b>A.properties</b>
+  <li>Die Datei mit den Validierungsfehlermeldungen hieß <b>A.properties</b>
   </li>
 </ul>
 
-<p>Hier, für Aktion <strong>A</strong> des Modells <strong>M</strong>:</p>
+<p>Hier, für die Aktion <strong>A</strong> des Modells <strong>M</strong>:</p>
 <ul>
   <li>heißt die Validierungsregeldatei <b>M-validation.xml</b>
   </li>
-  <li>Die Validierungsfehlermeldungsdatei heißt <b>M.properties</b>
+  <li>Die Datei mit den Validierungsfehlermeldungen heißt <b>M.properties</b>
   </li>
-  <li>Die Datei<b> A-validation.xml </b>existiert weiterhin, aber ihr Inhalt leitet die Validierungsregeln auf die Datei<b> M-validation.xml </b>um.
+  <li>Die Datei <b>A-validation.xml </b>existiert weiterhin, ihr Inhalt verweist jedoch auf die Validierungsregeln in der Datei <b>M-validation.xml</b>.
   </li>
 </ul>
 
 <p>Dies sind die einzigen Änderungen, die wir an der vorherigen Version vornehmen werden.</p>
-<p>Das NetBeans-Projekt sieht wie folgt aus:</p>
+<p>Das NetBeans-Projekt lautet wie folgt:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000001830000017319E91CC2.png" width="194" height="186" style="display:inline-block; margin:4px;width:5.121cm;height:4.909cm;" class="odt-zoomable" data-zoom-src="images/10000000000001830000017319E91CC2.png" /></td></tr></table>
 
 <ul>
-  <li>in [1] die Aktion [FormInt] und ihre Validierungsdatei
+  <li>in [1], die Aktion [FormInt] und deren Validierungsdatei
   </li>
-  <li>in [2] das zugehörige Modell [FormIntModel], die Validierungsdatei für dieses Modell und die mit diesem Modell verbundenen Meldungen.
+  <li>in „[2]“, die zugehörige Vorlage „[FormIntModel]“, die Validierungsdatei dieser Vorlage sowie die mit dieser Vorlage verbundenen Meldungen.
   </li>
 </ul>
 
 <p>Alles andere ist identisch mit der vorherigen Version.</p>
-<p>Die Datei [FormInt-validation.xml] sieht wie folgt aus:</p>
+<p>Die Datei [FormInt-validation.xml] lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!--</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!DOCTYPE validators PUBLIC &quot;-//OpenSymphony Group//XWork Validator 1.0.2//</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">EN&quot; &quot;http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">--&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">validators</span> <span style="color:#808080">PUBLIC</span> <span style="color:#008080">&quot;-//OpenSymphony Group//XWork Validator 1.0.2//</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">EN&quot;</span> <span style="color:#3f7f5f">&quot;http://localhost:8084/exemple-09B/example/xwork-validator-1.0.2.dtd&quot;</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">EN&quot; &quot;http://localhost:8084/Beispiel-09B/Beispiel/xwork-validator-1.0.2.dtd&quot;&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">validators</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;model&quot;</span> <span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field-validator</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;visitor&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -944,10 +943,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">validators</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>Wir werden nicht versuchen, den Inhalt dieser Datei zu erklären. Wir nehmen sie einfach so hin, wie sie ist, und behalten dabei ihren Zweck im Auge: Validierungsregeln an das Modell zu delegieren. Sie fragen sich vielleicht, wozu das gut sein soll. Tatsächlich können das Modell, seine Validierungsregeln und seine Meldungen bereits existieren und von verschiedenen Aktionen verwendet werden. Anstatt dieselben Validierungsregeln und Meldungen für verschiedene Aktionen zu wiederholen, ist es besser, diese Funktionen an das Modell zu delegieren.</p>
-<p>Die Datei [FormIntModel-validation.xml] ist identisch mit der Datei [FormInt-validation.xml] aus der vorherigen Version.</p>
+<p>Wir werden nicht versuchen, den Inhalt dieser Datei zu erklären. Wir nehmen sie so, wie sie ist, und behalten dabei ihre Funktion im Hinterkopf: die Validierungsregeln auf das Modell zu übertragen. Man könnte sich fragen, wozu das gut ist. Tatsächlich können das Modell, seine Validierungsregeln und seine Meldungen bereits vorhanden sein und von verschiedenen Aktionen verwendet werden. Anstatt dieselben Validierungsregeln und Meldungen für die verschiedenen Aktionen zu wiederholen, ist es daher besser, diese Funktionen an das Modell zu delegieren.</p>
+<p>Die Datei „[FormIntModel-validation.xml]“ ist identisch mit der Datei „[FormInt-validation.xml]“ aus der vorherigen Version.</p>
 <p>Die Datei [FormIntModel.properties] ist identisch mit der Datei [FormInt.properties] aus der vorherigen Version.</p>
-<p>Leser sind eingeladen, diese neue Version zu testen.</p>
+<p>Der Leser ist eingeladen, diese neue Version zu testen.</p>
 
 
 

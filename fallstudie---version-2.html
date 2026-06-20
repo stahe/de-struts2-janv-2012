@@ -467,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-05b---navigation-in-einem-dateneingabeformular.html" class="md-nav__link">
+      <a href="beispiel-05b---navigation-in-einem-eingabeformular.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Beispiel 05B – Navigation in einem Dateneingabeformular
+    7. Beispiel 05B – Navigation in einem Eingabeformular
   
 
     
@@ -548,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-08---mit-listen-verknupfte-tags.html" class="md-nav__link">
+      <a href="beispiel-08---tags-fur-listen.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Beispiel 08 – Mit Listen verknüpfte Tags
+    10. Beispiel 08 – Tags für Listen
   
 
     
@@ -656,14 +656,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-11---datumsumwandlung-und--validierung.html" class="md-nav__link">
+      <a href="beispiel-11---umwandlung-und-validierung-von-datumsangaben.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Beispiel 11 – Datumsumwandlung und -validierung
+    14. Beispiel 11 – Umwandlung und Validierung von Datumsangaben
   
 
     
@@ -737,14 +737,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-15---struts-2--spring-integration.html" class="md-nav__link">
+      <a href="beispiel-15---integration-von-struts-2-und-spring.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. Beispiel 15 – Struts 2 / Spring-Integration
+    17. Beispiel 15 – Integration von Struts 2 und Spring
   
 
     
@@ -892,30 +892,30 @@
 
 
 
-<p><a id="refheading91822522158564"></a></p>
-<h1 id="20-fallstudie-version-2">20. <span style="color: #365f91"><strong>Fallstudie – Version 2</strong></span></h1>
-<p>Wir präsentieren nun die endgültige Version unserer Anwendung:</p>
+<p><span id="refheading91822522158564" name="refheading91822522158564" class="odt-bookmark-anchor"></span></p>
+<h1 id="20-fallstudie-version-2">20. <span style="color: #365f91">Fallstudie – Version 2</span></h1>
+<p>Wir stellen nun die endgültige Version unserer Anwendung vor:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004F900000103F5E63927.png" width="637" height="130" style="display:inline-block; margin:4px;width:16.842cm;height:3.427cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F900000103F5E63927.png" /></td></tr></table>
 
-<p>Das neue NetBeans-Projekt [pam-02] wird durch Klonen des Projekts [pam-01] erstellt:</p>
+<p>Das neue NetBeans-Projekt [pam-02] wird durch Kopieren des Projekts [pam-01] erstellt:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004C2000002AE3E61B19A.png" width="609" height="343" style="display:inline-block; margin:4px;width:16.113cm;height:9.075cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C2000002AE3E61B19A.png" /></td></tr></table>
 
 <ul>
-  <li>Kopieren Sie in [1] das neue Projekt
+  <li>in [1], das neue Projekt wird kopiert
   </li>
-  <li>in [2] benennen Sie das neue Projekt [pam-02] und geben Sie dessen Verzeichnis an
+  <li>in [2], das neue Projekt wird in [pam-02] umbenannt und der Ordner angegeben
   </li>
-  <li>in [3] das neue Projekt [pam-02]
+  <li>in [3], das neue Projekt [pam-02]
   </li>
 </ul>
 
-<p>Um die eigentliche [Business]-Schicht mit der von uns erstellten Web-Schicht zu „verbinden“, müssen wir drei Dinge tun:</p>
+<p>Um die echte Ebene [metier] mit der von uns erstellten Web-Ebene zu „verbinden“, müssen drei Schritte durchgeführt werden:</p>
 <ol>
-  <li>die von uns erstellte simulierte [Business]-Schicht löschen
+  <li>die simulierte Schicht [metier] löschen, die wir erstellt hatten
   </li>
-  <li>Spring so konfigurieren, dass die echte [Business]-Schicht aus dem Archiv [pam-spring-metier-dao-jpa-hibernate.jar] instanziiert wird
+  <li>Spring so konfigurieren, dass es die echte Schicht [metier] instanziiert, die sich im Archiv [pam-spring-metier-dao-jpa-hibernate.jar] befindet.
   </li>
-  <li>alle erforderlichen Archive zum Projekt hinzufügen (Spring, Hibernate, JPA, MySQL-JDBC-Treiber).
+  <li>dem Projekt alle erforderlichen Archive hinzufügen (Spring, Hibernate, JPA, JDBC-Treiber von MySQL).
   </li>
 </ol>
 
@@ -925,24 +925,24 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;beans</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.springframework.org/schema/beans</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns:xsi</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.w3.org/2001/XMLSchema-instance</span><span style="color:#800080">&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#008080">       </span><span style="color:#808000">xmlns:tx</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.springframework.org/schema/tx</span><span style="color:#800080">&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#008080">       </span><span style="color:#808000">xsi:schemaLocation</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- Anwendungsschichten --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- application layers --&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- web --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- Web --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">config</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">web.Config</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">init-method</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">init</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">metier</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">ref</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">metier</span><span style="color:#800080">&quot;/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- business --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- Geschäftsprozess --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">metier</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">metier.Metier</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">employeDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">ref</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">employeDao</span><span style="color:#800080">&quot;/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">cotisationDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">ref</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">cotisationDao</span><span style="color:#800080">&quot;/&gt;</span><span style="color:#000000">  </span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!--  dao --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- DAO --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">employeDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">dao.EmployeDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">indemniteDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">dao.IndemniteDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">cotisationDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">dao.CotisationDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- configuration JPA --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- Konfiguration JPA --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">entityManagerFactory</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">dataSource</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">ref</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">dataSource</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">jpaVendorAdapter</span><span style="color:#800080">&quot;&gt;</span></span></span>
@@ -954,38 +954,38 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/property&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- data source DBCP --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- die Datenquelle DBCP --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">dataSource</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">org.apache.commons.dbcp.BasicDataSource</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">destroy-method</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">close</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">driverClassName</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">com.mysql.jdbc.Driver</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">url</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">jdbc:mysql://localhost:3306/dbpam_hibernate</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">username</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">root</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">password</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- transaction manager --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- der Transaktionsmanager --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;tx:annotation-driven</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">transaction-manager</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">txManager</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">txManager</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">org.springframework.orm.jpa.JpaTransactionManager</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">entityManagerFactory</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">ref</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">entityManagerFactory</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- translation of exceptions --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- Ausnahmebehandlung --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- persistence --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- Persistenz --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/beans&gt;</span></span>
 </code></pre></div>
 
-<p>Die Zeilen 36–41 konfigurieren den Datenbankzugriff.</p>
-<p>Neue Bibliotheken (Spring, Hibernate, JPA, MySQL-JDBC-Treiber) werden aus dem Ordner [lib] hinzugefügt [2]. Der gesamte Ordner wird einbezogen. Es sind mehrere Dutzend .jar-Dateien hinzuzufügen [1]:</p>
+<p>Die Zeilen 36–41 konfigurieren den Zugriff auf die Datenbank.</p>
+<p>Das Hinzufügen der neuen Bibliotheken (Spring, Hibernate, JPA, JDBC-Treiber von MySQL) erfolgt aus dem Ordner [lib] [2]. Der gesamte Ordner wird übernommen. Es sind mehrere Dutzend .jar-Dateien hinzuzufügen: [1]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000045F000002802B3E6C26.png" width="560" height="320" style="display:inline-block; margin:4px;width:14.804cm;height:8.467cm;" class="odt-zoomable" data-zoom-src="images/100000000000045F000002802B3E6C26.png" /></td></tr></table>
 
-<p>Es war ziemlich schwierig, diese Bibliothek zusammenzustellen, da diese Frameworks manchmal dieselben Archive verwenden. Duplikate müssen daher entfernt werden. Diese Dateien wurden im Beispielarchiv zu diesem Dokument im Ordner [lib] [2] zusammengestellt, damit der Leser diese Bibliothek nicht selbst neu erstellen muss.</p>
-<p>Das war’s. Die neue Anwendung [pam-02] funktioniert nun mit dem DBMS. Hier ist ein Screenshot einer Gehaltsberechnung:</p>
-<p><img src="images/100000000000031300000347F8A10D5E.png" width="551" height="587" style="width:14.58cm;height:15.543cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031300000347F8A10D5E.png" /></p>
-<p>Diesmal entspricht das berechnete Gehalt dem tatsächlichen Gehalt und nicht dem fiktiven Gehalt aus Version 1. Der Leser ist eingeladen, die neue Anwendung zu testen.</p>
+<p>Es war ziemlich schwierig, diese Bibliothek zusammenzustellen, da diese Frameworks manchmal dieselben Archive verwenden. Daher müssen die Duplikate entfernt werden. Diese Dateien wurden im Ordner [lib] [2] im Beispielarchiv dieses Dokuments zusammengestellt, damit der Leser diese Bibliothek nicht selbst neu zusammenstellen muss.</p>
+<p>Das war’s. Die neue Anwendung [pam-02] arbeitet nun mit SGBD zusammen. Hier ist ein Screenshot einer Gehaltsberechnung:</p>
+<p><img src="images/100000000000031300000347F8A10D5E.png" width="551" height="587" style="width:14.58cm;height:15.54cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031300000347F8A10D5E.png" /></p>
+<p>Diesmal handelt es sich bei dem berechneten Gehalt um das tatsächliche Gehalt und nicht um das fiktive Gehalt aus Version 1. Der Leser ist eingeladen, die neue Anwendung zu testen.</p>
 
 
 

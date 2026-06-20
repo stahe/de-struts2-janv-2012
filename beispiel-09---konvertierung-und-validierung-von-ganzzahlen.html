@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/de-struts2-janv-2012/beispiel-09---konvertierung-und-validierung-von-ganzzahlen.html">
       
       
-        <link rel="prev" href="beispiel-08---mit-listen-verknupfte-tags.html">
+        <link rel="prev" href="beispiel-08---tags-fur-listen.html">
       
       
         <link rel="next" href="beispiel-09b---modellvalidierung.html">
@@ -467,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-05b---navigation-in-einem-dateneingabeformular.html" class="md-nav__link">
+      <a href="beispiel-05b---navigation-in-einem-eingabeformular.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Beispiel 05B – Navigation in einem Dateneingabeformular
+    7. Beispiel 05B – Navigation in einem Eingabeformular
   
 
     
@@ -548,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-08---mit-listen-verknupfte-tags.html" class="md-nav__link">
+      <a href="beispiel-08---tags-fur-listen.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Beispiel 08 – Mit Listen verknüpfte Tags
+    10. Beispiel 08 – Tags für Listen
   
 
     
@@ -668,10 +668,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#114-meldungsdateien" class="md-nav__link">
+  <a href="#114-die-meldungsdateien" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.4. Meldungsdateien
+        11.4. Die Meldungsdateien
       
     </span>
   </a>
@@ -691,10 +691,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1151-homejsp" class="md-nav__link">
+  <a href="#1151-accueiljsp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.5.1. Home.jsp
+        11.5.1. Accueil.jsp
       
     </span>
   </a>
@@ -702,10 +702,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1152-die-formint-aktion" class="md-nav__link">
+  <a href="#1152-die-aktion-formint" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.5.2. Die [FormInt]-Aktion
+        11.5.2. Die Aktion [FormInt]
       
     </span>
   </a>
@@ -773,10 +773,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#117-abschlieende-details" class="md-nav__link">
+  <a href="#117-letzte-details" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.7. Abschließende Details
+        11.7. Letzte Details
       
     </span>
   </a>
@@ -784,10 +784,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#118-fazit" class="md-nav__link">
+  <a href="#118-conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.8. Fazit
+        11.8. Conclusion
       
     </span>
   </a>
@@ -863,14 +863,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-11---datumsumwandlung-und--validierung.html" class="md-nav__link">
+      <a href="beispiel-11---umwandlung-und-validierung-von-datumsangaben.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Beispiel 11 – Datumsumwandlung und -validierung
+    14. Beispiel 11 – Umwandlung und Validierung von Datumsangaben
   
 
     
@@ -944,14 +944,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-15---struts-2--spring-integration.html" class="md-nav__link">
+      <a href="beispiel-15---integration-von-struts-2-und-spring.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. Beispiel 15 – Struts 2 / Spring-Integration
+    17. Beispiel 15 – Integration von Struts 2 und Spring
   
 
     
@@ -1089,12 +1089,12 @@
 
 
 
-<p><a id="refheading91644522158564"></a></p>
+<p><span id="refheading91644522158564" name="refheading91644522158564" class="odt-bookmark-anchor"></span></p>
 <h1 id="11-beispiel-09-konvertierung-und-validierung-von-ganzzahlen">11. <span style="color: #365f91">Beispiel 09 – Konvertierung und Validierung von Ganzzahlen</span></h1>
-<p>Wir werden uns nun eine Reihe von Beispielen zur Konvertierung und Validierung von Formularparametern ansehen. Das Problem stellt sich wie folgt dar: Um eine URL der Form [http://machine:port/.../Action] zu verarbeiten, instanziiert der [FilterDispatcher]-Controller die Klasse, die die angeforderte Aktion implementiert, und führt eine ihrer Methoden aus – standardmäßig die Methode namens <em><code>execute</code></em>. Der Aufruf dieser execute-Methode durchläuft eine Reihe von Interceptors:</p>
+<p>Wir widmen uns nun einer Reihe von Beispielen zur Konvertierung und Validierung von Formularparametern. Das Problem stellt sich wie folgt dar: Um eine URL der Form [http://machine:port/.../Action] zu verarbeiten, instanziiert der Controller [FilterDispatcher] die Klasse, die die angeforderte Aktion implementiert, und führt eine ihrer Methoden aus – standardmäßig die Methode mit dem Namen <em>execute</em>. Der Aufruf dieser Methode <em>„execute“</em> durchläuft eine Reihe von Interceptoren:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000293000000E838087670.png" width="330" height="116" style="display:inline-block; margin:4px;width:8.719cm;height:3.069cm;" class="odt-zoomable" data-zoom-src="images/1000000000000293000000E838087670.png" /></td></tr></table>
 
-<p>Die Liste der Interceptors ist in der Datei [struts-default.xml] im Stammverzeichnis des Archivs [struts2-core.jar] definiert. Die dort definierte Liste der Interceptors lautet wie folgt:</p>
+<p>Die Liste der Interceptoren ist in der Datei [struts-default.xml] im Stammverzeichnis des Archivs [struts2-core.jar] definiert. Die dort definierte Liste der Interceptoren lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#800080">&lt;interceptor-stack</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">defaultStack</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                </span><span style="color:#800080">&lt;interceptor-ref</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">exception</span><span style="color:#800080">&quot;/&gt;</span></span></span>
@@ -1124,57 +1124,57 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;/interceptor-stack&gt;</span><span style="color:#800080"></span></span></span>
 </code></pre></div>
 
-<p>Unter den Interceptors gibt es einen, der dafür zuständig ist, die <em>Werte der</em> mit der Anfrage übermittelten <em>Parameter</em> in Form <em>von „parami=values“</em> in die Aktion einzufügen. Wir wissen, dass <em>die Werte</em> über die Methode <em>„setParami“</em> in das Feld <em>„parami“</em> der Aktion eingefügt werden, sofern dieses vorhanden ist. Andernfalls erfolgt keine Einfügung und es wird kein Fehler gemeldet.</p>
-<p>Die Zeichenfolge <em>parami=values</em> ist eine Zeichenkette. Bislang erfolgte die Einfügung von <em>Werten</em> in <em>parami</em>-Felder vom Typ <em>String</em>:</p>
+<p>Unter den Interceptoren gibt es einen, der dafür zuständig ist, die Werte <em>valeuri</em> der Parameter <em>parami,</em> die der Anfrage in der Form <em>parami=valeuri</em> beigefügt sind, in die Aktion einzufügen. Es ist bekannt, dass <em>valeuri</em> über die Methode <em>setParami</em> in das Feld <em>parami</em> der Aktion eingefügt wird, sofern diese existiert. Andernfalls erfolgt keine Einfügung und es wird kein Fehler gemeldet.</p>
+<p>Die Zeichenfolge <em>„parami=valeuri“</em> ist eine Zeichenfolge. Bislang wurde <em>„valeuri“</em> in Felder vom Typ <em>„parami“</em> eingefügt:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>private String parami ;
 </code></pre></div>
-<p>Das Einfügen der Zeichenkette <em>„valeuri“</em> als Wert der Zeichenkette <em>„parami“</em> stellte kein Problem dar. Ist <em>„parami“</em> nicht vom Typ <em>String</em>, muss <em>„valeuri“</em> in den Typ <em>„Ti“</em> von <em>„parami“</em> konvertiert werden. Dies ist das Konvertierungsproblem. Beispielsweise möchten wir vielleicht, dass ein Alter eine Ganzzahl ist, und schreiben in der Aktion:</p>
+<p>Das Einfügen der Zeichenfolge <em>valeuri</em> als Wert der Zeichenfolge <em>parami</em> stellte kein Problem dar. Wenn <em>parami</em> nicht vom Typ <em>String</em> ist, muss <em>valeuri</em> von <em>parami</em> in den Typ <em>Ti</em> konvertiert werden. Das ist das Problem bei der <strong>Konvertierung</strong>. Wenn man beispielsweise möchte, dass ein Alter eine ganze Zahl ist, schreibt man in die Aktion:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>private int age ;
 </code></pre></div>
-<p>Außerdem möchten wir das Alter vielleicht auf den Bereich zwischen 1 und 150 beschränken. Dies wirft ein Validierungsproblem auf. Der Parameter <em><code>parami</code></em> kann in den richtigen Typ konvertiert werden, ohne dass er zwangsläufig gültig ist. Es sind daher zwei Schritte erforderlich. Zurück zum Diagramm der Anforderungsverarbeitung:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000002A2000000F794588DC6.png" width="337" height="123" style="display:inline-block; margin:4px;width:8.916cm;height:3.267cm;" class="odt-zoomable" data-zoom-src="images/10000000000002A2000000F794588DC6.png" /></td></tr></table>
+<p>Außerdem möchte man möglicherweise das Alter auf den Bereich zwischen 1 und 150 beschränken. Hier liegt ein <strong>Validierungsproblem</strong> vor. Der Parameter <em>parami</em> kann zwar in den richtigen Typ konvertiert werden, ist aber dennoch nicht gültig. Es sind also zwei Schritte erforderlich. Kehren wir zum Schema der Bearbeitung einer Anfrage zurück:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000002A2000000F794588DC6.png" width="337" height="124" style="display:inline-block; margin:4px;width:8.916cm;height:3.268cm;" class="odt-zoomable" data-zoom-src="images/10000000000002A2000000F794588DC6.png" /></td></tr></table>
 
-<p>Zwei Interceptors übernehmen jeweils die <strong>Konvertierung</strong> und die <strong>Validierung</strong> der Parameter. Wenn einer der beiden Schritte fehlschlägt, wird die Anfrage nicht an die Aktion weitergeleitet (roter Pfad oben). Das Formular, über das die fehlerhaften Parameter übermittelt wurden, wird mit Fehlermeldungen erneut angezeigt.</p>
-<p>Die an der Parameterkonvertierung und -validierung beteiligten Interceptors sind die Interceptors <em>„conversionError“</em> und <em>„validation</em>“ in den Zeilen 19 und 20 der zuvor gezeigten Interceptor-Liste. Beachten Sie in den Zeilen 20–22, dass der Validierungs-Interceptor nicht angewendet wird, wenn es sich bei der aufgerufenen Methode um eine der Methoden <em><span style="color: #000000">„input“</span></em><span style="color: #000000">, </span><em><span style="color: #000000">„back“</span></em><span style="color: #000000">, </span><em><span style="color: #000000">„cancel</span></em><span style="color: #000000">“ oder </span><em><span style="color: #000000">„browse“ </span></em>handelt<span style="color: #000000">. Wir werden diese Eigenschaft später nutzen.</span></p>
-<p>Wir beginnen mit der Untersuchung der Konvertierung und Validierung von Ganzzahlen. Wir werden uns etwas Zeit für dieses erste Beispiel nehmen, da die Validierung viele Elemente umfasst. Sobald wir diese verstanden haben, werden wir die folgenden Beispiele zügiger durchgehen.</p>
-<p><a id="refheading91646522158564"></a></p>
+<p>Zwei Interceptoren kümmern sich jeweils um die <strong>Konvertierung</strong> und die <strong>Validierung</strong> der Parameter. Wenn einer der Schritte fehlschlägt, wird die Anfrage nicht an die Aktion weitergeleitet (roter Pfad oben). Das Formular, über das die fehlerhaften Parameter gesendet wurden, wird mit Fehlermeldungen erneut angezeigt.</p>
+<p>Die für die Konvertierung und Validierung der Parameter zuständigen Interceptors sind die Interceptors <em>conversionError</em> und <em>validation</em> in den Zeilen 19 und 20 der zuvor dargestellten Interceptor-Liste. In den Zeilen 20–22 ist zu beachten, dass der Interceptor <em>validation</em> nicht angewendet wird, wenn die aufgerufene Methode eine der folgenden ist: <em><span style="color: #000000">input</span></em><span style="color: #000000">, </span><em><span style="color: #000000">back</span></em><span style="color: #000000">, </span><em><span style="color: #000000">cancel</span></em><span style="color: #000000">, </span><em><span style="color: #000000">browse</span></em><span style="color: #000000">. Diese Eigenschaft werden wir im weiteren Verlauf nutzen.</span></p>
+<p>Zunächst befassen wir uns mit der Konvertierung und Validierung von Ganzzahlen. Wir werden uns für dieses erste Beispiel etwas Zeit nehmen, da bei der Validierung zahlreiche Aspekte eine Rolle spielen. Sobald diese bekannt sind, werden wir die folgenden Beispiele zügiger durchgehen.</p>
+<p><span id="refheading91646522158564" name="refheading91646522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="111-das-formular">11.1. <span style="color: #4f81bd">Das Formular</span></h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000053700000248212F8657.png" width="668" height="292" style="display:inline-block; margin:4px;width:17.662cm;height:7.726cm;" class="odt-zoomable" data-zoom-src="images/100000000000053700000248212F8657.png" /></td></tr></table>
 
 <ul>
   <li>in [1], das Eingabeformular
   </li>
-  <li>in [2], das Ergebnis bei der Validierung ohne Eingabe von Werten
+  <li>in [2], das Ergebnis bei einer Validierung ohne Eingabe von Werten
   </li>
 </ul>
 
-<p><a id="refheading91648522158564"></a></p>
+<p><span id="refheading91648522158564" name="refheading91648522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="112-das-netbeans-projekt">11.2. <span style="color: #4f81bd">Das NetBeans-Projekt</span></h2>
 <p>Das NetBeans-Projekt sieht wie folgt aus:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000033600000219203A555D.png" width="411" height="268" style="display:inline-block; margin:4px;width:10.874cm;height:7.103cm;" class="odt-zoomable" data-zoom-src="images/100000000000033600000219203A555D.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000033600000219203A555D.png" width="411" height="269" style="display:inline-block; margin:4px;width:10.874cm;height:7.105cm;" class="odt-zoomable" data-zoom-src="images/100000000000033600000219203A555D.png" /></td></tr></table>
 
 <ul>
   <li>in [1] die drei Ansichten der Anwendung
   </li>
-  <li>in [2] der Quellcode, die internationalisierten Meldungsdateien und die Struts-Konfigurationsdateien.
+  <li>in [2]: Quellcode, internationalisierte Meldungsdateien und Struts-Konfigurationsdateien.
   </li>
 </ul>
 
-<p><a id="refheading91650522158564"></a></p>
+<p><span id="refheading91650522158564" name="refheading91650522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="113-struts-konfiguration">11.3. <span style="color: #4f81bd">Struts-Konfiguration</span></h2>
 <p>Die Anwendung wird über die Dateien [struts.xml] und [example.xml] konfiguriert.</p>
-<p>Die Datei [struts.xml] sieht wie folgt aus:</p>
+<p>Die Datei [struts.xml] lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span> <span style="color:#008080">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">struts</span> <span style="color:#808080">PUBLIC</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#3f7f5f">&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">constant</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;struts.custom.i18n.resources&quot;</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;messages&quot;</span> <span style="color:#008080">/&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">include</span> <span style="color:#7f007f">file</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;example/example.xml&quot;</span><span style="color:#008080">/&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">package</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;default&quot;</span> <span style="color:#7f007f">namespace</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/&quot;</span> <span style="color:#7f007f">extends</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;struts-default&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">default-action-ref</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;index&quot;</span> <span style="color:#008080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;index&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1187,15 +1187,14 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>Die Zeilen 12–18 definieren die Aktion [/example/Home] als Standardaktion, wenn der Benutzer keine angibt.</p>
-<p>Die Datei [example.xml] sieht wie folgt aus:</p>
-<p><span style="color: #000000"> </span></p>
+<p>Die Zeilen 12–18 definieren die Aktion [/example/Accueil] als Standardaktion, wenn der Benutzer keine Angabe macht.</p>
+<p>Die Datei [example.xml] lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span> <span style="color:#008080">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">struts</span> <span style="color:#808080">PUBLIC</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008080">&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#3f7f5f">&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">package</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;example&quot;</span> <span style="color:#7f007f">namespace</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/example&quot;</span> <span style="color:#7f007f">extends</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;struts-default&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Accueil&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1211,20 +1210,20 @@
 </code></pre></div>
 
 <ul>
-  <li>Zeilen 8–10: Die Aktion [Home] zeigt die Ansicht [Home.jsp] an
+  <li>Zeilen 8–10: Die Aktion [Accueil] lässt die Ansicht [Accueil.jsp] anzeigen
   </li>
-  <li>Zeile 11: Die Aktion [FormInt] führt standardmäßig die Methode <i>„execute“ </i>der Klasse [example.FormInt] aus. Wir werden sehen, dass zwei weitere Methoden ausgeführt werden: die Methoden <i>„input“ </i>und <i>„cancel</i>“. Diese Methoden werden dann in den Anfrageparametern angegeben.
+  <li>Zeile 11: Die Aktion [FormInt] führt standardmäßig die Methode <i>execute </i>der Klasse [example.FormInt] aus. Wir werden sehen, dass zwei weitere Methoden ausgeführt werden, nämlich die Methoden <i>input </i>und <i>cancel</i>. Diese Methoden werden dann in den Parametern der Abfrage angegeben.
   </li>
-  <li>Zeile 12: Der Schlüssel <i>„input“ </i>zeigt die Ansicht [FormInt.jsp] an (Zeile 5). Diese Ansicht ist die Formularansicht.
+  <li>Zeile 12: Der Schlüssel <i>input </i>bewirkt die Anzeige der Ansicht [FormInt.jsp] (Zeile 5). Diese Ansicht ist die des Formulars.
   </li>
-  <li>Zeile 13: Der Schlüssel <i>„cancel“ </i>wird von einer „cancel“-Methode zurückgegeben, die mit dem Link [Cancel] verknüpft ist. Die gerenderte Ansicht ist dann nach einer Weiterleitung (<i>type=redirect</i>) die Ansicht [Home.jsp].
+  <li>Zeile 13: Der Schlüssel <i>cancel </i>wird von einer Methode <i>cancel</i> zurückgegeben, die dem Link [Annuler] zugeordnet ist. Die gerenderte Ansicht ist dann nach einer Weiterleitung (<i>type=redirect</i>) die Ansicht [Accueil.jsp].
   </li>
-  <li>Zeile 14: Der Schlüssel <i>`success` </i>wird von der Methode <i>`execute` </i>der Aktion [FormInt] zurückgegeben. Wenn die Anfrage die Methode <i>`execute` </i>erreicht, bedeutet dies, dass sie alle Interceptors erfolgreich durchlaufen hat, insbesondere diejenigen, die die Gültigkeit der Parameter überprüfen. Die Methode <i>`execute` </i>gibt dann einfach den Schlüssel <i>`success` </i>zurück, wodurch die Bestätigungsansicht [ConfirmationInt.jsp] angezeigt wird.
+  <li>Zeile 14: Der Schlüssel <i>success </i>wird von der Methode <i>execute </i>der Aktion [FormInt] zurückgegeben. Wenn die Anfrage die Methode <i>execute</i> erreicht, bedeutet dies, dass sie alle Interceptoren erfolgreich durchlaufen hat, insbesondere diejenigen, die die Gültigkeit der Parameter überprüfen. Die Methode <i>execute </i>gibt dann lediglich den Schlüssel <i>success</i> zurück, der die Bestätigungsansicht [ConfirmationInt.jsp] anzeigt.
   </li>
 </ul>
 
-<p><a id="refheading91652522158564"></a></p>
-<h2 id="114-meldungsdateien">11.4. <span style="color: #4f81bd">Meldungsdateien</span></h2>
+<p><span id="refheading91652522158564" name="refheading91652522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="114-die-meldungsdateien">11.4. <span style="color: #4f81bd">Die Meldungsdateien</span></h2>
 <p>Die Datei [messages.properties] sieht wie folgt aus:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Accueil.titre=</span><span style="color:#2a00ff">Accueil</span></span></span>
@@ -1242,7 +1241,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Confirmation.lien=</span><span style="color:#2a00ff">Formulaire</span><span style="color:#000000"> </span><span style="color:#2a00ff">de</span><span style="color:#000000"> </span><span style="color:#2a00ff">test</span></span></span>
 </code></pre></div>
 
-<p>Zusätzlich zu dieser Datei verwenden die Ansichten die folgende [FormInt.properties]-Datei:</p>
+<p>Zusätzlich zu dieser Datei verwenden die Ansichten die folgende Datei [FormInt.properties]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">int1.prompt=</span><span style="color:#2a00ff">1-Nombre</span><span style="color:#000000"> </span><span style="color:#2a00ff">entier</span><span style="color:#000000"> </span><span style="color:#2a00ff">positif</span><span style="color:#000000"> </span><span style="color:#2a00ff">de</span><span style="color:#000000"> </span><span style="color:#2a00ff">deux</span><span style="color:#000000"> </span><span style="color:#2a00ff">chiffres</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">int1.error=</span><span style="color:#2a00ff">Tapez</span><span style="color:#000000"> </span><span style="color:#2a00ff">un</span><span style="color:#000000"> </span><span style="color:#2a00ff">nombre</span><span style="color:#000000"> </span><span style="color:#2a00ff">entier</span><span style="color:#000000"> </span><span style="color:#2a00ff">positif</span><span style="color:#000000"> </span><span style="color:#2a00ff">de</span><span style="color:#000000"> </span><span style="color:#2a00ff">deux</span><span style="color:#000000"> </span><span style="color:#2a00ff">chiffres</span></span></span>
@@ -1258,16 +1257,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">int6.error=</span><span style="color:#2a00ff">Tapez</span><span style="color:#000000"> </span><span style="color:#2a00ff">un</span><span style="color:#000000"> </span><span style="color:#2a00ff">nombre</span><span style="color:#000000"> </span><span style="color:#2a00ff">entier</span><span style="color:#000000"> </span><span style="color:#2a00ff">dans</span><span style="color:#000000"> </span><span style="color:#2a00ff">l&#x27;&#x27;intervalle</span><span style="color:#000000"> </span><span style="color:#2a00ff">[2,20]</span></span></span>
 </code></pre></div>
 
-<p>Die Datei [FormInt.properties] wird nur verwendet, wenn die Aktion, die die Ansicht generiert hat, die Aktion [FormInt] ist. Dies ist eine Möglichkeit, die Meldungsdatei aufzuteilen, falls sie zu groß wird. Die Meldungen für die Aktion <strong>„Action“</strong> sind in der Datei [<strong>Action</strong>.properties] lokalisiert.</p>
-<p><a id="refheading91654522158564"></a></p>
+<p>Die Datei „[FormInt.properties]“ wird nur dann verwendet, wenn die Aktion, die die Ansicht generiert hat, die Aktion „[FormInt]“ ist. Dies ist eine Möglichkeit, die Meldungsdatei zu segmentieren, falls diese zu groß ist. Die Meldungen der Aktion <strong>„Action“</strong> werden in der Datei [Action.properties] internationalisiert.</p>
+<p><span id="refheading91654522158564" name="refheading91654522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="115-ansichten-und-aktionen">11.5. <span style="color: #4f81bd">Ansichten und Aktionen</span></h2>
-<p>Wir stellen nun die Ansichten und Aktionen der Anwendung vor. Basierend auf der Anwendungskonfiguration:</p>
+<p>Im Folgenden werden die Ansichten und Aktionen der Anwendung vorgestellt. Entsprechend der Konfiguration der Anwendung:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span> <span style="color:#008080">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">struts</span> <span style="color:#808080">PUBLIC</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008080">&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#3f7f5f">&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">package</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;example&quot;</span> <span style="color:#7f007f">namespace</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/example&quot;</span> <span style="color:#7f007f">extends</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;struts-default&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Accueil&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1282,12 +1281,12 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>Wir sehen, dass es drei Ansichten [Home.jsp, FormInt.jsp, ConfirmationFormInt.jsp] und zwei Aktionen [Home, FormInt] gibt.</p>
-<p><a id="refheading91656522158564"></a></p>
-<h3 id="1151-homejsp">11.5.1. <span style="color: #4f81bd">Home.jsp</span></h3>
-<p>Die Ansicht [Home.jsp] sieht wie folgt aus:</p>
-<p><img src="images/10000000000001850000009E58437AF5.png" width="327" height="133" style="width:8.641cm;height:3.51cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001850000009E58437AF5.png" /></p>
-<p>Der Code lautet wie folgt:</p>
+<p>sehen wir, dass es drei Ansichten [Accueil.jsp, FormInt.jsp, ConfirmationFormInt.jsp] und zwei Aktionen [Accueil, FormInt] gibt.</p>
+<p><span id="refheading91656522158564" name="refheading91656522158564" class="odt-bookmark-anchor"></span></p>
+<h3 id="1151-accueiljsp">11.5.1. <span style="color: #4f81bd">Accueil.jsp</span></h3>
+<p>Die Ansicht [Accueil.jsp] sieht wie folgt aus:</p>
+<p><img src="images/10000000000001850000009E58437AF5.png" width="327" height="133" style="width:8.641cm;height:3.508cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001850000009E58437AF5.png" /></p>
+<p>Ihr Code lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">taglib</span> <span style="color:#7f007f">prefix</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot;</span> <span style="color:#7f007f">uri</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot;</span> <span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1296,7 +1295,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Accueil.titre&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:head</span><span style="color:#008080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span> <span style="color:#7f007f">background</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/ressources/standard.jpg&quot;</span><span style="color:#008080">/&gt;</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Accueil.message&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">ul</span><span style="color:#008080">&gt;</span></span></span>
@@ -1312,7 +1311,7 @@
 <p>Der Link in Zeile 14 erzeugt den folgenden HTML-Code:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&lt;a href=&quot;</span><span class="na">view-source:http:</span><span class="err">//</span><span class="na">localhost:8084</span><span class="err">/</span><span class="na">exemple-09</span><span class="err">/</span><span class="na">example</span><span class="err">/</span><span class="na">FormInt</span><span class="err">.</span><span class="na">action</span><span class="err">&quot;</span><span class="p">&gt;</span>/exemple-09/example/FormInt!input.action<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>&quot;&gt;Saisie de nombres entiers<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Dies ist also ein Link zur Aktion [FormInt], die in [example.xml] wie folgt konfiguriert ist:</p>
+<p>Es handelt sich also um einen Link zur Aktion [FormInt], die in [example.xml] wie folgt konfiguriert ist:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;FormInt&quot;</span> <span style="color:#7f007f">class</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;example.FormInt&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;input&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/example/FormInt.jsp</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">result</span><span style="color:#008080">&gt;</span></span></span>
@@ -1321,67 +1320,67 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">action</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>Durch Klicken auf den Link wird die Klasse [example.FormInt] instanziiert und ihre input-Methode ausgeführt. Da diese nicht existiert, wird die input-Methode der übergeordneten Klasse <em>ActionSupport</em> ausgeführt. Diese Methode führt nichts anderes aus, als den input-Schlüssel zurückzugeben. Daher wird die Ansicht [/example/FormInt.jsp] angezeigt.</p>
-<p>Darüber hinaus gehört die Eingabemethode zu den Methoden, die vom Validierungs-Interceptor ignoriert werden:</p>
+<p>Ein Klick auf den Link instanziiert somit die Klasse [example.FormInt] und führt deren Methode <em>input</em> aus. Da diese nicht existiert, wird stattdessen die Methode <em>input</em> der übergeordneten Klasse <em>ActionSupport</em> ausgeführt. Diese führt nichts anderes aus, als den Schlüssel <em>input</em> zurückzugeben. Daher wird die Ansicht [/example/FormInt.jsp] angezeigt.</p>
+<p>Außerdem ist die Methode <em>input</em> eine der Methoden, die vom Validierungs-Interceptor ignoriert werden:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">interceptor-ref</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;validation&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">param</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;excludeMethods&quot;</span><span style="color:#008080">&gt;</span><span style="font-weight:bold;color:#000000">input</span><span style="color:#000000">,back,cancel,browse</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">param</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">interceptor-ref</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>Daher findet keine Parametervalidierung statt. Dies ist wichtig, da hier keine Parameter vorhanden sind und wir später sehen werden, dass die Validierungsregeln das Vorhandensein von sechs Parametern erfordern.</p>
-<p><a id="refheading91658522158564"></a></p>
-<h3 id="1152-die-formint-aktion">11.5.2. <span style="color: #4f81bd">Die [FormInt]-Aktion</span></h3>
-<p>Die Aktion [FormInt] ist mit der folgenden Klasse [FormInt] verknüpft:</p>
+<p>Daher findet keine Parametervalidierung statt. Dies ist wichtig, da hier keine Parameter vorhanden sind und wir später sehen werden, dass die Validierungsregeln das Vorhandensein von sechs Parametern vorschreiben.</p>
+<p><span id="refheading91658522158564" name="refheading91658522158564" class="odt-bookmark-anchor"></span></p>
+<h3 id="1152-die-aktion-formint">11.5.2. <span style="color: #4f81bd">Die Aktion [FormInt]</span></h3>
+<p>Die Aktion [FormInt] ist der folgenden Klasse [FormInt] zugeordnet:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> example;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.opensymphony.xwork2.ActionSupport;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.opensymphony.xwork2.ModelDriven;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.Map;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.apache.struts2.interceptor.SessionAware;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.apache.struts2.interceptor.validation.SkipValidation;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> FormInt </span><span style="font-weight:bold;color:#7f0055">extends</span><span style="color:#000000"> ActionSupport </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> ModelDriven, SessionAware {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// constructor without parameters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Konstruktor ohne Parameter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> FormInt() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// action model</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Aktionsmodell</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Object getModel() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000"> (session.get(</span><span style="color:#2a00ff">&quot;model&quot;</span><span style="color:#000000">) == </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      session.put(</span><span style="color:#2a00ff">&quot;model&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> FormIntModel());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> session.get(</span><span style="color:#2a00ff">&quot;model&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String cancel() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cleaning the model</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Das Modell wird bereinigt</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    ((FormIntModel) getModel()).clearModel();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Ergebnis</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> </span><span style="color:#2a00ff">&quot;cancel&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">SkipValidation</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String clearModel() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// close to the model</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Modell zurücksetzen</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    ((FormIntModel) getModel()).clearModel();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Ergebnis</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">     </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> INPUT;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// SessionAware</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Map&lt;String, Object&gt; session;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> setSession(Map&lt;String, Object&gt; session) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.session = session;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// validation</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Validierung</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> validate() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// valid int6 input?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Ist die Eingabe „int6“ gültig?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000"> (getFieldErrors().get(</span><span style="color:#2a00ff">&quot;int6&quot;</span><span style="color:#000000">) == </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> int6 = Integer.parseInt(((FormIntModel) getModel()).getInt6());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000"> (int6 &lt; 2 || int6 &gt; 20) {</span></span></span>
@@ -1392,39 +1391,39 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>Wir werden diesen Code bei Bedarf kommentieren. Vorerst:</p>
+<p>Wir werden diesen Code nach und nach erläutern, sobald es erforderlich ist. Vorerst gilt:</p>
 <ul>
   <li>Zeile 9: Die Klasse [FormInt] implementiert zwei Schnittstellen:
   </li>
-  <li><b>ModelDriven, </b>das nur eine Methode enthält, nämlich <b>getModel </b>in Zeile 16
+  <li><b>ModelDriven</b>, die nur eine Methode hat, und <b>getModel </b>in Zeile 16
   </li>
-  <li><b>SessionAware</b>, das nur eine Methode hat, nämlich <b>setSession </b>in Zeile 41
+  <li><b>SessionAware</b>, die nur eine Methode hat, nämlich <b>setSession </b>in Zeile 41
   </li>
 </ul>
 
 <ul>
-  <li>Zeilen 16–21: Implementierung der ModelDriven-Schnittstelle. Zur Erinnerung: Diese Schnittstelle ermöglicht es, das Modell einer Ansicht an eine externe Klasse zu delegieren, in diesem Fall an die folgende Klasse [FormIntModel]:
+  <li>Zeilen 16–21: Implementierung der Schnittstelle <i>ModelDriven</i>. Zur Erinnerung: Diese Schnittstelle ermöglicht es, das Modell einer Ansicht in eine externe Klasse auszulagern, in diesem Fall in die folgende Klasse [FormIntModel]:
   </li>
 </ul>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> example;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> FormIntModel {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// constructor without parameters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Konstruktor ohne Parameter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> FormIntModel() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// form fields</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Formularfelder</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String int1;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Integer int2;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Integer int3;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Integer int4;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Integer int5;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String int6;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// raz model</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Vorlage leeren</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> clearModel(){</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    int1=</span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    int2=</span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span></span>
@@ -1433,16 +1432,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    int5=</span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    int6=</span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getters and setters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Getter und Setter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#3f5fbf">   ...</span><span style="color:#3f5fbf"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>Das Modell [FormIntModel] verfügt über sechs Felder, die den sechs Eingabefeldern in der Ansicht [FormInt.jsp] entsprechen. Diese sechs Felder nehmen die übermittelten Werte entgegen. Vier davon sind vom Typ <em>Integer</em>. Daher stellt sich bei ihnen das Problem der Konvertierung von <em>String</em> in <em>Integer</em>. Mit der Methode <em>clearModel</em> können Sie das Modell zurücksetzen.</p>
-<p>Kehren wir zur Methode <em>getModel</em> der Aktion [FormInt] zurück:</p>
+<p>Das Modell [FormIntModel] verfügt über sechs Felder, die den sechs Eingabefeldern der Ansicht [FormInt.jsp] entsprechen. Diese sechs Felder nehmen die übermittelten Werte entgegen. Vier davon haben den Typ <em>Integer</em>. Für diese Felder stellt sich daher das Problem der Konvertierung von <em>String</em> nach <em>Integer</em>. Mit der Methode <em>clearModel</em> lässt sich das Modell zurücksetzen.</p>
+<p>Kommen wir zurück zur Methode <em>getModel</em> der Aktion [FormInt]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// action model</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Aktionsmodell</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Object getModel() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000"> (session.get(</span><span style="color:#2a00ff">&quot;model&quot;</span><span style="color:#000000">) == </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      session.put(</span><span style="color:#2a00ff">&quot;model&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> FormIntModel());</span></span></span>
@@ -1452,33 +1451,26 @@
 </code></pre></div>
 
 <ul>
-  <li>Zeilen 3–5: Das Modell wird aus der Sitzung abgerufen. Ist es dort nicht vorhanden, wird eine Instanz des Modells erstellt und in die Sitzung aufgenommen.
+  <li>Zeilen 3–5: Das Modell wird in der Sitzung gesucht. Ist es dort nicht vorhanden, wird eine Instanz des Modells erstellt und in die Sitzung aufgenommen.
   </li>
   <li>Zeile 6: Während bei jeder neuen Anfrage an die Aktion eine Instanz der Aktion erstellt wird, verbleibt deren Modell in der Sitzung.
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Wir sehen, dass die Klasse keine Eingabemethode definiert, die übergeordnete Klasse jedoch über eine verfügt, die den Eingabeschlüssel zurückgibt. Durch Aufruf dieser Methode wird die Ansicht [FormInt.jsp] angezeigt, die wir nun vorstellen werden.</span></p>
-<p><a id="refheading91660522158564"></a></p>
+<p><span style="color: #000000">Wir sehen, dass die Klasse keine Methode </span><em><span style="color: #000000">„input“</span></em><span style="color: #000000"> definiert, aber die übergeordnete Klasse verfügt über eine solche, die den Schlüssel </span><em><span style="color: #000000">„input“</span></em><span style="color: #000000"> zurückgibt. Die Ausführung dieser Methode führt zur Anzeige der Ansicht „[FormInt.jsp]“, die wir nun vorstellen.</span></p>
+<p><span id="refheading91660522158564" name="refheading91660522158564" class="odt-bookmark-anchor"></span></p>
 <h3 id="1153-die-ansicht-formintjsp">11.5.3. <span style="color: #4f81bd">Die Ansicht [FormInt.jsp]</span></h3>
-<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Die Ansicht [FormInt.jsp] sieht wie folgt aus:</span></p>
-<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005380000023F74BB859F.png" width="668" height="288" style="display:inline-block; margin:4px;width:17.674cm;height:7.608cm;" class="odt-zoomable" data-zoom-src="images/10000000000005380000023F74BB859F.png" /></td></tr></table>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">in [1] das leere Formular</span>
   </li>
-  <li><span style="color: #000000">in [2] das Formular nach der Validierung falscher Parameter.</span>
+  <li><span style="color: #000000">in [2] das Formular nach einer Validierung mit fehlerhaften Parametern.</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Der Code lautet wie folgt:</span></p>
-<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span>=<span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span> <span style="color:#7f007f">pageEncoding</span>=<span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">taglib</span> <span style="color:#7f007f">prefix</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot;</span> <span style="color:#7f007f">uri</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot;</span> <span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1487,7 +1479,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.titre&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:head</span><span style="color:#008080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span> <span style="color:#7f007f">background</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/ressources/standard.jpg&quot;</span><span style="color:#008080">/&gt;</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;FormInt.message&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:form</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;formulaire&quot;</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;FormInt&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1509,39 +1501,33 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">Zeilen 12–17: Die sechs Eingabefelder entsprechen den sechs Feldern des [FormIntModel]-Modells für die [FormInt]-Aktion. Bei der Anzeige der Ansicht werden die value-Attribute der Eingabefelder für die von diesen Feldern angezeigten Werte verwendet. Fehlt das value-Attribut, wird das name-Attribut verwendet.</span>
+  <li><span style="color: #000000">Zeilen 12–17: Die sechs Eingabefelder entsprechen den sechs Feldern des Modells [FormIntModel] der Aktion [FormInt]. Bei der Anzeige der Ansicht werden die Attribute </span><i><span style="color: #000000">value </span></i><span style="color: #000000">der Eingabefelder für den </span><span style="color: #000000">von diesen Feldern angezeigten Wert verwendet. Fehlt das Attribut </span><i><span style="color: #000000">value</span></i><span style="color: #000000">, wird stattdessen das Attribut </span><i><span style="color: #000000">name </span></i><span style="color: #000000">verwendet.</span>
   </li>
-  <li><span style="color: #000000">Zeile 12: Das Eingabefeld ist (</span><i><span style="color: #000000">name</span></i><span style="color: #000000">) mit dem Feld </span><i><span style="color: #000000">int1 </span></i><span style="color: #000000">der Aktion oder ihres Modells verknüpft, sofern die Aktion die Schnittstelle </span><i><span style="color: #000000">ModelDriven</span></i><span style="color: #000000"> implementiert. Dies ist hier der Fall. Dies gilt auch für alle anderen Felder.</span>
+  <li><span style="color: #000000">Zeile 12: Das Eingabefeld wird (</span><i><span style="color: #000000">name</span></i><span style="color: #000000">) dem Feld </span><i><span style="color: #000000">int1 </span></i><span style="color: #000000">der Aktion oder ihres Modells zugeordnet, sofern die Aktion die Schnittstelle </span><i><span style="color: #000000">ModelDriven</span></i><span style="color: #000000"> implementiert. Dies ist hier der Fall. Dies gilt auch für alle anderen Felder.</span>
   </li>
-  <li><span style="color: #000000">Zeile 18: Die Schaltfläche [Submit] übermittelt die Eingaben an die in Zeile 11 definierte Aktion [FormInt]. Deren execute-Methode wird ausgeführt.</span>
+  <li><span style="color: #000000">Zeile 18: Die Schaltfläche [Valider] übermittelt die Eingaben an die in Zeile 11 definierte Aktion [FormInt]. Dabei wird deren Methode </span><i><span style="color: #000000">execute </span></i><span style="color: #000000">ausgeführt.</span>
   </li>
-  <li><span style="color: #000000">Zeilen 21–22: Der Link [Cancel] führt die Methode [FormInt.cancel] aus.</span>
+  <li><span style="color: #000000">Zeilen 21–22: Der Link [Annuler] führt die Methode [FormInt.cancel] aus.</span>
   </li>
-  <li><span style="color: #000000">Zeilen 24–25: Der Link [Clear Model] führt die Methode [FormInt.clearModel] aus.</span>
+  <li><span style="color: #000000">Zeilen 24–25: Der Link [Raz modèle] führt die Methode [FormInt.clearModel] aus.</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
-<p><a id="refheading91662522158564"></a></p>
+<p><span id="refheading91662522158564" name="refheading91662522158564" class="odt-bookmark-anchor"></span></p>
 <h3 id="1154-die-ansicht-confirmationformintjsp">11.5.4. <span style="color: #4f81bd">Die Ansicht [ConfirmationFormInt.jsp]</span></h3>
-<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004E3000001E2FA7D77F0.png" width="626" height="241" style="display:inline-block; margin:4px;width:16.551cm;height:6.376cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E3000001E2FA7D77F0.png" /></td></tr></table>
 
-<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Sie wird angezeigt, wenn alle Eingaben im Formular [FormInt.jsp] gültig sind.</span></p>
 <p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">In [1] werden gültige Werte übermittelt</span>
+  <li><span style="color: #000000">In [1] werden gültige Werte</span>
   </li>
-  <li><span style="color: #000000">In [2] die Bestätigungsseite</span>
+  <li><span style="color: #000000">in [2] wird die Bestätigungsseite</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Der Code für die Ansicht [ConfirmationInt.jsp] lautet wie folgt:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Der Code der Ansicht [ConfirmationInt.jsp] lautet wie folgt:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span>=<span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span> <span style="color:#7f007f">pageEncoding</span>=<span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">taglib</span> <span style="color:#7f007f">prefix</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot;</span> <span style="color:#7f007f">uri</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot;</span> <span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1550,7 +1536,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Confirmation.titre&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:head</span><span style="color:#008080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span> <span style="color:#7f007f">background</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/ressources/standard.jpg&quot;</span><span style="color:#008080">/&gt;</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Confirmation.message&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">table</span> <span style="color:#7f007f">border</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1590,9 +1576,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Um diesen Code zu verstehen, denken Sie daran, dass die Ansicht angezeigt wird, nachdem die Klasse [FormInt] instanziiert wurde. Die Felder dieser Klasse und ihres Modells [FormIntModel] sind daher für die Ansicht zugänglich.</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Um diesen Code zu verstehen, muss man bedenken, dass die Ansicht nach der Instanziierung der Klasse [FormInt] angezeigt wird. Die Felder dieser Klasse und ihres Modells [FormIntModel] sind daher für die Ansicht zugänglich.</span></p>
 <ul>
   <li><span style="color: #000000">Zeilen 16–38: Die Werte der sechs Felder werden angezeigt</span>
   </li>
@@ -1600,14 +1584,11 @@
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">&lt;a href=&quot;</span><a href="view-source:http://localhost:8084/exemple-09/example/FormInt%21show.action">/exemple-09/example/FormInt!input.action</a><span style="color:#000000">&quot;&gt;Formulaire de test&lt;/a&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Die spezifische URL des Links gibt an, dass die Eingabemethode der Aktion [FormInt] die Anfrage bearbeiten muss. Erinnern Sie sich an die Konfiguration der Aktion [FormInt] in [example.xml]:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Die spezifische URL des Links gibt an, dass die Methode </span><em><span style="color: #000000">input </span></em><span style="color: #000000">der Aktion [FormInt] die Anfrage bearbeiten soll. Zur Erinnerung: Die Konfiguration der Aktion [FormInt] in [example.xml] lautet wie folgt:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action</span> <span style="color:#7f007f">name</span>=<span style="font-style:italic;color:#2a00ff">&quot;FormInt&quot;</span> <span style="color:#7f007f">class</span>=<span style="font-style:italic;color:#2a00ff">&quot;example.FormInt&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;input&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/example/FormInt.jsp</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">result</span><span style="color:#008080">&gt;</span></span></span>
@@ -1616,24 +1597,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">action</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Die Eingabemethode der Klasse [FormInt] entspricht der ihrer übergeordneten Klasse </span><em><span style="color: #000000">ActionSupport</span></em><span style="color: #000000">. Die Eingabemethode der Klasse [FormInt] wird ausgeführt, nachdem die Interceptors ausgeführt wurden</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Die Methode </span><em><span style="color: #000000">input </span></em><span style="color: #000000">der Klasse [FormInt] entspricht der ihrer übergeordneten Klasse </span><em><span style="color: #000000">ActionSupport</span></em><span style="color: #000000">. Die Ausführung der Methode </span><em><span style="color: #000000">input </span></em><span style="color: #000000">der Klasse [FormInt] erfolgt nach der Ausführung der Interceptoren</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000002B3000000FBD96E1AC0.png" width="346" height="126" style="display:inline-block; margin:4px;width:9.142cm;height:3.321cm;" class="odt-zoomable" data-zoom-src="images/10000000000002B3000000FBD96E1AC0.png" /></td></tr></table>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Wir wissen, dass der Aufruf der Eingabemethode vom Validierungs-Interceptor ignoriert wird. Daher findet keine Validierung statt.</span></p>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Es ist bekannt, dass der Aufruf der Methode </span><em><span style="color: #000000">input </span></em><span style="color: #000000">vom Validierungs-Interceptor ignoriert wird. Es findet daher keine Validierung statt.</span></p>
 <p><span style="color: #000000">Die Ansicht [FormInt.jsp] wird angezeigt:</span></p>
-<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000518000001EEC8C97446.png" width="652" height="247" style="display:inline-block; margin:4px;width:17.251cm;height:6.535cm;" class="odt-zoomable" data-zoom-src="images/1000000000000518000001EEC8C97446.png" /></td></tr></table>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">In [2] werden die Eingabefelder auf ihre Standardwerte zurückgesetzt. Das mag normal erscheinen, ist es aber nicht. Da die Aktion [FormInt] aufgerufen wurde, wurde die zugehörige Klasse [FormInt] instanziiert. Da diese Klasse die Schnittstelle </span><em><span style="color: #000000">ModelDriven</span></em><span style="color: #000000"> implementiert, wurde ihre Methode </span><em><span style="color: #000000">getModel </span></em><span style="color: #000000">aufgerufen:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">In [2] erhalten die Eingabefelder ihre Eingabewerte zurück. Das mag normal erscheinen, ist es aber nicht. Da die Aktion [FormInt] aufgerufen wurde, wurde die zugehörige Klasse [FormInt] instanziiert. Da diese Klasse die Schnittstelle </span><em><span style="color: #000000">ModelDriven</span></em><span style="color: #000000"> implementiert, wurde ihre Methode </span><em><span style="color: #000000">getModel </span></em><span style="color: #000000">aufgerufen:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// action model</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Aktionsmodell</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Object getModel() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000"> (session.get(</span><span style="color:#2a00ff">&quot;model&quot;</span><span style="color:#000000">) == </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      session.put(</span><span style="color:#2a00ff">&quot;model&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> FormIntModel());</span></span></span>
@@ -1642,51 +1615,40 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Wir sehen, dass das Modell der Aktion aus der Sitzung abgerufen wird. Im vorherigen Schritt wurde dieses Modell mit den übermittelten Werten aktualisiert. Wir rufen daher diese Werte ab. Hätten wir das Modell nicht in die Sitzung geschrieben, hätten wir in der Ansicht [FormInt.jsp] sechs leere Felder gehabt.</span></p>
-<p><span style="color: #000000"> </span></p>
-<p><a id="refheading91664522158564"></a></p>
+<p><span style="color: #000000">Man sieht, dass das Modell der Aktion aus der Sitzung abgerufen wird. Im vorherigen Schritt war dieses Modell durch die übermittelten Werte aktualisiert worden. Diese Werte werden also wiederhergestellt. Hätte man das Modell nicht in die Sitzung gespeichert, hätte man in der Ansicht [FormInt.jsp] sechs leere Felder vorgefunden.</span></p>
+<p><span id="refheading91664522158564" name="refheading91664522158564" class="odt-bookmark-anchor"></span></p>
 <h3 id="1155-die-aktion-formintclearmodel">11.5.5. <span style="color: #4f81bd">Die Aktion [FormInt!clearModel]</span></h3>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Die Aktion [FormInt!clearModel] wird durch Klicken auf den Link [Clear Model] ausgelöst:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Die Aktion [Formint!clearModel] wird durch einen Klick auf den Link [Raz modèle] ausgelöst:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000051F000001D4ED32CA53.png" width="656" height="234" style="display:inline-block; margin:4px;width:17.344cm;height:6.191cm;" class="odt-zoomable" data-zoom-src="images/100000000000051F000001D4ED32CA53.png" /></td></tr></table>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">in [1] das Formular nach einer falschen Eingabe</span>
+  <li><span style="color: #000000">in [1], das Formular nach einer fehlerhaften Eingabe</span>
   </li>
-  <li><span style="color: #000000">in [2] das Formular nach dem Klicken auf den Link [Clear Model].</span>
+  <li><span style="color: #000000">in [2], das Formular nach einem Klick auf den Link [Raz modèle].</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Die Methode [FormInt.clearModel] lautet wie folgt:</span></p>
-<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">SkipValidation</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String clearModel() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// close to the model</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Modell zurücksetzen</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    ((FormIntModel) getModel()).clearModel();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Ergebnis</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> INPUT;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">Zeile 1: Es ist keine Validierung durchzuführen. Wir verwenden die Annotation </span><i><span style="color: #000000">@SkipValidation</span></i><span style="color: #000000">, um dies anzugeben. Der Validierungs-Interceptor führt daher keine Validierungen durch.</span>
+  <li><span style="color: #000000">Zeile 1: Es ist keine Validierung erforderlich. Dies wird mit der Notation </span><i><span style="color: #000000">@SkipValidation </span></i><span style="color: #000000">angegeben. Der Validierungs-Interceptor führt in diesem Fall keine Validierungen durch.</span>
   </li>
   <li><span style="color: #000000">Zeile 4: Die Methode [FormIntModel].</span><i><span style="color: #000000">clearModel </span></i><span style="color: #000000">wird ausgeführt. Wir sind ihr bereits begegnet. Sie setzt die sechs Felder des Modells auf </span><i><span style="color: #000000">null</span></i><span style="color: #000000"> zurück.</span>
   </li>
-  <li><span style="color: #000000">Zeile 7: Die Methode gibt den Eingabeschlüssel zurück.</span>
+  <li><span style="color: #000000">Zeile 7: Die Methode gibt den Schlüssel </span><i><span style="color: #000000">input</span></i><span style="color: #000000"> zurück.</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Zurück zur Konfiguration der [FormInt]-Aktion:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Kehren wir nun zur Konfiguration der Aktion [FormInt] zurück:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action</span> <span style="color:#7f007f">name</span>=<span style="font-style:italic;color:#2a00ff">&quot;FormInt&quot;</span> <span style="color:#7f007f">class</span>=<span style="font-style:italic;color:#2a00ff">&quot;example.FormInt&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;input&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/example/FormInt.jsp</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">result</span><span style="color:#008080">&gt;</span></span></span>
@@ -1695,49 +1657,39 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">action</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Wir sehen, dass die Eingabetaste die Ansicht [FormInt.jsp] anzeigt. Diese Ansicht zeigt die sechs Felder des Modells an. Da diese </span><em><span style="color: #000000">leer</span></em><span style="color: #000000"> sind, zeigt die Ansicht sechs leere Felder an [2].</span></p>
-<p><span style="color: #000000"> </span></p>
-<p><a id="refheading91666522158564"></a></p>
+<p><span style="color: #000000">sehen wir, dass der Schlüssel </span><em><span style="color: #000000">input </span></em><span style="color: #000000">die Ansicht [FormInt.jsp] anzeigt. Diese zeigt die sechs Felder des Modells an. Da diese in </span><em><span style="color: #000000">null</span></em><span style="color: #000000"> enthalten sind, zeigt die Ansicht sechs leere Felder [2] an.</span></p>
+<p><span id="refheading91666522158564" name="refheading91666522158564" class="odt-bookmark-anchor"></span></p>
 <h3 id="1156-die-aktion-formintcancel">11.5.6. <span style="color: #4f81bd">Die Aktion [FormInt!cancel]</span></h3>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Die Aktion [FormInt!cancel] wird durch Klicken auf den Link [Abbrechen] ausgelöst:</span></p>
-<p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000535000002632D6D8EFF.png" width="667" height="305" style="display:inline-block; margin:4px;width:17.635cm;height:8.082cm;" class="odt-zoomable" data-zoom-src="images/1000000000000535000002632D6D8EFF.png" /></td></tr></table>
+<p><span style="color: #000000">Die Aktion [Formint!cancel] wird durch einen Klick auf den Link [Annuler] ausgelöst:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000535000002632D6D8EFF.png" width="667" height="306" style="display:inline-block; margin:4px;width:17.635cm;height:8.084cm;" class="odt-zoomable" data-zoom-src="images/1000000000000535000002632D6D8EFF.png" /></td></tr></table>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">in [1] das Formular nach einer falschen Eingabe</span>
+  <li><span style="color: #000000">in [1], das Formular nach einer fehlerhaften Eingabe</span>
   </li>
-  <li><span style="color: #000000">in [2], die Startseite nach dem Klicken auf den Link [Abbrechen].</span>
+  <li><span style="color: #000000">in [2], die Startseite nach einem Klick auf den Link [Annuler].</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Die Methode [FormInt.cancel] lautet wie folgt:</span></p>
-<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String cancel() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// cleaning the model</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Das Modell wird bereinigt</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    ((FormIntModel) getModel()).clearModel();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Ergebnis</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> </span><span style="color:#2a00ff">&quot;cancel&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">Zeile 1: Beachten Sie, dass der Methode keine SkipValidation-Annotation vorangestellt ist. Wir möchten jedoch keine Validierungen durchführen. Die Methode </span><i><span style="color: #000000">„cancel“ </span></i><span style="color: #000000">ist eine der vier Methoden (</span><i><span style="color: #000000">input</span></i><span style="color: #000000">, </span><i><span style="color: #000000">back</span></i><span style="color: #000000">, </span><i><span style="color: #000000">cancel</span></i><span style="color: #000000">, </span><i><span style="color: #000000">browse)</span></i><span style="color: #000000">, die vom Validierungs-Interceptor ignoriert werden, daher ist die SkipValidation-Annotation nicht erforderlich.</span>
+  <li><span style="color: #000000">Zeile 1: Es ist zu beachten, dass der Methode die Anmerkung </span><i><span style="color: #000000">SkipValidation</span></i><span style="color: #000000"> nicht vorangestellt ist. Die Validierungen sollen jedoch nicht durchgeführt werden. Die Methode </span><i><span style="color: #000000">cancel </span></i><span style="color: #000000">gehört zu den vier Methoden </span><i><span style="color: #000000">input</span></i><span style="color: #000000">, </span><i><span style="color: #000000">back</span></i><span style="color: #000000">, </span><i><span style="color: #000000">cancel </span></i><span style="color: #000000">und </span><i><span style="color: #000000">browse </span></i><span style="color: #000000">gehört, die vom Validierungs-Interceptor ignoriert werden, sodass auch die Annotation </span><i><span style="color: #000000">SkipValidation </span></i><span style="color: #000000">nicht erforderlich ist.</span>
   </li>
-  <li><span style="color: #000000">Zeile 3: Dies löscht das Modell</span>
+  <li><span style="color: #000000">Zeile 3: Sie leert die Vorlage</span>
   </li>
-  <li><span style="color: #000000">Zeile 5: Hier wird der Schlüssel </span><i><span style="color: #000000">„cancel“</span></i><span style="color: #000000"> zurückgegeben</span>
+  <li><span style="color: #000000">Zeile 5: Sie gibt den Schlüssel </span><i><span style="color: #000000">cancel</span></i><span style="color: #000000"> zurück</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Zurück zur Konfiguration der [FormInt]-Aktion:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Kehren wir zur Konfiguration der Aktion [FormInt] zurück:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action</span> <span style="color:#7f007f">name</span>=<span style="font-style:italic;color:#2a00ff">&quot;FormInt&quot;</span> <span style="color:#7f007f">class</span>=<span style="font-style:italic;color:#2a00ff">&quot;example.FormInt&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;input&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/example/FormInt.jsp</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">result</span><span style="color:#008080">&gt;</span></span></span>
@@ -1746,16 +1698,12 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">action</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Wir sehen, dass der Schlüssel </span><em><span style="color: #000000">„cancel“ </span></em><span style="color: #000000">nach einer clientseitigen Weiterleitung die Ansicht [Home.jsp] anzeigt. Dies wird in Ansicht [2] dargestellt.</span></p>
-<p><span style="color: #000000"> </span></p>
-<p><a id="refheading91668522158564"></a></p>
+<p><span style="color: #000000">sehen wir, dass der Schlüssel </span><em><span style="color: #000000">cancel </span></em><span style="color: #000000">nach einer Weiterleitung des Clients die Ansicht [Accueil.jsp] anzeigen wird. Dies zeigt die Ansicht [2].</span></p>
+<p><span id="refheading91668522158564" name="refheading91668522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="116-der-validierungsprozess">11.6. <span style="color: #4f81bd">Der Validierungsprozess</span></h2>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Wir werden uns nun mit der Validierung der sechs Eingabefelder befassen, die den folgenden sechs Feldern im Modell zugeordnet sind:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Wir befassen uns nun mit der Validierung der sechs Eingabefelder, die den folgenden sechs Feldern des Modells zugeordnet sind:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// champs du formulaire</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Formularfelder</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String int1;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Integer int2;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Integer int3;</span></span></span>
@@ -1764,20 +1712,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String int6;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Diese Validierung findet jedes Mal statt, wenn die Klasse [FormInt] instanziiert wird und die ausgeführte Methode vom Validierungs-Interceptor nicht ignoriert wird. Sie wird gesteuert durch:</span></p>
+<p><span style="color: #000000">Diese Validierung findet jedes Mal statt, wenn die Klasse [FormInt] instanziiert wird und die ausgeführte Methode nicht vom Validierungs-Interceptor ignoriert wird. Sie wird gesteuert durch:</span></p>
 <ul>
-  <li><span style="color: #000000">der Datei [FormInt-validation.xml], sofern sie sich im selben Ordner wie die Klasse [FormInt] befindet</span>
+  <li><span style="color: #000000">der Datei [FormInt-validation.xml], sofern sie im selben Ordner wie die Klasse [FormInt] vorhanden ist</span>
   </li>
-  <li><span style="color: #000000">der Methode [FormInt.validate], sofern diese vorhanden ist.</span>
+  <li><span style="color: #000000">die Methode [FormInt.validate], sofern sie vorhanden ist.</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000003290000020FFF036DAA.png" width="405" height="264" style="display:inline-block; margin:4px;width:10.703cm;height:6.973cm;" class="odt-zoomable" data-zoom-src="images/10000000000003290000020FFF036DAA.png" /></td></tr></table>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">in [1]: die für den Validierungsprozess erforderliche Datei [xwork-validator-1.0.2.dtd]</span>
   </li>
@@ -1785,20 +1729,18 @@
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Die Datei [FormInt-validation.xml] sieht wie folgt aus:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Die Datei [FormInt-validation.xml] lautet wie folgt:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!--</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!DOCTYPE validators PUBLIC &quot;-//OpenSymphony Group//XWork Validator 1.0.2//</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">EN&quot; &quot;http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">--&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">validators</span> <span style="color:#808080">PUBLIC</span> <span style="color:#008080">&quot;-//OpenSymphony Group//XWork Validator 1.0.2//</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">EN&quot; &quot;http://localhost:8084/exemple-09/example/xwork-validator-1.0.2.dtd&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">EN&quot; &quot;http://localhost:8084/Beispiel-09/Beispiel/xwork-validator-1.0.2.dtd&quot;&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">validators</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int1&quot;</span> <span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field-validator</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;requiredstring&quot;</span> <span style="color:#7f007f">short-circuit</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">message</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int1.error&quot;</span><span style="color:#008080">/&gt;</span></span></span>
@@ -1809,36 +1751,36 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">message</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int1.error&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">field-validator</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">field</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int2&quot;</span> <span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">...</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">field</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">...</span><span style="color:#008080"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">validators</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
 <ul>
-  <li>in [3] die URL der DTD (Document Type Definition) für die Validierungsdatei. Diese muss zugänglich sein; andernfalls wird die Validierungsdatei nicht verwendet.
+  <li>in [3]: die URL der Datei DTD (Document Type Definition) der Validierungsdatei. Diese muss erreichbar sein, andernfalls wird die Validierungsdatei nicht verwendet.
   </li>
-  <li>in [7], die URL der von der Anwendung verwendeten DTD. Wir haben die DTD-Datei im Ordner [example] des Projekts <i>example-09 </i>[1] abgelegt, damit sie auch ohne Internetzugang verfügbar ist.
+  <li>in [7] die URL der von der Anwendung verwendeten Datei DTD. Wir haben die Datei DTD im Ordner [example] des Projekts <i>exemple-09 </i>[1] abgelegt, damit sie auch dann verfügbar ist, wenn kein Internetzugang besteht.
   </li>
-  <li>Zeilen 11–20: Legen Sie die Validierungsbedingungen für den Parameter <i>int1</i> fest, der dem Feld <i>int1 </i>im Modell zugeordnet ist.
+  <li>Zeilen 11–20: Legen die Validierungsbedingungen für den Parameter <i>int1</i> fest, der dem Feld <i>int1 </i>des Modells zugeordnet ist.
   </li>
 </ul>
 
-<p>Das Tag mit dem Namen <em>int1</em> im Formular lautet wie folgt:</p>
+<p>Das im Formular als <em>int1</em> bezeichnete Tag lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textfield</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int1&quot;</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int1.prompt&quot;</span> <span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p>Das Feld <em>„int1“</em> im Modell ist wie folgt deklariert:</p>
+<p>Das Feld <em>int1</em> der Vorlage ist wie folgt deklariert:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String int1;</span></span></span>
 </code></pre></div>
 
 <ul>
-  <li>Zeilen 12–14: Überprüfen Sie, ob der Parameter <i>„int1“ </i>vorhanden ist (nicht <i>null</i>) und eine Länge ungleich Null hat. Ist dies nicht der Fall, wird dem Eingabefeld eine Fehlermeldung zugeordnet. Diese ist in [FormInt.properties] wie folgt definiert:
+  <li>Zeilen 12–14: Überprüfen, ob der Parameter <i>int1 </i>vorhanden ist (nicht <i>null</i>) und eine Länge ungleich Null aufweist. Ist dies nicht der Fall, wird dem Eingabefeld eine Fehlermeldung zugeordnet. Er ist in [FormInt.properties] wie folgt definiert:
   </li>
 </ul>
 
@@ -1846,48 +1788,45 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">int1.error=</span><span style="color:#2a00ff">Tapez</span><span style="color:#000000"> </span><span style="color:#2a00ff">un</span><span style="color:#000000"> </span><span style="color:#2a00ff">nombre</span><span style="color:#000000"> </span><span style="color:#2a00ff">entier</span><span style="color:#000000"> </span><span style="color:#2a00ff">positif</span><span style="color:#000000"> </span><span style="color:#2a00ff">de</span><span style="color:#000000"> </span><span style="color:#2a00ff">deux</span><span style="color:#000000"> </span><span style="color:#2a00ff">chiffres</span></span></span>
 </code></pre></div>
 
-<p>Liegt ein Fehler vor, wird der Validierungsprozess für den Parameter <em>int1</em> abgebrochen (<em>short-circuit=true</em>).</p>
+<p>Im Fehlerfall wird der Validierungsprozess für den Parameter <em>int1</em> abgebrochen (<em>short-circuit=true</em>).</p>
 <ul>
-  <li>Zeilen 15–19: Die Gültigkeit des Parameters <i>„int1“ </i>wird mithilfe eines regulären Ausdrucks überprüft.
+  <li>Zeilen 15–19: Die Gültigkeit des Parameters <i>int1 </i>wird anhand eines regulären Ausdrucks überprüft.
   </li>
-  <li>Zeile 16: Der reguläre Ausdruck, in diesem Fall zwei Ziffern ohne Vor- oder Nachlauf.
+  <li>Zeile 16: Der reguläre Ausdruck, hier zwei Ziffern ohne Vor- oder Nachzeichen.
   </li>
-  <li>Zeile 17: Vor dem Abgleich mit dem regulären Ausdruck werden führende und nachfolgende Leerzeichen aus dem Parameter <i>int1 </i>entfernt.
+  <li>Zeile 17: Der Parameter <i>int1 </i>wird vor dem Abgleich mit dem regulären Ausdruck von führenden und nachfolgenden Leerzeichen befreit.
   </li>
-  <li>Zeile 18: Die Fehlermeldung, falls vorhanden. Sie ist dieselbe wie beim vorherigen Validator.
+  <li>Zeile 18: Die eventuelle Fehlermeldung. Sie ist dieselbe wie beim vorherigen Validator.
   </li>
 </ul>
 
-<p>Schauen wir uns an, wie das funktioniert:</p>
+<p>Schauen wir uns das Ergebnis an:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000052E000001FD94EDE2BC.png" width="663" height="255" style="display:inline-block; margin:4px;width:17.542cm;height:6.735cm;" class="odt-zoomable" data-zoom-src="images/100000000000052E000001FD94EDE2BC.png" /></td></tr></table>
 
 <ul>
-  <li>in [1], eine falsche Eingabe für das Feld <i>int1</i>
+  <li>wird zu [1], eine fehlerhafte Eingabe für das Feld <i>int1</i>
   </li>
-  <li>in [2] die Seite zurückgegeben:
+  <li>bei [2], die zurückgegebene Seite:
   </li>
-  <li>Die Fehlermeldung für den Schlüssel<i> „int1.error“ </i>wird angezeigt. Sie ist rot.
+  <li>Die Fehlermeldung zum Schlüssel <i>int1.error </i>ist vorhanden. Sie ist rot markiert.
   </li>
   <li>Die Bezeichnung des fehlerhaften Feldes ist ebenfalls rot.
   </li>
-  <li>Der fehlerhafte Eintrag wird erneut angezeigt. Dies muss berücksichtigt werden, da es sich nicht unbedingt um das Standardverhalten handelt.
+  <li>Die fehlerhafte Eingabe wird erneut angezeigt. Dies muss berücksichtigt werden, da es sich nicht unbedingt um das Standardverhalten handelt.
   </li>
 </ul>
 
-<p>Wir haben gesehen, dass die Formularvalidierung die Ausführung der Methode [FormInt].<em>execute</em> auslöst, <span style="color: #000000">wenn die Anfrage alle Interceptors, insbesondere den Validierungs-Interceptor, erfolgreich durchläuft:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p>Wir haben gesehen, dass die Formularvalidierung die Ausführung der Methode [FormInt].<em>execute</em> auslöst, <span style="color: #000000">wenn die Anfrage alle Interceptoren, insbesondere den Validierungs-Interceptor, erfolgreich durchläuft:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000002A4000000F60A1B9296.png" width="338" height="123" style="display:inline-block; margin:4px;width:8.943cm;height:3.254cm;" class="odt-zoomable" data-zoom-src="images/10000000000002A4000000F60A1B9296.png" /></td></tr></table>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">Wenn die Anfrage die </span><i><span style="color: #000000">`execute`</span></i><span style="color: #000000">-Methode der Aktion erreicht, gibt diese, wie wir gesehen haben, den Schlüssel </span><i><span style="color: #000000">„success“ </span></i><span style="color: #000000">an den Controller zurück.</span>
+  <li><span style="color: #000000">Wenn die Anfrage die Methode </span><i><span style="color: #000000">execute </span></i><span style="color: #000000">der Aktion erreicht, gibt diese, wie wir gesehen haben, den Schlüssel </span><i><span style="color: #000000">success </span></i><span style="color: #000000">an den Controller zurück.</span>
   </li>
-  <li><span style="color: #000000">Wenn der Validierungs-Interceptor die Anfrage stoppt, weil die geprüften Parameter ungültig sind, wird der Schlüssel `</span><i><span style="color: #000000">input` </span></i><span style="color: #000000">an den Controller zurückgegeben.</span>
+  <li><span style="color: #000000">Wenn der Validierungs-Interceptor die Anfrage stoppt, weil die geprüften Parameter ungültig sind, wird der Schlüssel </span><i><span style="color: #000000">input </span></i><span style="color: #000000">an den Controller zurückgegeben.</span>
   </li>
 </ul>
 
-<p>Da die [FormInt]-Aktion wie folgt konfiguriert ist:</p>
-<p><span style="color: #000000"> </span></p>
+<p>Da die Aktion [FormInt] wie folgt konfiguriert ist:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action</span> <span style="color:#7f007f">name</span>=<span style="font-style:italic;color:#2a00ff">&quot;FormInt&quot;</span> <span style="color:#7f007f">class</span>=<span style="font-style:italic;color:#2a00ff">&quot;example.FormInt&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;input&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/example/FormInt.jsp</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">result</span><span style="color:#008080">&gt;</span></span></span>
@@ -1896,18 +1835,14 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">action</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Bei einem Validierungsfehler wird die Ansicht [FormInt.jsp] angezeigt, d. h. das Formular. Struts-Tags sind so konzipiert, dass sie alle damit verbundenen Fehlermeldungen anzeigen. Wir sehen daher die Ansicht [FormInt.jsp] mit Fehlermeldungen, die den verschiedenen Feldern zugeordnet sind. Dies ist in Ansicht [2] dargestellt.</span></p>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Betrachten wir nun die Validierung des Feldes </span><em><span style="color: #000000">int2</span></em><span style="color: #000000">, das im Modell wie folgt deklariert ist:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">wird bei einem Validierungsfehler die Ansicht [FormInt.jsp] angezeigt, also das Formular. Die Struts-Tags sind so gestaltet, dass sie die ihnen zugeordneten Fehlermeldungen anzeigen. Man erhält also die Ansicht [FormInt.jsp] mit den den verschiedenen Feldern zugeordneten Fehlermeldungen. Dies zeigt die Ansicht [2].</span></p>
+<p><span style="color: #000000">Betrachten wir nun die Validierung des Feldes </span><em><span style="color: #000000">int2, das </span></em><span style="color: #000000">im Modell wie folgt deklariert ist:</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Integer int2;</span></span></span>
 </code></pre></div>
 
 <p><span style="color: #000000">  </span></p>
-<p><span style="color: #000000">Die Validierung des Feldes </span><em><span style="color: #000000">„int2“ </span></em><span style="color: #000000">in [FormInt-validation.xml] lautet wie folgt:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Die Validierung des Feldes </span><em><span style="color: #000000">int2 </span></em><span style="color: #000000">in [FormInt-validation.xml] lautet wie folgt:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field</span> <span style="color:#7f007f">name</span>=<span style="font-style:italic;color:#2a00ff">&quot;int2&quot;</span> <span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field-validator</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;required&quot;</span> <span style="color:#7f007f">short-circuit</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1919,24 +1854,20 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">field</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">Zeilen 2–4: Überprüfen Sie, ob der Parameter </span><i><span style="color: #000000">„int2“ </span></i><span style="color: #000000">vorhanden ist.</span>
+  <li><span style="color: #000000">Zeilen 2–4: Überprüfen, ob der Parameter </span><i><span style="color: #000000">int2 </span></i><span style="color: #000000">vorhanden ist.</span>
   </li>
-  <li><span style="color: #000000">Zeilen 5–7: Überprüfen Sie, ob die Konvertierung</span><i><span style="color: #000000"> von String zu Integer </span></i><span style="color: #000000">möglich ist.</span>
+  <li><span style="color: #000000">Zeilen 5–7: Es wird geprüft, ob die Konvertierung </span><i><span style="color: #000000">von String nach Integer </span></i><span style="color: #000000">möglich ist.</span>
   </li>
-  <li><span style="color: #000000">Zeilen 3, 6: Die Fehlermeldung für den Schlüssel</span><i><span style="color: #000000"> „int2.error“ </span></i><span style="color: #000000">lautet wie folgt:</span>
+  <li><span style="color: #000000">Zeile 3, 6: Die Fehlermeldung für den Schlüssel </span><i><span style="color: #000000">int2.error </span></i><span style="color: #000000">lautet wie folgt:</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">int2.error=</span><span style="color:#2a00ff">Tapez</span><span style="color:#000000"> </span><span style="color:#2a00ff">un</span><span style="color:#000000"> </span><span style="color:#2a00ff">nombre</span><span style="color:#000000"> </span><span style="color:#2a00ff">entier</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Die Validierung für das </span><em><span style="color: #000000">Integer</span></em><span style="color: #000000">-Feld </span><em><span style="color: #000000">„int3“ </span></em><span style="color: #000000">im Modell in [FormInt-validation.xml] lautet wie folgt:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Die Validierung der Felder </span><em><span style="color: #000000">Integer und int3 </span></em><span style="color: #000000">des Modells in [FormInt-validation.xml] lautet wie folgt:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field</span> <span style="color:#7f007f">name</span>=<span style="font-style:italic;color:#2a00ff">&quot;int3&quot;</span> <span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field-validator</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;required&quot;</span> <span style="color:#7f007f">short-circuit</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1952,11 +1883,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">field</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">Zeilen 8–11: Überprüfen Sie, ob das Feld </span><i><span style="color: #000000">„int3“ </span></i><span style="color: #000000">eine ganze Zahl &gt;= -1 ist</span>
+  <li><span style="color: #000000">Zeilen 8–11: Überprüfen, ob das Feld </span><i><span style="color: #000000">int3 </span></i><span style="color: #000000">vom Typ Ganzzahl &gt;=-1 ist</span>
   </li>
-  <li><span style="color: #000000">Zeilen 3, 7: Die Fehlermeldung für den Schlüssel</span><i><span style="color: #000000"> „int3.error“ </span></i><span style="color: #000000">lautet wie folgt:</span>
+  <li><span style="color: #000000">Zeile 3, 7: Die Fehlermeldung für den Schlüssel </span><i><span style="color: #000000">int3.error </span></i><span style="color: #000000">lautet wie folgt:</span>
   </li>
 </ul>
 
@@ -1964,9 +1894,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">int3.error=</span><span style="color:#2a00ff">Tapez</span><span style="color:#000000"> </span><span style="color:#2a00ff">un</span><span style="color:#000000"> </span><span style="color:#2a00ff">nombre</span><span style="color:#000000"> </span><span style="color:#2a00ff">entier</span><span style="color:#000000"> </span><span style="color:#2a00ff">&gt;=-1</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Die Validierung des Integer-Feldes </span><em><span style="color: #000000">int4 </span></em><span style="color: #000000">im Modell in [FormInt-validation.xml] lautet wie folgt:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Die Validierung der Felder </span><em><span style="color: #000000">Integer und int4 </span></em><span style="color: #000000">des Modells in [FormInt-validation.xml] lautet wie folgt:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field</span> <span style="color:#7f007f">name</span>=<span style="font-style:italic;color:#2a00ff">&quot;int4&quot;</span> <span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field-validator</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;required&quot;</span> <span style="color:#7f007f">short-circuit</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1982,22 +1910,18 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">field</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">Zeilen 8–11: Überprüfen, ob es sich um eine ganze Zahl &lt;=10 handelt</span>
+  <li><span style="color: #000000">Zeilen 8–11: prüfen, ob es sich um einen ganzzahligen Wert &lt;=10 handelt</span>
   </li>
-  <li><span style="color: #000000">Zeilen 3, 7: Die Fehlermeldung für den Schlüssel</span><i><span style="color: #000000"> „int4.error“ </span></i><span style="color: #000000">lautet wie folgt:</span>
+  <li><span style="color: #000000">Zeile 3, 7: Die Fehlermeldung für den Schlüssel </span><i><span style="color: #000000">int4.error </span></i><span style="color: #000000">lautet wie folgt:</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">int4.error=</span><span style="color:#2a00ff">Tapez</span><span style="color:#000000"> </span><span style="color:#2a00ff">un</span><span style="color:#000000"> </span><span style="color:#2a00ff">nombre</span><span style="color:#000000"> </span><span style="color:#2a00ff">entier</span><span style="color:#000000"> </span><span style="color:#2a00ff">&lt;=10</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Die Validierung für das Integer-Feld </span><em><span style="color: #000000">int5 </span></em><span style="color: #000000">im Modell in [FormInt-validation.xml] lautet wie folgt:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Die Validierung des Feldes </span><em><span style="color: #000000">Integer int5 </span></em><span style="color: #000000">des Modells in [FormInt-validation.xml] lautet wie folgt:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field</span> <span style="color:#7f007f">name</span>=<span style="font-style:italic;color:#2a00ff">&quot;int5&quot;</span> <span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field-validator</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;required&quot;</span> <span style="color:#7f007f">short-circuit</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -2014,22 +1938,18 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">field</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">Zeilen 5–9: Überprüfen Sie, ob der Wert eine ganze Zahl im Bereich [1, 10] ist.</span>
+  <li><span style="color: #000000">Zeilen 5–9: Es wird überprüft, ob der Wert vom Typ „Ganzzahl“ im Intervall [1, 10] liegt.</span>
   </li>
-  <li><span style="color: #000000">Zeilen 3, 8: Die Fehlermeldung für den Schlüssel</span><i><span style="color: #000000"> „int5.error“ </span></i><span style="color: #000000">lautet wie folgt:</span>
+  <li><span style="color: #000000">Zeile 3, 8: Die Fehlermeldung für den Schlüssel </span><i><span style="color: #000000">int5.error </span></i><span style="color: #000000">lautet wie folgt:</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">int5.error=</span><span style="color:#2a00ff">Tapez</span><span style="color:#000000"> </span><span style="color:#2a00ff">un</span><span style="color:#000000"> </span><span style="color:#2a00ff">nombre</span><span style="color:#000000"> </span><span style="color:#2a00ff">entier</span><span style="color:#000000"> </span><span style="color:#2a00ff">dans</span><span style="color:#000000"> </span><span style="color:#2a00ff">l&#x27;&#x27;intervalle</span><span style="color:#000000"> </span><span style="color:#2a00ff">[1,10]</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Die Validierung für das String-Feld</span><em><span style="color: #000000"> int6 </span></em><span style="color: #000000">im Modell in [FormInt-validation.xml] lautet wie folgt:</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000">Die Validierung des Feldes </span><em><span style="color: #000000">String int6 </span></em><span style="color: #000000">des Modells in [FormInt-validation.xml] lautet wie folgt:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field</span><span style="color:#000000"> </span><span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int6&quot;</span><span style="color:#000000"> </span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field-validator</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;requiredstring&quot;</span> <span style="color:#7f007f">short-circuit</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -2043,26 +1963,23 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">field</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">Zeilen 5–9: Überprüfen, ob </span><i><span style="color: #000000">int6 </span></i><span style="color: #000000">eine zweistellige Zeichenfolge ist.</span>
   </li>
-  <li><span style="color: #000000">Zeilen 3, 8: Die Fehlermeldung für den Schlüssel</span><i><span style="color: #000000"> „int6.error“ </span></i><span style="color: #000000">lautet wie folgt:</span>
+  <li><span style="color: #000000">Zeile 3, 8: Die Fehlermeldung für den Schlüssel </span><i><span style="color: #000000">int6.error </span></i><span style="color: #000000">lautet wie folgt:</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">int6.error=</span><span style="color:#2a00ff">Tapez</span><span style="color:#000000"> </span><span style="color:#2a00ff">un</span><span style="color:#000000"> </span><span style="color:#2a00ff">nombre</span><span style="color:#000000"> </span><span style="color:#2a00ff">entier</span><span style="color:#000000"> </span><span style="color:#2a00ff">dans</span><span style="color:#000000"> </span><span style="color:#2a00ff">l&#x27;&#x27;intervalle</span><span style="color:#000000"> </span><span style="color:#2a00ff">[2,20]</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #2a00ff"> </span></p>
-<p>Die vorherige Validierung prüft nicht, ob der Parameter <em>int6</em> eine ganze Zahl im Bereich [2,20] ist. Diese Prüfung wird in der Methode [FormInt].<em>validate</em> durchgeführt, die nach der Verarbeitung der Datei [FormInt-validation.xml] ausgeführt wird. Diese Methode lautet wie folgt:</p>
+<p>Die vorstehende Validierung überprüft nicht, ob der Parameter <em>int6</em> eine ganze Zahl im Intervall [2,20] ist. Diese Überprüfung erfolgt in der Methode [FormInt].<em>validate</em>, die ausgeführt wird, nachdem die Datei [FormInt-validation.xml] verarbeitet wurde. Diese Methode lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// validation</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Validierung</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> validate() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// valid int6 input?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Ist die int6-Eingabe gültig?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000"> (getFieldErrors().get(</span><span style="color:#2a00ff">&quot;int6&quot;</span><span style="color:#000000">) == </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> int6 = Integer.parseInt(((FormIntModel) getModel()).getInt6());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000"> (int6 &lt; 2 || int6 &gt; 20) {</span></span></span>
@@ -2073,35 +1990,35 @@
 </code></pre></div>
 
 <ul>
-  <li>Zeile 5: Wir prüfen, ob Fehler im Zusammenhang mit dem Feld <i>„int6“</i> vorliegen. Wenn ja, brechen wir hier ab.
+  <li>Zeile 5: Es wird geprüft, ob Fehler im Feld <i>int6</i> vorliegen. Wenn ja, wird der Vorgang nicht fortgesetzt.
   </li>
-  <li>Zeile 6: Wenn keine Fehler aufgetreten sind, rufen wir das int6-String-Feld aus dem Modell ab und konvertieren es in eine Ganzzahl.
+  <li>Zeile 6: Wenn kein Fehler aufgetreten ist, wird das Feld <i>„String int6“ </i>aus dem Modell abgerufen und in eine Ganzzahl umgewandelt.
   </li>
-  <li>Zeile 7: Wir überprüfen, ob die abgerufene Ganzzahl im Bereich [2,20] liegt.
+  <li>Zeile 7: Es wird überprüft, ob die abgerufene Ganzzahl im Bereich [2,20] liegt.
   </li>
-  <li>Zeile 8: Ist dies nicht der Fall, wird dem Feld <i>„int6“</i> eine Fehlermeldung zugeordnet. Diese Fehlermeldung wird mithilfe des Schlüssels <i>„int6.error“ </i>aus der Meldungsdatei abgerufen.
+  <li>Zeile 8: Ist dies nicht der Fall, wird dem Feld <i>int6</i> eine Fehlermeldung zugeordnet. Diese Fehlermeldung wird in der Meldungsdatei unter dem Schlüssel <i>int6.error</i> gesucht.
   </li>
 </ul>
 
-<p>Werden am Ende dieses Validierungsprozesses Fehler gefunden, wird der Aufruf der Methode [FormInt].<em>execute</em> abgebrochen und der Eingabeschlüssel an den Struts-Controller zurückgegeben.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000002DB000000F9DDAAD0DE.png" width="366" height="124" style="display:inline-block; margin:4px;width:9.671cm;height:3.293cm;" class="odt-zoomable" data-zoom-src="images/10000000000002DB000000F9DDAAD0DE.png" /></td></tr></table>
+<p>Wenn nach Abschluss dieses Validierungsprozesses Fehler vorliegen, wird der Aufruf der Methode [FormInt].<em>execute</em> abgebrochen und der Schlüssel <em>input</em> an den Struts-Controller zurückgegeben.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000002DB000000F9DDAAD0DE.png" width="366" height="125" style="display:inline-block; margin:4px;width:9.671cm;height:3.295cm;" class="odt-zoomable" data-zoom-src="images/10000000000002DB000000F9DDAAD0DE.png" /></td></tr></table>
 
-<p><a id="refheading91670522158564"></a></p>
-<h2 id="117-abschlieende-details">11.7. <span style="color: #4f81bd">Abschließende Details</span></h2>
-<p>Wir haben verschiedene Möglichkeiten zur Eingabe von Ganzzahlen kennengelernt. Diese sind nicht alle gleichwertig. Betrachten Sie zum Beispiel die Eingabefelder <em>int5</em> und <em>int6</em>:</p>
+<p><span id="refheading91670522158564" name="refheading91670522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="117-letzte-details">11.7. <span style="color: #4f81bd">Letzte Details</span></h2>
+<p>Wir haben verschiedene Möglichkeiten zur Eingabe von ganzen Zahlen kennengelernt. Diese sind nicht alle gleichwertig. Betrachten wir zum Beispiel die Eingabefelder <em>int5</em> und <em>int6</em>:</p>
 <p>In der Ansicht [FormInt.jsp] sind sie wie folgt deklariert:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textfield</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int5&quot;</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int5.prompt&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textfield</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int6&quot;</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int6.prompt&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p>Ihr Modell ist in [FormIntModel.java] deklariert:</p>
+<p>Ihre Vorlage ist in [FormIntModel.java] deklariert:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Integer int5;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String int6;</span></span></span>
 </code></pre></div>
 
-<p>Das Feld <em>int5</em> ist vom Typ <em>Integer</em>, während das Feld <em>int6</em> vom Typ <em>String</em> ist. Ihre Validierungsregeln unterscheiden sich:</p>
+<p>Das Feld <em>int5</em> hat den Typ <em>Integer</em>, während das Feld <em>int6</em> den Typ <em>String</em> hat. Ihre Validierungsregeln unterscheiden sich:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int5&quot;</span> <span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field-validator</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;required&quot;</span> <span style="color:#7f007f">short-circuit</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -2116,7 +2033,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">message</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int5.error&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">field-validator</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">field</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int6&quot;</span> <span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field-validator</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;requiredstring&quot;</span> <span style="color:#7f007f">short-circuit</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">message</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;int6.error&quot;</span><span style="color:#008080">/&gt;</span></span></span>
@@ -2129,10 +2046,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">field</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>Die Validierung des Felds <em>„int6“</em> erfolgt durch die Methode <em>„validate“</em> der Aktion [FormInt]:</p>
+<p>Die Validierung des Feldes <em>int6</em> wird durch die Methode <em>validate</em> der Aktion [FormInt] ergänzt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> validate() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// valid int6 input?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Ist die Eingabe „int6“ gültig?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000"> (getFieldErrors().get(</span><span style="color:#2a00ff">&quot;int6&quot;</span><span style="color:#000000">) == </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> int6 = Integer.parseInt(((FormIntModel) getModel()).getInt6());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000"> (int6 &lt; 2 || int6 &gt; 20) {</span></span></span>
@@ -2141,15 +2058,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>Obwohl unterschiedlich formuliert, zielen beide Validierungsregeln darauf ab, zu überprüfen, ob der eingegebene Wert eine ganze Zahl innerhalb eines bestimmten Bereichs ist. Das Verhalten der Felder <em>int5</em> und <em>int6</em> unterscheidet sich jedoch zur Laufzeit, wie die folgenden Screenshots zeigen:</p>
+<p>Obwohl die Validierungsregeln unterschiedlich formuliert sind, dienen beide dazu, zu überprüfen, ob das eingegebene Feld eine ganze Zahl innerhalb eines bestimmten Intervalls ist. Das Verhalten der Felder <em>int5</em> und <em>int6</em> unterscheidet sich jedoch bei der Ausführung, wie die folgenden Screenshots zeigen:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000053D000002BC59E9233D.png" width="671" height="350" style="display:inline-block; margin:4px;width:17.741cm;height:9.26cm;" class="odt-zoomable" data-zoom-src="images/100000000000053D000002BC59E9233D.png" /></td></tr></table>
 
 <ul>
-  <li>in [1] die gleiche falsche Eingabe für beide Felder
+  <li>in [1], dieselbe fehlerhafte Eingabe für beide Felder
   </li>
-  <li>in [2] die angezeigte Fehlerseite. Die beiden Felder weisen unterschiedliche Fehlermeldungen auf.
+  <li>in [2] die zurückgegebene Fehlerseite. Die beiden Felder weisen unterschiedliche Fehlermeldungen auf.
   </li>
-  <li>In [3] erscheint eine unerwünschte Meldung für das Feld <i>„int5“</i>, da es auf Englisch ist. Dies resultiert aus der fehlgeschlagenen Konvertierung <i>von String zu Integer</i>. Außerdem gibt es eine Ausnahme in den Apache-Protokollen:
+  <li>In [3] erscheint für das Feld <i>int5 </i>eine unerwünschte Meldung, da sie auf Englisch ist. Sie stammt von der fehlgeschlagenen Konvertierung <i>von String in Integer</i>. Außerdem gibt es eine Ausnahme in den Apache-Logs:
   </li>
 </ul>
 
@@ -2157,18 +2074,16 @@
 <span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>Avertissement: Error setting expression &#39;int5&#39; with value &#39;[Ljava.lang.String;@1ad405d8&#39;
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>ognl.MethodFailedException: Method &quot;setInt5&quot; failed for object example.FormIntModel@21b63266 [java.lang.NoSuchMethodException: example.FormIntModel.setInt5([Ljava.lang.String;)]
 </code></pre></div></td></tr></table></div>
-<p>Seltsamerweise suchte Struts nach einer Methode <em>FormIntModel</em>.<em>setInt5(String value)</em>, konnte diese jedoch nicht finden.</p>
-<p>Der Schlüssel für die Fehlermeldung lautet <em>xwork.default.invalid.fieldvalue</em>. Um sie ins Französische zu übersetzen, ordnen Sie diesem Schlüssel einfach einen französischen Text zu. Wir fügen daher die folgende Zeile in die Datei [messages.properties] ein:</p>
+<p>Seltsamerweise hat Struts nach einer Methode <em>FormIntModel.setInt5(String value)</em> gesucht, die es nicht gefunden hat.</p>
+<p>Der Schlüssel der unerwünschten Meldung lautet <em>xwork.default.invalid.fieldvalue</em>. Um sie ins Französische zu übersetzen, muss diesem Schlüssel lediglich ein französischer Text zugeordnet werden. Dazu fügt man der Datei [messages.properties] die folgende Zeile hinzu:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2a00ff">...</span><span style="color:#2a00ff"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">xwork.default.invalid.fieldvalue=</span><span style="color:#2a00ff">Valeur</span><span style="color:#000000"> </span><span style="color:#2a00ff">invalide</span><span style="color:#000000"> </span><span style="color:#2a00ff">pour</span><span style="color:#000000"> </span><span style="color:#2a00ff">le</span><span style="color:#000000"> </span><span style="color:#2a00ff">champ</span><span style="color:#000000"> </span><span style="color:#2a00ff">&quot;</span><span style="font-weight:bold;color:#7f0055">{0}</span><span style="color:#2a00ff">&quot;.</span></span></span>
 </code></pre></div>
 
-<p><a id="refheading91672522158564"></a></p>
-<h2 id="118-fazit">11.8. <span style="color: #4f81bd">Fazit</span></h2>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">Damit ist unsere Untersuchung dieser ersten Anwendung zur Parametervalidierung abgeschlossen. Die Erläuterung war komplex. Wir werden nun ähnliche Anwendungen betrachten. Daher werden wir nur auf die Änderungen eingehen.</span></p>
-<p><span style="color: #000000"> </span></p>
+<p><span id="refheading91672522158564" name="refheading91672522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="118-conclusion">11.8. <span style="color: #4f81bd">Conclusion</span></h2>
+<p><span style="color: #000000">Die Betrachtung dieser ersten Anwendung zur Parametervalidierung ist damit abgeschlossen. Die Erläuterung war recht komplex. Wir werden uns nun ähnliche Anwendungen ansehen. Daher werden wir nur die Änderungen erläutern.</span></p>
 
 
 

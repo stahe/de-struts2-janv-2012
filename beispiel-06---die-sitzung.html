@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/de-struts2-janv-2012/beispiel-06---die-sitzung.html">
       
       
-        <link rel="prev" href="beispiel-05b---navigation-in-einem-dateneingabeformular.html">
+        <link rel="prev" href="beispiel-05b---navigation-in-einem-eingabeformular.html">
       
       
         <link rel="next" href="beispiel-07---formular-tags.html">
@@ -467,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-05b---navigation-in-einem-dateneingabeformular.html" class="md-nav__link">
+      <a href="beispiel-05b---navigation-in-einem-eingabeformular.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Beispiel 05B – Navigation in einem Dateneingabeformular
+    7. Beispiel 05B – Navigation in einem Eingabeformular
   
 
     
@@ -554,10 +554,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#81-das-konzept-einer-sitzung" class="md-nav__link">
+  <a href="#81-der-begriff-der-sitzung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.1. Das Konzept einer Sitzung
+        8.1. Der Begriff der Sitzung
       
     </span>
   </a>
@@ -576,10 +576,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#83-konfiguration" class="md-nav__link">
+  <a href="#83-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.3. Konfiguration
+        8.3. Configuration
       
     </span>
   </a>
@@ -587,10 +587,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#84-die-aktion-confirm" class="md-nav__link">
+  <a href="#84-die-aktion-confirmer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.4. Die Aktion [Confirm]
+        8.4. Die Aktion [Confirmer]
       
     </span>
   </a>
@@ -598,10 +598,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#85-die-ansichten-confirmationjsp-und-saisiejsp" class="md-nav__link">
+  <a href="#85-die-sichten-confirmationjsp-und-saisiejsp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.5. Die Ansichten [Confirmation.jsp] und [Saisie.jsp]
+        8.5. Die Sichten [Confirmation.jsp] und [Saisie.jsp]
       
     </span>
   </a>
@@ -609,10 +609,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#86-die-aktion-loschen" class="md-nav__link">
+  <a href="#86-die-aktion-effacer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.6. Die Aktion [Löschen]
+        8.6. Die Aktion [Effacer]
       
     </span>
   </a>
@@ -661,14 +661,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-08---mit-listen-verknupfte-tags.html" class="md-nav__link">
+      <a href="beispiel-08---tags-fur-listen.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Beispiel 08 – Mit Listen verknüpfte Tags
+    10. Beispiel 08 – Tags für Listen
   
 
     
@@ -769,14 +769,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-11---datumsumwandlung-und--validierung.html" class="md-nav__link">
+      <a href="beispiel-11---umwandlung-und-validierung-von-datumsangaben.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Beispiel 11 – Datumsumwandlung und -validierung
+    14. Beispiel 11 – Umwandlung und Validierung von Datumsangaben
   
 
     
@@ -850,14 +850,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-15---struts-2--spring-integration.html" class="md-nav__link">
+      <a href="beispiel-15---integration-von-struts-2-und-spring.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. Beispiel 15 – Struts 2 / Spring-Integration
+    17. Beispiel 15 – Integration von Struts 2 und Spring
   
 
     
@@ -995,39 +995,39 @@
 
 
 
-<p><a id="refheading100371454977699"></a></p>
+<p><span id="refheading100371454977699" name="refheading100371454977699" class="odt-bookmark-anchor"></span></p>
 <h1 id="8-beispiel-06-die-sitzung">8. <span style="color: #365f91">Beispiel 06 – Die Sitzung</span></h1>
-<p><a id="refheading100391454977699"></a></p>
-<h2 id="81-das-konzept-einer-sitzung">8.1. <span style="color: #4f81bd">Das Konzept einer Sitzung</span></h2>
-<p>Wenn sich ein Client-Browser zum ersten Mal mit einer Webanwendung verbindet, erhält er ein Sitzungstoken, eine eindeutige Zeichenfolge, die er bei jeder neuen Anfrage an die Webanwendung zurücksendet. Dadurch kann die Webanwendung den Client-Browser erkennen. Die Webanwendung kann dann Daten mit diesem Sitzungstoken verknüpfen. Diese Daten gehören zu einem einzelnen Client-Browser. So wird mit jeder Anfrage des Client-Browsers ein Speicher aufgebaut.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004770000010FF6B0E2AA.png" width="572" height="135" style="display:inline-block; margin:4px;width:15.122cm;height:3.584cm;" class="odt-zoomable" data-zoom-src="images/10000000000004770000010FF6B0E2AA.png" /></td></tr></table>
+<p><span id="refheading100391454977699" name="refheading100391454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="81-der-begriff-der-sitzung">8.1. <span style="color: #4f81bd">Der Begriff der Sitzung</span></h2>
+<p>Wenn sich ein Client-Browser zum ersten Mal mit einer Webanwendung verbindet, erhält er ein Sitzungstoken, eine eindeutige Zeichenfolge, die er bei jeder neuen Anfrage an die Webanwendung zurücksendet. Dadurch kann die Webanwendung den Client-Browser erkennen. Mit diesem Sitzungstoken kann sie dann Daten verknüpfen. Diese Daten gehören zu einem einzigen Client-Browser. So entsteht im Laufe der Anfragen des Client-Browsers ein Speicher.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004770000010FF6B0E2AA.png" width="572" height="136" style="display:inline-block; margin:4px;width:15.122cm;height:3.586cm;" class="odt-zoomable" data-zoom-src="images/10000000000004770000010FF6B0E2AA.png" /></td></tr></table>
 
-<p>Wie oben dargestellt, verfügt jeder Benutzer (Browser) über einen eigenen Speicher, der als Sitzung bezeichnet wird. Dieser Speicher wird von allen Anfragen desselben Benutzers gemeinsam genutzt. Es gibt außerdem einen übergeordneten Speicher, den sogenannten Anwendungsspeicher. Dieser Speicher wird von allen Anfragen aller Benutzer gemeinsam genutzt. Er ist in der Regel schreibgeschützt.</p>
-<p><a id="refheading100411454977699"></a></p>
+<p>Wie oben dargestellt, verfügt jeder Benutzer (Browser) über einen eigenen Speicher, der als seine Sitzung bezeichnet wird. Dieser Speicher wird von allen Anfragen desselben Benutzers gemeinsam genutzt. Es gibt außerdem einen übergeordneten Speicher, der als Anwendungsspeicher bezeichnet wird. Dieser Speicher wird von allen Anfragen aller Benutzer gemeinsam genutzt. Er ist in der Regel schreibgeschützt.</p>
+<p><span id="refheading100411454977699" name="refheading100411454977699" class="odt-bookmark-anchor"></span></p>
 <h2 id="82-das-netbeans-projekt">8.2. <span style="color: #4f81bd">Das NetBeans-Projekt</span></h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000490000001F532AB0F8B.png" width="584" height="251" style="display:inline-block; margin:4px;width:15.452cm;height:6.629cm;" class="odt-zoomable" data-zoom-src="images/1000000000000490000001F532AB0F8B.png" /></td></tr></table>
 
-<p>Das Projekt [example-06] wird durch Kopieren des Projekts [example-05] erstellt. Wir werden einige Elemente ändern, um</p>
+<p>Das Projekt [exemple-06] wurde durch Kopieren des Projekts [exemple-05] erstellt. Wir werden einige Elemente ändern, um</p>
 <ul>
-  <li>die Vorteile der Benutzersitzung zu nutzen.
+  <li>die Benutzersitzung nutzen zu können.
   </li>
-  <li>Fügen Sie eine neue Aktion [Clear] [1] hinzu, um das Eingabefeld zu löschen.
+  <li>Eine neue Aktion „[Effacer] [1]“ hinzufügen, um das Eingabefeld zu löschen.
   </li>
 </ul>
 
-<p><a id="refheading100431454977699"></a></p>
-<h2 id="83-konfiguration">8.3. <span style="color: #4f81bd">Konfiguration</span></h2>
+<p><span id="refheading100431454977699" name="refheading100431454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="83-configuration">8.3. <span style="color: #4f81bd">Configuration</span></h2>
 <p>Die Datei [struts.xml] ändert sich wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!DOCTYPE struts PUBLIC</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        &quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        &quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;struts&gt;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- internationalization --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- Internationalisierung --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;constant</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts.custom.i18n.resources</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">messages</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- default package --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- Standardpaket --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;package</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">default</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">namespace</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">/</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">extends</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;default-action-ref</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">index</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">index</span><span style="color:#800080">&quot;&gt;</span></span></span>
@@ -1037,7 +1037,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;/result&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/package&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- equity package --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- Aktionspaket --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;package</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">actions</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">namespace</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">/actions</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">extends</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">Saisir</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;result</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/vues/Saisie.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span></span>
@@ -1052,59 +1052,59 @@
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/struts&gt;</span></span>
 </code></pre></div>
 
-<p>Die Zeilen 27–29 definieren eine neue Aktion [Delete], die mit einer Klasse [Delete] verknüpft ist. Die Antwort auf diese Aktion ist die Ansicht [Input.jsp].</p>
-<p><a id="refheading100451454977699"></a></p>
-<h2 id="84-die-aktion-confirm">8.4. <span style="color: #4f81bd">Die Aktion [Confirm]</span></h2>
-<p>Sie verläuft wie folgt:</p>
+<p>Die Zeilen 27–29 definieren eine neue Aktion [Effacer], die einer Klasse [Effacer] zugeordnet ist. Die Antwort auf diese Aktion ist die Ansicht [Saisie.jsp].</p>
+<p><span id="refheading100451454977699" name="refheading100451454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="84-die-aktion-confirmer">8.4. <span style="color: #4f81bd">Die Aktion [Confirmer]</span></h2>
+<p>Sie entwickelt sich wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">package</span><span style="color:#008080"> </span><span style="color:#000000">actions;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">import</span><span style="color:#008080"> </span><span style="color:#000000">com.opensymphony.xwork2.ActionSupport;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">import</span><span style="color:#008080"> </span><span style="color:#000000">java.util.Map;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">import</span><span style="color:#008080"> </span><span style="color:#000000">org.apache.struts2.interceptor.SessionAware;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">class</span><span style="color:#008080"> </span><span style="color:#000000">Confirmer</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">extends</span><span style="color:#008080"> </span><span style="color:#000000">ActionSupport</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">implements</span><span style="color:#008080"> </span><span style="color:#000000">SessionAware{</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// model</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// Vorlage</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">nom;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// Sitzung</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#000000">Map&lt;String,</span><span style="color:#008080"> </span><span style="color:#000000">Object&gt;</span><span style="color:#008080"> </span><span style="color:#000000">session;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// getters and setters</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// Getter und Setter</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">getNom()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#000000">nom;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">void</span><span style="color:#008080"> </span><span style="color:#000000">setNom(String</span><span style="color:#008080"> </span><span style="color:#000000">nom)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">this</span><span style="color:#000000">.nom</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">nom;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">@Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">void</span><span style="color:#008080"> </span><span style="color:#000000">setSession(Map&lt;String,</span><span style="color:#008080"> </span><span style="color:#000000">Object&gt;</span><span style="color:#008080"> </span><span style="color:#000000">session)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">this</span><span style="color:#000000">.session=session;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">@Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">execute(){</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// put the name in the session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// Der Name wird in die Sitzung eingefügt</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">session.put(</span><span style="color:#800000">&quot;nom&quot;</span><span style="color:#000000">,nom);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// navigation</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// Navigation</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#000000">SUCCESS;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
-  <li>Zeile 7: Die Klasse [Confirm] implementiert die Schnittstelle <b>SessionAware</b>. Diese Schnittstelle verfügt nur über eine Methode, die Methode <b>setSession </b>in den Zeilen 25–27. Bevor die Methode <i>execute </i>aufgerufen wird, fügt einer der Request-Interceptors über die Methode <i>setSession </i>die Sitzung des Benutzers in Form eines <i>Map&lt;String, Object&gt;</i>-Wörterbuchs ein (Zeile 25). Wir entscheiden uns dafür, dieses Wörterbuch im Feld `<i>session` </i>in Zeile 12 zu speichern.
+  <li>Zeile 7: Die Klasse [Confirmer] implementiert die Schnittstelle <b>SessionAware</b>. Diese Schnittstelle verfügt nur über eine Methode, nämlich die Methode <b>setSession </b>in den Zeilen 25–27. Vor dem Aufruf der Methode <i>execute </i>fügt einer der Request-Interceptors über die Methode <i>setSession </i>die Benutzersitzung in Form eines <i>Map&lt;String, Object&gt;</i>-Wörterbuchs ein (Zeile 25). Wir entscheiden uns, dieses Wörterbuch im Feld <i>session </i>in Zeile 12 zu speichern.
   </li>
-  <li>Zeilen 30–34: Die `<i>execute`</i>-Methode der Aktion. Bei ihrer Ausführung wurde das Feld <i>„session“ </i>bereits von einem der Interceptors initialisiert, das Feld <i>„name“ </i>von einem anderen Interceptor. Wir verwenden dieses Session-Dictionary, um das Feld <i>„name“</i> zu speichern. Somit wird der Name Teil der Benutzersitzung und steht für alle dessen Anfragen zur Verfügung.
+  <li>Zeilen 30–34: die Methode <i>execute </i>der Aktion. Bei ihrer Ausführung wurde das Feld <i>session </i>von einem der Interceptoren initialisiert, ebenso wie das Feld <i>nom </i>von einem anderen Interceptor. Dieses Wörterbuch <i>session</i> wird verwendet, um das Feld <i>nom</i> darin zu speichern. Auf diese Weise wird der Name Teil des Speichers des Benutzers und steht für alle seine Abfragen zur Verfügung.
   </li>
 </ul>
 
-<p><a id="refheading100471454977699"></a></p>
-<h2 id="85-die-ansichten-confirmationjsp-und-saisiejsp">8.5. <span style="color: #4f81bd">Die Ansichten [Confirmation.jsp] und [Saisie.jsp]</span></h2>
+<p><span id="refheading100471454977699" name="refheading100471454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="85-die-sichten-confirmationjsp-und-saisiejsp">8.5. <span style="color: #4f81bd">Die Sichten [Confirmation.jsp] und [Saisie.jsp]</span></h2>
 <p>Die Ansicht [Confirmation.jsp] bleibt unverändert. Die Ansicht [Saisie.jsp] ändert sich wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span><span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1127,15 +1127,15 @@
 </code></pre></div>
 
 <ul>
-  <li>Zeile 12: Wir fügen dem <i>`&lt;s:textfield&gt;`</i>-Tag ein <i>`value`</i>-Attribut hinzu<i>. </i>Dieses Attribut legt den Wert fest, der im Eingabefeld angezeigt werden soll. Wird dieses Attribut weggelassen, ist der Standardwert von<i> `value` `name`</i>. Hier ist der Wert des Attributs ein OGNL-Ausdruck (Object-Graph Navigation Language) in der Form <i>`%{expression_to_evaluate}`</i>. Hier lautet der auszuwertende Ausdruck <i>#attr[&#x27;name&#x27;]</i>. Das Attribut <i>„name“ </i>wird in der aktuellen Aktion, auf der Seite, in der Anfrage, in der Sitzung und in der Anwendung in dieser Reihenfolge gesucht. Da die Aktion [Confirm] das Attribut <i>„name“ </i>in der Sitzung ablegt, wird es dort gefunden. Dies wird durch die folgende Anfrage veranschaulicht:
+  <li>Zeile 12: Wir fügen dem Tag <i>&lt;s:textfield&gt;. </i>ein Attribut <i>value</i> hinzu. Dieses Attribut legt den Wert fest, der im Eingabefeld angezeigt werden soll. Ohne dieses Attribut gilt: <i>value </i>= <i>name</i>. Hier ist der Wert des Attributs ein OGNL-Ausdruck (Object-Graph Navigation Language) der Form <i>%{expression_à_évaluer}</i>. Hier lautet der auszuwertende Ausdruck <i>#attr[&#x27;nom&#x27;]</i>. Das Attribut <i>nom </i>wird in dieser Reihenfolge in der aktuellen Aktion, der Seite, der Abfrage, der Sitzung und der Anwendung gesucht. Da die Aktion [Confirmer] das Attribut <i>nom </i>in die Sitzung einfügt, wird es dort gefunden. Dies zeigt die folgende Abfrage:
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004BC0000019860FC6267.png" width="606" height="204" style="display:inline-block; margin:4px;width:16.034cm;height:5.398cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BC0000019860FC6267.png" /></td></tr></table>
 
-<p>In [1] lautete der eingegebene Name <em>ST</em>. Wir wissen, dass die Aktion [Confirm] diesen Namen in der Sitzung abgelegt hat. Der Link [2] führt uns zur URL [3]. Die Ansicht [Saisie.jsp] wird angezeigt. Für das Eingabefeld ruft das Attribut <em>%{#attr[&#x27;name&#x27;]}</em> den Namen aus der Sitzung ab.</p>
+<p>Bei [1] lautete der eingegebene Name <em>ST</em>. Es ist bekannt, dass die Aktion [Confirmer] diesen Namen in die Sitzung geschrieben hat. Der Link [2] führt uns zur URL [3]. Die Ansicht [Saisie.jsp] wird angezeigt. Für das Eingabefeld ermöglicht das Attribut <em>%{#attr[&#x27;nom&#x27;]}</em> das Abrufen des Namens aus der Sitzung.</p>
 <ul>
-  <li>Zeile 14: die Schaltfläche [Clear], die die Ausführung der Aktion [Clear] und die Anzeige der Ansicht [Saisie.jsp] auslöst
+  <li>Zeile 14: Die Schaltfläche [Effacer] löst die Ausführung der Aktion [Effacer] und die Anzeige der Ansicht [Saisie.jsp] aus.
   </li>
 </ul>
 
@@ -1145,33 +1145,33 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;/action&gt;</span><span style="color:#800080"></span></span></span>
 </code></pre></div>
 
-<p><a id="refheading100491454977699"></a></p>
-<h2 id="86-die-aktion-loschen">8.6. <span style="color: #4f81bd">Die Aktion [Löschen]</span></h2>
-<p>Der Code für die Aktion [Löschen] lautet wie folgt:</p>
+<p><span id="refheading100491454977699" name="refheading100491454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="86-die-aktion-effacer">8.6. <span style="color: #4f81bd">Die Aktion [Effacer]</span></h2>
+<p>Der Code der Aktion [Effacer] lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">package</span><span style="color:#008080"> </span><span style="color:#000000">actions;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">import</span><span style="color:#008080"> </span><span style="color:#000000">com.opensymphony.xwork2.ActionSupport;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">import</span><span style="color:#008080"> </span><span style="color:#000000">java.util.Map;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">import</span><span style="color:#008080"> </span><span style="color:#000000">org.apache.struts2.interceptor.SessionAware;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">class</span><span style="color:#008080"> </span><span style="color:#000000">Effacer</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">extends</span><span style="color:#008080"> </span><span style="color:#000000">ActionSupport</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">implements</span><span style="color:#008080"> </span><span style="color:#000000">SessionAware{</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// Sitzung</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#000000">Map&lt;String,</span><span style="color:#008080"> </span><span style="color:#000000">Object&gt;</span><span style="color:#008080"> </span><span style="color:#000000">session;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">@Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">execute(){</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// retrieve the name from the session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// Der Name wird aus der Sitzung abgerufen</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">nom=(String)session.get(</span><span style="color:#800000">&quot;nom&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// remove it from the session if necessary</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// Bei Bedarf wird er aus der Sitzung entfernt</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#000000">(nom!=</span><span style="font-weight:bold;color:#000000">null</span><span style="color:#000000">){</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="color:#000000">session.remove(</span><span style="color:#800000">&quot;nom&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">}</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// navigation</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// Navigation</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#000000">SUCCESS;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">@Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">void</span><span style="color:#008080"> </span><span style="color:#000000">setSession(Map&lt;String,</span><span style="color:#008080"> </span><span style="color:#000000">Object&gt;</span><span style="color:#008080"> </span><span style="color:#000000">map)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">this</span><span style="color:#000000">.session=map;</span></span></span>
@@ -1179,50 +1179,49 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li>Zeile 7: Die Klasse [Delete] implementiert die Schnittstelle [SessionAware], genau wie die Aktion [Confirm].
+  <li>Zeile 7: Die Klasse [Effacer] implementiert die Schnittstelle [SessionAware], genau wie es die Aktion [Confirmer] tat.
   </li>
-  <li>Zeile 13: Die Aktion [Delete] muss den Inhalt des Namens-Eingabefelds in der Ansicht [Input.jsp] löschen. Wir wissen, dass diese Ansicht diesen Namen aus der Sitzung abruft. Wir müssen daher den Namen aus der Sitzung entfernen. Genau das tut die Methode <i>execute</i>.
+  <li>Zeile 13: Die Aktion [Effacer] muss den Inhalt des Eingabefelds für den Namen in der Ansicht [Saisie.jsp] löschen. Da diese Ansicht diesen Namen aus der Sitzung abruft, muss der Name aus der Sitzung entfernt werden. Dies übernimmt die Methode <i>execute</i>.
   </li>
 </ul>
 
-<p>Schauen wir uns an, wie das funktioniert:</p>
+<p>Schauen wir uns an, wie das aussieht:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005120000019296DA5187.png" width="649" height="201" style="display:inline-block; margin:4px;width:17.171cm;height:5.318cm;" class="odt-zoomable" data-zoom-src="images/10000000000005120000019296DA5187.png" /></td></tr></table>
 
-<p>In [1] möchten wir das Eingabefeld löschen. Wir klicken auf die Schaltfläche [Löschen].</p>
+<p>In [1] möchten wir das Eingabefeld löschen. Wir klicken auf die Schaltfläche [Effacer].</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;saisie.effacer&quot;</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Effacer&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p>Die Aktion [Löschen] wird ausgeführt. In [2] stellen wir fest, dass die aufgerufene URL die der Aktion [Bestätigen] war. Dies ist auf das <em>&lt;s:form&gt;</em>-Tag im Formular zurückzuführen:</p>
+<p>Die Aktion [Effacer] wird ausgeführt. In [2] ist zu erkennen, dass die aufgerufene URL die der Aktion [Confirmer] war. Dies ist auf das Tag <em>&lt;s:form&gt;</em> im Formular zurückzuführen:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:form action=&quot;Confirmer&quot;</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>wodurch das Formular an die Aktion [Bestätigen] übermittelt wird. Wenn die Schaltfläche [Löschen] angeklickt wird, wird der Parameter</p>
-<p><strong>action:Delete=Delete</strong></p>
-<p>an die URL [/actions/Confirm.action] gesendet. Struts verwendet diesen Parameter, um die von der Aktion [Delete] gesendeten Daten zu verarbeiten. Diese Aktion entfernt den Sitzungsnamen. Die Seite [Input.jsp] ist die Antwort auf die Aktion [Delete]:</p>
+<p>, wodurch das Formular an die Aktion [Confirmer] gesendet wird. Beim Klicken auf die Schaltfläche [Effacer] wird der Parameter</p>
+<p><strong>action:Effacer=Effacer</strong></p>
+<p>an die URL [/actions/Confirmer.action] gesendet. Struts verwendet diesen Parameter, um die gesendeten Daten von der Aktion [Effacer] verarbeiten zu lassen. Diese entfernt den Sitzungsnamen. Die Seite [Saisie.jsp] ist die Antwort der Aktion [Effacer]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">Effacer</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">actions.Effacer</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;result</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/vues/Saisie.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;/action&gt;</span><span style="color:#800080"></span></span></span>
 </code></pre></div>
 
-<p>Diese Aktion, die den Sitzungsnamen anzeigt, gibt anschließend eine leere Zeichenfolge aus [3].</p>
+<p>Diese Aktion, die den Sitzungsnamen anzeigt, gibt nun eine leere Zeichenfolge aus: [3].</p>
 <p>Wir haben mehrere einfache Beispiele geschrieben, um wichtige Konzepte von Struts 2 vorzustellen:</p>
 <ul>
-  <li>Internationalisierung von Seiten
+  <li>die Internationalisierung von Seiten
   </li>
-  <li>Einfügen von übermittelten Parametern in Aktionsfelder
+  <li>die Einfügung von über „POST“ übermittelten Parametern in die Felder der Aktionen
   </li>
-  <li>das Konzept von Sitzungen
+  <li>das Konzept der Sitzung
   </li>
-  <li>die Beziehung zwischen Actions und Views
+  <li>die Verknüpfung zwischen Aktionen und Ansichten
   </li>
 </ul>
 
-<p>Nachdem wir diese Konzepte nun beherrschen, sind wir bereit, komplexere Beispiele anzugehen. Wir beginnen mit der Vorstellung der verschiedenen Tags, die in einem Formular verwendet werden können.</p>
+<p>Nachdem wir uns diese Konzepte angeeignet haben, können wir uns nun komplexeren Beispielen zuwenden. Zunächst stellen wir die verschiedenen Tags vor, die in einem Formular verwendet werden können.</p>
 
 
 

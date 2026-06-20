@@ -376,10 +376,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#12-das-struts-2-mvc-entwicklungsmodell" class="md-nav__link">
+  <a href="#12-das-entwicklungsmodell-mvc-von-struts-2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Das Struts 2 MVC-Entwicklungsmodell
+        1.2. Das Entwicklungsmodell MVC von Struts 2
       
     </span>
   </a>
@@ -399,10 +399,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#131-netbeans-ide" class="md-nav__link">
+  <a href="#131-ide-netbeans" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3.1. NetBeans IDE
+        1.3.1. IDE NetBeans
       
     </span>
   </a>
@@ -413,7 +413,7 @@
   <a href="#132-struts-2-plugin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3.2. Struts 2-Plugin
+        1.3.2. Struts-2-Plugin
       
     </span>
   </a>
@@ -424,7 +424,7 @@
   <a href="#133-die-struts-2-bibliotheken" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3.3. Die Struts 2-Bibliotheken
+        1.3.3. Die Struts-2-Bibliotheken
       
     </span>
   </a>
@@ -586,14 +586,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-05b---navigation-in-einem-dateneingabeformular.html" class="md-nav__link">
+      <a href="beispiel-05b---navigation-in-einem-eingabeformular.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Beispiel 05B – Navigation in einem Dateneingabeformular
+    7. Beispiel 05B – Navigation in einem Eingabeformular
   
 
     
@@ -667,14 +667,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-08---mit-listen-verknupfte-tags.html" class="md-nav__link">
+      <a href="beispiel-08---tags-fur-listen.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Beispiel 08 – Mit Listen verknüpfte Tags
+    10. Beispiel 08 – Tags für Listen
   
 
     
@@ -775,14 +775,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-11---datumsumwandlung-und--validierung.html" class="md-nav__link">
+      <a href="beispiel-11---umwandlung-und-validierung-von-datumsangaben.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Beispiel 11 – Datumsumwandlung und -validierung
+    14. Beispiel 11 – Umwandlung und Validierung von Datumsangaben
   
 
     
@@ -856,14 +856,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-15---struts-2--spring-integration.html" class="md-nav__link">
+      <a href="beispiel-15---integration-von-struts-2-und-spring.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. Beispiel 15 – Struts 2 / Spring-Integration
+    17. Beispiel 15 – Integration von Struts 2 und Spring
   
 
     
@@ -1001,54 +1001,68 @@
 
 
 
-<p><a id="refheading1882601168461456"></a></p>
+<p><span id="refheading1882601168461456" name="refheading1882601168461456" class="odt-bookmark-anchor"></span></p>
 <h1 id="1-einfuhrung">1. <span style="color: #365f91">Einführung</span></h1>
-<p>Das PDF des Dokuments ist |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQAZOPXqnZXmTpYpi-5pdk31AW96e69A5ZtNJYscGitS_lY?e=VcRqtA">HIER</a>| verfügbar.</p>
-<p>Beispiele aus dem Dokument finden Sie |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCK8uXeRK2lQKIuSyyRSvDkAfg6UXI793TJqSOkpq0qRVM?e=pRCVl9">HIER</a>|.</p>
-<p>Hier möchten wir die wichtigsten Konzepte von Struts 2 anhand von Beispielen vorstellen. Struts 2 ist ein Web-Framework, das Folgendes bietet:</p>
+<p>Die PDF des Dokuments ist verfügbar |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQAZOPXqnZXmTpYpi-5pdk31AW96e69A5ZtNJYscGitS_lY?e=bm8aLu">HIER</a>|.</p>
+<p>Die Beispiele aus dem Dokument sind verfügbar |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCK8uXeRK2lQKIuSyyRSvDkAfg6UXI793TJqSOkpq0qRVM?e=i99FbD">HIER</a>|.</p>
+<p>Wir möchten hier anhand von Beispielen die wichtigsten Konzepte von Struts 2 vorstellen. Struts 2 ist ein Web-Framework, das Folgendes bereitstellt:</p>
 <ul>
-<li>eine Reihe von Bibliotheken in Form von JAR-Dateien</li>
-<li>ein Entwicklungsframework: Struts 2 beeinflusst die Art und Weise, wie eine Webanwendung entwickelt wird.</li>
+  <li>eine Reihe von Bibliotheken in Form von JAR-Dateien
+  </li>
+  <li>ein Entwicklungsframework: Struts 2 beeinflusst die Art und Weise, wie eine Webanwendung entwickelt wird.
+  </li>
 </ul>
-<p>Die Voraussetzungen zum Verständnis der Beispiele sind wie folgt:</p>
+
+<p>Zum Verständnis der Beispiele sind folgende Voraussetzungen erforderlich:</p>
 <ul>
-<li>Grundkenntnisse der Programmiersprache Java</li>
-<li>Grundkenntnisse in der Webentwicklung, insbesondere in HTML.</li>
+  <li>Grundkenntnisse in der Programmiersprache Java
+  </li>
+  <li>Grundkenntnisse in der Webentwicklung, insbesondere in HTML.
+  </li>
 </ul>
-<p>Alle Ressourcen, die zur Erfüllung dieser Voraussetzungen benötigt werden, finden Sie auf der Website [<a href="https://developpez.com/"><u><span style="color: #0563c1">https://developpez.com</span></u></a>]. Einige davon habe ich selbst verfasst; diese finden Sie auf der Website [<a href="https://stahe.github.io/"><u><span style="color: #0563c1">https://stahe.github.io</span></u></a>].</p>
-<p>Die Beispiele in diesem Dokument sind unter der URL [<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCK8uXeRK2lQKIuSyyRSvDkAfg6UXI793TJqSOkpq0qRVM?e=pRCVl9"><u><span style="color: #0563c1">https://stahe.github.io/de-struts2-janv-2012/</span></u></a>] verfügbar.</p>
-<p>Um mehr über Struts 2 zu erfahren, können Sie die folgenden Quellen nutzen:</p>
+
+<p>Auf der Website [http://developpez.com] finden Sie alle für diese Voraussetzungen erforderlichen Ressourcen. Einige davon habe ich selbst verfasst; diese finden Sie auf der Website [http://tahe.developpez.com].</p>
+<p>Die Beispiele dieses Dokuments sind unter der URL [http://tahe.developpez.com/java/struts2] verfügbar.</p>
+<p>Um sich näher mit Struts 2 zu befassen, können die folgenden Referenzen herangezogen werden:</p>
 <ul>
-<li><strong>[ref1]</strong>: die Struts-2-Dokumentation, verfügbar auf der Struts-Website</li>
-<li><strong>[ref2]</strong>: das Buch „Struts 2 in Action“ von Donald Brown, Chad Michael Davis und Scott Stanlick, erschienen bei Manning. Dieses Buch ist besonders lehrreich.</li>
+  <li><b>[ref1]</b>: die Struts-2-Dokumentation, die auf der Struts-Website zu finden ist
+  </li>
+  <li><b>[ref2]</b>: das Buch „Struts 2 in Action“ von Donald Brown, Chad Michael Davis und Scott Stanlick, erschienen im Manning-Verlag. Dieses Buch ist besonders lehrreich.
+  </li>
 </ul>
-<p>Wir werden gelegentlich auf [<strong>ref2]</strong> verweisen, um den Leser darauf hinzuweisen, dass er ein Thema mithilfe dieses Buches vertiefen kann.</p>
-<p>Dieses Dokument wurde so verfasst, dass es auch ohne Computer zur Hand gelesen werden kann. Daher haben wir viele Screenshots eingefügt.</p>
-<p><a id="refheading99511454977699"></a></p>
-<h2 id="11-die-rolle-von-struts-2-in-einer-webanwendung">1.1. <span style="color: #4f81bd"><strong>Die Rolle von Struts 2 in einer Webanwendung</strong></span></h2>
-<p>Betrachten wir zunächst die Rolle von Struts 2 bei der Entwicklung einer Webanwendung. Meistens basiert diese auf einer mehrschichtigen Architektur wie der folgenden:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005120000010F52DA01EA.png" width="649" height="135" style="display:inline-block; margin:4px;width:17.171cm;height:3.584cm;" class="odt-zoomable" data-zoom-src="images/10000000000005120000010F52DA01EA.png" /></td></tr></table>
+
+<p>Gelegentlich werden wir auf [ref2] verweisen, um den Leser darauf hinzuweisen, dass er sich mit diesem Buch näher in ein Thema vertiefen kann.</p>
+<p>Das Dokument wurde so verfasst, dass es auch ohne Computer zur Hand gelesen werden kann. Daher enthalten wir zahlreiche Screenshots.</p>
+<p><span id="refheading99511454977699" name="refheading99511454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="11-die-rolle-von-struts-2-in-einer-webanwendung">1.1. <span style="color: #4f81bd">Die Rolle von Struts 2 in einer Webanwendung</span></h2>
+<p>Zunächst wollen wir Struts 2 in den Kontext der Entwicklung einer Webanwendung einordnen. Meistens basiert diese auf einer mehrschichtigen Architektur wie der folgenden:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005120000010F52DA01EA.png" width="649" height="136" style="display:inline-block; margin:4px;width:17.171cm;height:3.586cm;" class="odt-zoomable" data-zoom-src="images/10000000000005120000010F52DA01EA.png" /></td></tr></table>
 
 <ul>
-<li>Die [<strong>Web</strong>-]Schicht ist die Schicht, die mit dem Benutzer der Webanwendung in Kontakt steht. Der Benutzer interagiert mit der Webanwendung über Webseiten, die von einem Browser angezeigt werden. <strong>In dieser Schicht befindet sich Struts 2, und zwar ausschließlich in dieser Schicht</strong>.</li>
-<li>Die [<strong>Business</strong>]-Schicht implementiert die Geschäftslogik der Anwendung, wie beispielsweise die Berechnung eines Gehalts oder einer Rechnung. Diese Schicht nutzt Daten vom Benutzer über die [Web]-Schicht und aus dem DBMS über die [DAO]-Schicht.</li>
-<li>Die [<strong>DAO</strong>]-Schicht (Data Access Objects), die [<strong>JPA</strong>]-Schicht (Java Persistence API) und der JDBC-Treiber verwalten den Zugriff auf die DBMS-Daten. Die [JPA]-Schicht dient als ORM (Object-Relational Mapper). Sie fungiert als Brücke zwischen den von der [DAO]-Schicht verwalteten Objekten und den Zeilen und Spalten der Daten in einer relationalen Datenbank.</li>
-<li>Die Integration der Schichten kann mithilfe eines Spring-Containers oder EJB3 (Enterprise JavaBeans) erreicht werden.</li>
+  <li>Die Schicht [web] ist die Schicht, die mit dem Benutzer der Webanwendung in Kontakt steht. Dieser interagiert mit der Webanwendung über Webseiten, die in einem Browser angezeigt werden. <b>In dieser Schicht befindet sich Struts 2 und ausschließlich in dieser Schicht</b>.
+  </li>
+  <li>Die Schicht [metier] implementiert die Geschäftslogik der Anwendung, wie beispielsweise die Berechnung eines Gehalts oder einer Rechnung. Diese Schicht nutzt Daten, die vom Benutzer über die Schicht [web] und vom Datenbanksystem über die Schicht [dao] bereitgestellt werden.
+  </li>
+  <li>Die Schicht [dao] (Data Access Objects), die Schicht [jpa] (Java Persistence API) und der JDBC-Treiber verwalten den Zugriff auf die Daten des DBMS. Die Schicht [jpa] dient als ORM (Object Relational Mapper). Sie bildet eine Brücke zwischen den von der Schicht [dao] verarbeiteten Objekten und den Zeilen und Spalten der Daten einer relationalen Datenbank.
+  </li>
+  <li>Die Integration der Schichten kann über einen Spring- oder EJB3-Container (Enterprise Java Bean) erfolgen.
+  </li>
 </ul>
-<p>Die meisten der unten aufgeführten Beispiele verwenden nur eine einzige Schicht, die [Web]-Schicht:</p>
+
+<p>Die meisten der im Folgenden aufgeführten Beispiele verwenden nur eine einzige Schicht, nämlich die Schicht [web]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000001CB000000DC8F508E6B.png" width="230" height="110" style="display:inline-block; margin:4px;width:6.073cm;height:2.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000001CB000000DC8F508E6B.png" /></td></tr></table>
 
 <p>Dieses Dokument schließt jedoch mit der Erstellung einer mehrschichtigen Webanwendung ab:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000050900000109E756FF33.png" width="645" height="133" style="display:inline-block; margin:4px;width:17.053cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/100000000000050900000109E756FF33.png" /></td></tr></table>
 
-<p>Die Schichten [Business], [DAO] und [JPA/Hibernate] werden uns als JAR-Archiv zur Verfügung gestellt, sodass wir wiederum nur die [Web]-Schicht erstellen müssen.</p>
-<p><a id="refheading99531454977699"></a></p>
-<h2 id="12-das-struts-2-mvc-entwicklungsmodell">1.2. <span style="color: #4f81bd">Das Struts 2 MVC-Entwicklungsmodell</span></h2>
-<p>Struts 2 implementiert das MVC-Architekturmuster (Model–View–Controller) wie folgt:</p>
+<p>Die Schichten [metier], [dao] und [jpa/hibernate] werden uns in Form eines JAR-Archivs zur Verfügung gestellt, sodass wir wiederum nur die Schicht [web] erstellen müssen.</p>
+<p><span id="refheading99531454977699" name="refheading99531454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="12-das-entwicklungsmodell-mvc-von-struts-2">1.2. <span style="color: #4f81bd">Das Entwicklungsmodell MVC von Struts 2</span></h2>
+<p>Struts 2 implementiert das sogenannte MVC-Architekturmodell (Model – View – Controller) wie folgt:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000046D0000016F5978A320.png" width="567" height="184" style="display:inline-block; margin:4px;width:14.99cm;height:4.856cm;" class="odt-zoomable" data-zoom-src="images/100000000000046D0000016F5978A320.png" /></td></tr></table>
 
-<p>Die Verarbeitung einer Client-Anfrage verläuft wie folgt:</p>
-<p>Die angeforderten URLs haben die Form <em>http://machine:port/contexte/rep1/rep2/.../Action.</em> Der Pfad [<em>/rep1/rep2/.../Action</em>] muss einer in einer Struts-2-Konfigurationsdatei definierten Aktion entsprechen; andernfalls wird er abgelehnt. Eine Aktion wird in einer XML-Datei im folgenden Format definiert:</p>
+<p>Die Bearbeitung einer Client-Anfrage läuft wie folgt ab:</p>
+<p>Die angeforderten URLs haben die Form <em>http://machine:port/contexte/rep1/rep2/.../Action.</em>. Der Pfad [/rep1/rep2/.../Action] muss einer in einer Struts-2-Konfigurationsdatei definierten Aktion entsprechen, andernfalls wird die Anfrage abgelehnt. Eine Aktion wird in einer XML-Datei in folgender Form definiert:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -1061,28 +1075,27 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="s">    &lt;/action&gt;</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="s">&lt;/package&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>Nehmen wir im vorigen Beispiel an, dass die URL [<em>http://machine:port/contexte/actions/Action1]</em> angefordert wird. Dann werden die folgenden Schritte ausgeführt:</p>
+<p>Nehmen wir im obigen Beispiel an, dass die URL „[ http://machine:port/contexte/actions/Action1]“ angefordert wird. Dann werden die folgenden Schritte ausgeführt:</p>
 <ol>
-<li><strong>Anfrage</strong> – Der Browser-Client sendet eine Anfrage an den Controller [<strong>FilterDispatcher</strong>]. Der Controller verarbeitet alle Client-Anfragen. Er ist der Einstiegspunkt der Anwendung. Er ist das <strong>C</strong> in MVC.</li>
-</ol>
-<ol start="2">
+  <li><b>Anfrage </b>– Der Browser des Clients sendet eine Anfrage an den Controller [FilterDispatcher]. Dieser empfängt alle Anfragen der Clients. Er ist das Eingangstor der Anwendung. Er entspricht dem <b>„C“ </b>in MVC.
+  </li>
   <li>Verarbeitung
   </li>
 </ol>
 <ul>
-  <li>Der C-Controller konsultiert seine Konfigurationsdatei und stellt fest, dass die Aktion <i>actions/Action1 </i>existiert. Der <i>Namespace </i>(Zeile 1) verkettet mit dem Aktionsnamen (name-Attribut in Zeile 2) definiert die Aktion <i>actions/Action1</i>.
+  <li>Der Controller <b>C </b>konsultiert seine Konfigurationsdatei und stellt fest, dass die Aktion <i>actions/Action1 </i>existiert. <i>namespace </i>(Zeile 1), verkettet mit dem Namen der Aktion (Attribut <i>name </i>aus Zeile 2), definiert die Aktion <i>actions/Action1</i>.
   </li>
-  <li>Der C-Controller instanziiert [2a] eine Klasse vom Typ [<i>actions.Action1</i>] (class-Attribut in Zeile 2). Der Name und das Paket dieser Klasse können beliebig sein.
+  <li>Der Controller <b>C </b>instanziiert [2a], eine Klasse vom Typ [actions.Action1] (Attribut <i>class </i>aus Zeile 2). Der Name und das Paket dieser Klasse können beliebig sein.
   </li>
-  <li>Wenn die angeforderte URL Parameter der Form [<i>param1=val1&amp;param2=val2&amp;...</i>] enthält, weist Controller <b>C </b>diese Parameter der Klasse [<i>actions.Action1</i>] wie folgt zu:
+  <li>Wenn die angeforderte URL Parameter vom Typ [param1=val1&amp;param2=val2&amp;...] enthält, weist der Controller <b>C </b>diese Parameter der Klasse [actions.Action1] wie folgt zu:
   </li>
 </ul>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[actions.Action1].setParami(valeuri) ;
 </code></pre></div>
-<p>Daher muss die Klasse [<em>actions.Action1</em>] für jeden der erwarteten <em>parami</em>-Parameter <em>setParami</em>-Methoden enthalten.</p>
+<p>Die Klasse [actions.Action1] muss daher für jeden der erwarteten Parameter <em>parami</em> über die entsprechenden Methoden <em>setParami</em> verfügen.</p>
 <ul>
-  <li>Controller <b>C </b>ruft die Methode mit der Signatur [<i>String execute()</i>] der Klasse [<i>actions.Action1</i>] auf, um diese auszuführen. Diese Methode kann dann die parami-Parameter nutzen, die die Klasse abgerufen hat. Bei der Verarbeitung der Benutzeranfrage benötigt er möglicherweise die [business]-Schicht [2b]. Sobald die Anfrage des Clients verarbeitet wurde, kann er verschiedene Antworten generieren. Ein klassisches Beispiel ist:
+  <li>Der Controller <b>C </b>fordert die Signaturmethode [String execute()] der Klasse [actions.Action1] auf, ausgeführt zu werden. Diese kann dann die Parameter <i>parami</i> nutzen, die die Klasse abgerufen hat. Bei der Bearbeitung der Benutzeranfrage benötigt sie möglicherweise die Schichten [metier] und [2b]. Sobald die Client-Anfrage bearbeitet wurde, kann sie verschiedene Antworten auslösen. Ein klassisches Beispiel ist:
   </li>
   <li>eine Fehlerseite, wenn die Anfrage nicht korrekt verarbeitet werden konnte
   </li>
@@ -1090,9 +1103,9 @@
   </li>
 </ul>
 
-<p>Die Methode <em><code>execute</code></em> gibt ein Ergebnis vom Typ String an den C-Controller zurück, <strong>das als Navigationsschlüssel</strong> bezeichnet wird. Im obigen Beispiel kann <code>[*actions.Action1*].*execute</code><em> zwei Navigationsschlüssel erzeugen: „page1“ (Zeile 3) und „page2“ (Zeile 4). Die Methode [</em>actions.Action1<em>].</em>execute* aktualisiert zudem das M-Modell [2c], das von der JSP-Seite verwendet wird, die als Antwort an den Benutzer gesendet wird. Dieses Modell kann Elemente enthalten von:</p>
+<p>Die Methode <em>execute</em> gibt an den Controller <strong>C</strong> ein Ergebnis vom Typ Zeichenkette zurück, das als <strong>Navigationsschlüssel</strong> bezeichnet wird. Im obigen Beispiel ist dies [actions.Action1].<em>execute</em> kann zwei Navigationsschlüssel erzeugen: „page1“ (Zeile 3) und „page2“ (Zeile 4). Die Methode [actions.Action1].<em>execute</em> aktualisiert zudem die Vorlage <strong>M</strong> [2c], die von der Seite JSP verwendet wird, welche als Antwort an den Benutzer gesendet wird. Diese Vorlage kann Elemente der folgenden</p>
 <ul>
-  <li>der instanziierten Klasse [<i>actions.Action1</i>]
+  <li>der Klasse [actions.Action1], die
   </li>
   <li>der Benutzersitzung
   </li>
@@ -1102,60 +1115,60 @@
   </li>
 </ul>
 <ol>
-  <li><b>Antwort </b>– der C-Controller weist die dem Navigationsschlüssel entsprechende JSP-Seite an, die Anzeige zu übernehmen [3]. Dies ist die Ansicht, das <b>V </b>in MVC. Die JSP-Seite verwendet ein M-Modell, um die dynamischen Teile der Antwort zu initialisieren, die sie an den Client senden muss.
+  <li><b>Antwort </b>– Der Controller <b>C </b>fordert die Seite JSP, die dem Navigationsschlüssel [3] entspricht, auf, sich anzuzeigen. Dies ist die Ansicht, das <b>V </b>von MVC. Die Seite JSP verwendet eine Vorlage <b>M, </b>um die dynamischen Teile der Antwort zu initialisieren, die sie an den Client senden muss.
   </li>
 </ol>
 
-<p>Lassen Sie uns nun die Beziehung zwischen der MVC-Webarchitektur und der Schichtenarchitektur klären. Tatsächlich handelt es sich hierbei um zwei unterschiedliche Konzepte, die manchmal verwechselt werden. Nehmen wir eine einschichtige Struts 2-Webanwendung:</p>
+<p>Lassen Sie uns nun den Zusammenhang zwischen der Webarchitektur MVC und der Schichtenarchitektur näher erläutern. Tatsächlich handelt es sich um zwei unterschiedliche Konzepte, die manchmal verwechselt werden. Nehmen wir eine einschichtige Struts-2-Webanwendung:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000003E70000016B4696B1A1.png" width="500" height="182" style="display:inline-block; margin:4px;width:13.217cm;height:4.803cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E70000016B4696B1A1.png" /></td></tr></table>
 
-<p>Wenn wir die [Web]-Schicht mit Struts 2 implementieren, erhalten wir zwar eine MVC-Webarchitektur, aber keine mehrschichtige Architektur. Hier übernimmt die [Web]-Schicht alles: Darstellung, Geschäftslogik und Datenzugriff. Bei Struts 2 sind es die [Action]-Klassen, die diese Arbeit verrichten.</p>
+<p>Wenn wir die Schicht [web] mit Struts 2 implementieren, haben wir zwar eine Webarchitektur MVC, aber keine mehrschichtige Architektur. Hier übernimmt die Schicht [web] alles: Darstellung, Geschäftslogik und Datenzugriff. Bei Struts 2 übernehmen Klassen vom Typ [Action] diese Aufgaben.</p>
 <p>Betrachten wir nun eine mehrschichtige Webarchitektur:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000048C0000010A4681095B.png" width="582" height="133" style="display:inline-block; margin:4px;width:15.399cm;height:3.519cm;" class="odt-zoomable" data-zoom-src="images/100000000000048C0000010A4681095B.png" /></td></tr></table>
 
-<p>Die [Web-]Schicht kann ohne Framework und ohne Befolgung des MVC-Modells implementiert werden. Wir haben dann eine mehrschichtige Architektur, aber die Web-Schicht implementiert das MVC-Modell nicht.</p>
-<p>In MVC haben wir gesagt, dass das M-Modell das der V-Ansicht ist, d. h. die Menge der von der V-Ansicht angezeigten Daten. Manchmal (oft) wird eine andere Definition des M-Modells in MVC angegeben:</p>
+<p>Die Schicht [web] kann ohne Framework und ohne Befolgung des Modells MVC implementiert werden. Wir haben dann zwar eine mehrschichtige Architektur, aber die Webschicht implementiert das Modell MVC nicht.</p>
+<p>In MVC haben wir gesagt, dass das Modell M das der Ansicht V, c.a.d, ist – also die Gesamtheit der von der Ansicht V angezeigten Daten. Manchmal (oft) wird eine andere Definition des Modells M von MVC angegeben:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004C700000109249566B9.png" width="612" height="133" style="display:inline-block; margin:4px;width:16.18cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C700000109249566B9.png" /></td></tr></table>
 
-<p>Viele Autoren sind der Ansicht, dass das, was sich rechts von der [Web]-Schicht befindet, das M-Modell von MVC bildet. Um Mehrdeutigkeiten zu vermeiden, können wir uns auf Folgendes beziehen:</p>
+<p>Viele Autoren sind der Ansicht, dass das, was sich rechts von der Ebene [web] befindet, das Modell M von MVC bildet. Um Mehrdeutigkeiten zu vermeiden, kann man sprechen von:</p>
 <ul>
-  <li>das Domänenmodell, wenn wir uns auf alles rechts von der [Präsentations-]Schicht beziehen
+  <li>vom Domänenmodell, wenn man alles bezeichnet, was rechts von der Ebene [présentation] liegt
   </li>
-  <li>das View-Modell, wenn wir uns auf die von einer View V angezeigten Daten beziehen
+  <li>vom Modell der Ansicht, wenn man die von einer Ansicht V angezeigten Daten bezeichnet
   </li>
 </ul>
 
-<p>Im Folgenden bezieht sich der Begriff „M-Modell“ ausschließlich auf das Modell einer Ansicht V.</p>
-<p><a id="refheading99551454977699"></a></p>
+<p>Im Folgenden bezeichnet der Begriff „M-Modell“ ausschließlich das Modell einer Ansicht V.</p>
+<p><span id="refheading99551454977699" name="refheading99551454977699" class="odt-bookmark-anchor"></span></p>
 <h2 id="13-die-verwendeten-werkzeuge">1.3. <span style="color: #4f81bd">Die verwendeten Werkzeuge</span></h2>
-<p>Im weiteren Verlauf verwenden wir (Stand: Dezember 2011)</p>
+<p>Im Folgenden verwenden wir (Dezember 2011)</p>
 <ul>
-  <li>die NetBeans 7.01 IDE, verfügbar unter [<a href="http://www.netbeans.org/"><u><span style="color: #0563c1">http://www.netbeans.org</span></u></a>]
+  <li>NetBeans 7.01 (IDE), verfügbar unter der URL [http://www.netbeans.org]
   </li>
-  <li>das Struts 2-Plugin für NetBeans 7.01, verfügbar unter [http://plugins.netbeans.org/plugin/39218]
+  <li>das Struts-2-Plugin für NetBeans 7.01, verfügbar unter der URL [http://plugins.netbeans.org/plugin/39218]
   </li>
-  <li>Struts 2 Version 2.2.3, verfügbar unter [<a href="http://struts.apache.org/"><u><span style="color: #0563c1">http://struts.apache.org/</span></u></a>]
+  <li>die Version 2.2.3 von Struts 2, verfügbar unter der URL [http://struts.apache.org/]
   </li>
 </ul>
 
-<p>Beachten Sie, dass für die Entwicklung der folgenden Beispiele nur die unter [<a href="http://struts.apache.org/"><u><span style="color: #0563c1">http://struts.apache.org/</span></u></a>] verfügbaren Struts 2-Bibliotheken erforderlich sind. NetBeans kann durch eine andere IDE (Eclipse, JDeveloper, IntelliJ usw.) ersetzt werden, und das Struts 2-Plugin dient lediglich dazu, dem Entwickler die Arbeit zu erleichtern. Es ist ebenfalls nicht zwingend erforderlich.</p>
-<p><a id="refheading99571454977699"></a></p>
-<h3 id="131-netbeans-ide">1.3.1. <span style="color: #4f81bd">NetBeans IDE</span></h3>
-<p>Auf der NetBeans-Download-Seite wählen wir die Java EE-Version aus:</p>
-<p><img src="images/100000000000037E00000173C0A73F40.png" width="626" height="260" style="width:16.559cm;height:6.872cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000037E00000173C0A73F40.png" /></p>
-<p><a id="refheading99591454977699"></a></p>
-<h3 id="132-struts-2-plugin">1.3.2. <span style="color: #4f81bd">Struts 2-Plugin</span></h3>
-<p>Je nach NetBeans-Version war dieses Plugin nicht immer verfügbar. Seit Dezember 2011 ist es unter der URL [<a href="http://plugins.netbeans.org/plugin/39218"><u><span style="color: #0563c1">http://plugins.netbeans.org</span></u></a>] zu finden. Diese URL listet die verschiedenen für NetBeans verfügbaren Plugins auf. Sie können Ihre Suche filtern. Unter [1] suchen wir nach Plugins, deren Name das Wort „struts“ enthält.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000042C000001632EB5D944.png" width="534" height="177" style="display:inline-block; margin:4px;width:14.129cm;height:4.695cm;" class="odt-zoomable" data-zoom-src="images/100000000000042C000001632EB5D944.png" /></td></tr></table>
+<p>Es sei darauf hingewiesen, dass für die Entwicklung der folgenden Beispiele ausschließlich die Struts-2-Bibliotheken erforderlich sind, die unter der URL [http://struts.apache.org/] erhältlich sind. NetBeans kann durch eine andere Umgebung (Eclipse, JDeveloper, IntelliJ, …) ersetzt werden, und das Struts-2-Plugin dient lediglich dazu, dem Entwickler die Arbeit zu erleichtern. Auch dieses ist nicht zwingend erforderlich.</p>
+<p><span id="refheading99571454977699" name="refheading99571454977699" class="odt-bookmark-anchor"></span></p>
+<h3 id="131-ide-netbeans">1.3.1. <span style="color: #4f81bd">IDE NetBeans</span></h3>
+<p>Auf der Download-Seite von NetBeans wählen wir die Java-Version EE aus:</p>
+<p><img src="images/100000000000037E00000173C0A73F40.png" width="626" height="260" style="width:16.559cm;height:6.87cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000037E00000173C0A73F40.png" /></p>
+<p><span id="refheading99591454977699" name="refheading99591454977699" class="odt-bookmark-anchor"></span></p>
+<h3 id="132-struts-2-plugin">1.3.2. <span style="color: #4f81bd">Struts-2-Plugin</span></h3>
+<p>Je nach NetBeans-Version war dieses Plugin nicht immer verfügbar. Im Dezember 2011 findet man es unter der URL [http://plugins.netbeans.org]. Über diese URL lassen sich die verschiedenen für NetBeans verfügbaren Plugins einsehen. Man kann die Suche filtern. Unter [1] werden die Plugins angefordert, deren Name das Wort „struts“ enthält.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000042C000001632EB5D944.png" width="534" height="178" style="display:inline-block; margin:4px;width:14.129cm;height:4.697cm;" class="odt-zoomable" data-zoom-src="images/100000000000042C000001632EB5D944.png" /></td></tr></table>
 
 <ul>
-  <li>Folgen Sie dem Link [2]
+  <li>Man folgt dem Link [2]
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000520000003DEAEE6F124.png" width="656" height="495" style="display:inline-block; margin:4px;width:17.357cm;height:13.097cm;" class="odt-zoomable" data-zoom-src="images/1000000000000520000003DEAEE6F124.png" /></td></tr></table>
 
-<p>Laden Sie das Plugin herunter und entpacken Sie es [2]. Um es in NetBeans zu integrieren, gehen Sie wie folgt vor:</p>
+<p>Man lädt das Plugin herunter und entpackt es: [2]. Um es in NetBeans zu integrieren, kann man wie folgt vorgehen:</p>
 <ul>
   <li>Starten Sie NetBeans
   </li>
@@ -1164,23 +1177,23 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000051E000001D69B7E53DF.png" width="655" height="235" style="display:inline-block; margin:4px;width:17.33cm;height:6.218cm;" class="odt-zoomable" data-zoom-src="images/100000000000051E000001D69B7E53DF.png" /></td></tr></table>
 
 <ul>
-  <li>Wählen Sie unter [1] das Menü „Tools/Plugins“
+  <li>in [1] wählen Sie das Menü „Tools/Plugins“
   </li>
-  <li>Klicken Sie auf der Registerkarte [2] auf die Schaltfläche [3]
+  <li>auf der Registerkarte [2] die Schaltfläche [3] verwenden
   </li>
-  <li>Wählen Sie unter [4] die <i>.</i>nbm-Dateien für die heruntergeladenen Plugins aus. Hier wählen wir die Struts 2.2.3-Bibliotheken anstelle derjenigen für Struts 2.0.14
+  <li>Wählen Sie unter „[4]“ die Dateien <i>„.nbm“ </i>der heruntergeladenen Plugins aus. Hier wählen wir die Bibliotheken von Struts Version 2.2.3 anstelle derjenigen von Struts 2.0.14
   </li>
-  <li>Kehren Sie zum Reiter [2] zurück und installieren Sie die ausgewählten Plugins über die Schaltfläche [5].
+  <li>Zurück auf der Registerkarte „[2]“ installieren wir die ausgewählten Plugins über die Schaltfläche „[5]“.
   </li>
 </ul>
 
-<p>Die Installation von Plugins erfordert oft einen Neustart von NetBeans.</p>
-<p><a id="refheading99611454977699"></a></p>
-<h3 id="133-die-struts-2-bibliotheken">1.3.3. <span style="color: #4f81bd">Die Struts 2-Bibliotheken</span></h3>
-<p>Wenn Sie das Struts 2-Plugin für NetBeans heruntergeladen haben, verfügen Sie über die wichtigsten Struts-Bibliotheken, jedoch nicht über alle. Später benötigen wir bestimmte Bibliotheken, die auf der Struts 2-Website [<a href="http://struts.apache.org/"><u><span style="color: #0563c1">http://struts.apache.org/</span></u></a>] verfügbar sind.</p>
+<p>Die Installation der Plugins erfordert oft einen Neustart von NetBeans.</p>
+<p><span id="refheading99611454977699" name="refheading99611454977699" class="odt-bookmark-anchor"></span></p>
+<h3 id="133-die-struts-2-bibliotheken">1.3.3. <span style="color: #4f81bd">Die Struts-2-Bibliotheken</span></h3>
+<p>Wenn Sie das Struts-2-Plugin für NetBeans heruntergeladen haben, stehen Ihnen die wichtigsten Struts-Bibliotheken zur Verfügung, jedoch nicht alle. Im weiteren Verlauf benötigen wir bestimmte Bibliotheken, die auf der Struts-2-Website unter [http://struts.apache.org/] verfügbar sind.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000538000002CF9F9ED3C6.png" width="668" height="360" style="display:inline-block; margin:4px;width:17.674cm;height:9.513cm;" class="odt-zoomable" data-zoom-src="images/1000000000000538000002CF9F9ED3C6.png" /></td></tr></table>
 
-<p>Folgen Sie dem Link [1] und dann dem Link [2], um die ZIP-Datei für Version 2.2.3.1 herunterzuladen. Sobald die Distribution entpackt ist, finden Sie die von Struts benötigten Bibliotheken im Ordner [lib] [3] der Distribution. Da es Dutzende davon gibt, stellt sich die Frage, welche davon unverzichtbar sind. Hier kommt uns das Struts-Plugin zu Hilfe.</p>
+<p>Wir folgen dem Link [1] und anschließend dem Link [2], um die ZIP-Datei der Distribution 2.2.3.1 herunterzuladen. Nach dem Entpacken der Distribution befinden sich die für Struts erforderlichen Bibliotheken im Ordner [lib] [3] der Distribution. Da es mehrere Dutzend davon gibt, stellt sich die Frage, welche davon unverzichtbar sind. Hier hilft uns das Struts-Plugin weiter.</p>
 
 
 

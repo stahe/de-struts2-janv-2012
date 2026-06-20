@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/de-struts2-janv-2012/beispiel-15---struts-2--spring-integration.html">
+        <link rel="canonical" href="https://stahe.github.io/de-struts2-janv-2012/beispiel-15---integration-von-struts-2-und-spring.html">
       
       
         <link rel="prev" href="beispiel-13---der-kontext-einer-aktion.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>17. Beispiel 15 – Struts 2 / Spring-Integration - Einführung in Struts 2 anhand von Beispielen</title>
+        <title>17. Beispiel 15 – Integration von Struts 2 und Spring - Einführung in Struts 2 anhand von Beispielen</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#17-beispiel-15-struts-2-spring-integration" class="md-skip">
+        <a href="#17-beispiel-15-integration-von-struts-2-und-spring" class="md-skip">
           Skip to content
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              17. Beispiel 15 – Struts 2 / Spring-Integration
+              17. Beispiel 15 – Integration von Struts 2 und Spring
             
           </span>
         </div>
@@ -467,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-05b---navigation-in-einem-dateneingabeformular.html" class="md-nav__link">
+      <a href="beispiel-05b---navigation-in-einem-eingabeformular.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Beispiel 05B – Navigation in einem Dateneingabeformular
+    7. Beispiel 05B – Navigation in einem Eingabeformular
   
 
     
@@ -548,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-08---mit-listen-verknupfte-tags.html" class="md-nav__link">
+      <a href="beispiel-08---tags-fur-listen.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Beispiel 08 – Mit Listen verknüpfte Tags
+    10. Beispiel 08 – Tags für Listen
   
 
     
@@ -656,14 +656,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-11---datumsumwandlung-und--validierung.html" class="md-nav__link">
+      <a href="beispiel-11---umwandlung-und-validierung-von-datumsangaben.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Beispiel 11 – Datumsumwandlung und -validierung
+    14. Beispiel 11 – Umwandlung und Validierung von Datumsangaben
   
 
     
@@ -753,7 +753,7 @@
   <span class="md-ellipsis">
     
   
-    17. Beispiel 15 – Struts 2 / Spring-Integration
+    17. Beispiel 15 – Integration von Struts 2 und Spring
   
 
     
@@ -764,14 +764,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="beispiel-15---struts-2--spring-integration.html" class="md-nav__link md-nav__link--active">
+      <a href="beispiel-15---integration-von-struts-2-und-spring.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. Beispiel 15 – Struts 2 / Spring-Integration
+    17. Beispiel 15 – Integration von Struts 2 und Spring
   
 
     
@@ -808,15 +808,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#172-konfiguration" class="md-nav__link">
+  <a href="#172-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        17.2. Konfiguration
+        17.2. Configuration
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="17.2. Konfiguration">
+    <nav class="md-nav" aria-label="17.2. Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -869,10 +869,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#174-tests" class="md-nav__link">
+  <a href="#174-die-tests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        17.4. Tests
+        17.4. Die Tests
       
     </span>
   </a>
@@ -1012,35 +1012,35 @@
 
 
 
-<p><a id="refheading91754522158564"></a></p>
-<h1 id="17-beispiel-15-struts-2-spring-integration">17. <span style="color: #365f91">Beispiel 15 – Struts 2 / Spring-Integration</span></h1>
-<p>Im vorherigen Beispiel hatten wir keine Daten <em>im Anwendungsbereich</em>, die für alle Anfragen aller Benutzer gemeinsam genutzt wurden. Wir zeigen hier ein Beispiel dafür. Zur Umsetzung verwenden wir das Spring-Framework [http://www.springsource.org/]. Spring ist ein äußerst wertvolles Werkzeug. In diesem Beispiel zeigen wir nur einen winzigen Ausschnitt davon. Ein späteres Beispiel wird es umfangreicher nutzen.</p>
-<p>Der Zweck dieser Anwendung besteht darin, Daten <em>im Anwendungsbereich</em> anzuzeigen.</p>
-<p><a id="refheading91756522158564"></a></p>
+<p><span id="refheading91754522158564" name="refheading91754522158564" class="odt-bookmark-anchor"></span></p>
+<h1 id="17-beispiel-15-integration-von-struts-2-und-spring">17. <span style="color: #365f91">Beispiel 15 – Integration von Struts 2 und Spring</span></h1>
+<p>Im vorherigen Beispiel hatten wir keine Daten mit dem Geltungsbereich <em>Application</em>, die von allen Anfragen aller Benutzer gemeinsam genutzt wurden. Hier zeigen wir ein Beispiel dafür. Zur Umsetzung verwenden wir das Spring-Framework [http://www.springsource.org/]. Spring ist ein äußerst wertvolles Werkzeug. In diesem Beispiel zeigen wir nur einen winzigen Ausschnitt davon. Ein späteres Beispiel wird es intensiver nutzen.</p>
+<p>Das Ziel dieser Anwendung ist es, Daten aus dem Bereich <em>Application</em> anzuzeigen.</p>
+<p><span id="refheading91756522158564" name="refheading91756522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="171-das-netbeans-projekt">17.1. <span style="color: #4f81bd">Das NetBeans-Projekt</span></h2>
-<p>Das NetBeans-Projekt für die Anwendung sieht wie folgt aus:</p>
+<p>Das NetBeans-Projekt der Anwendung sieht wie folgt aus:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005020000029A34360EF5.png" width="641" height="333" style="display:inline-block; margin:4px;width:16.96cm;height:8.811cm;" class="odt-zoomable" data-zoom-src="images/10000000000005020000029A34360EF5.png" /></td></tr></table>
 
 <ul>
   <li>in [1]:
   </li>
-  <li>[web.xml], das die Webanwendung konfiguriert, wird sich gegenüber früheren Versionen ändern
+  <li>[web.xml], das die Webanwendung konfiguriert, wird sich gegenüber den vorherigen Versionen weiterentwickeln
   </li>
   <li>[applicationContext.xml] ist die Spring-Konfigurationsdatei
   </li>
-  <li>in [2]: die Ansicht [Context.jsp], die Daten im Anwendungsbereich anzeigt
+  <li>in [2]: die Ansicht [Context.jsp], die die Daten des Anwendungsbereichs anzeigt
   </li>
   <li>in [3]:
   </li>
   <li>die Meldungsdatei [messages.properties]
   </li>
-  <li>die Hauptkonfigurationsdatei von Struts [struts.xml]. Wird sich im Vergleich zu früheren Anwendungen ändern.
+  <li>die Hauptkonfigurationsdatei von Struts [struts.xml]. Diese wird sich im Vergleich zu den vorherigen Anwendungen weiterentwickeln.
   </li>
   <li>in [4]:
   </li>
   <li>die Struts-Aktion [Action1.java]
   </li>
-  <li>die Klasse [Config.java], die Daten im Anwendungsbereich speichert
+  <li>die Klasse [Config.java], die die Daten im Anwendungsbereich speichert
   </li>
   <li>die sekundäre Struts-Konfigurationsdatei [example.xml]
   </li>
@@ -1050,23 +1050,23 @@
   </li>
   <li>die für Spring erforderlichen Archive [spring-core, spring-context, spring-beans, spring-web, commons-logging]
   </li>
-  <li>das Spring-Plugin-Archiv für Struts 2. Ermöglicht die Integration von Spring mit Struts 2 [struts2-spring-plugin]
+  <li>das Archiv des Spring-Plugins für Struts 2. Ermöglicht die Integration von Spring in Struts 2 [struts2-spring-plugin]
   </li>
 </ul>
 
 <p>Im Vergleich zu früheren Versionen:</p>
 <ul>
-  <li>müssen Sie dem Projekt Archive hinzufügen
+  <li>müssen dem Projekt weitere Archive hinzugefügt werden
   </li>
-  <li>die Dateien [web.xml] und [struts.xml] ändern
+  <li>die Dateien [web.xml] und [struts.xml] müssen geändert werden
   </li>
 </ul>
 
-<p><a id="refheading91758522158564"></a></p>
-<h2 id="172-konfiguration">17.2. <span style="color: #4f81bd"><strong>Konfiguration</strong></span></h2>
-<p><a id="refheading91760522158564"></a></p>
+<p><span id="refheading91758522158564" name="refheading91758522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="172-configuration">17.2. <span style="color: #4f81bd">Configuration</span></h2>
+<p><span id="refheading91760522158564" name="refheading91760522158564" class="odt-bookmark-anchor"></span></p>
 <h3 id="1721-die-datei-webxml">17.2.1. <span style="color: #4f81bd">Die Datei [web.xml]</span></h3>
-<p>Die Datei [web.xml] ändert sich wie folgt:</p>
+<p>Die Datei „[web.xml]“ ändert sich wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#008080">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">web-app</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;WebApp_9&quot;</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;2.4&quot;</span> <span style="color:#7f007f">xmlns</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://java.sun.com/xml/ns/j2ee&quot;</span> <span style="color:#7f007f">xmlns:xsi</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span style="color:#7f007f">xsi:schemaLocation</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1077,7 +1077,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">filter</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">filter-mapping</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">filter-name</span><span style="color:#008080">&gt;</span><span style="color:#000000">struts2</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">filter-name</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">url-pattern</span><span style="color:#008080">&gt;</span><span style="color:#000000">/*</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">url-pattern</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">filter-mapping</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">listener</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">listener-class</span><span style="color:#008080">&gt;</span><span style="color:#000000">org.springframework.web.context.ContextLoaderListener</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">listener-class</span><span style="color:#008080">&gt;</span></span></span>
@@ -1085,66 +1085,66 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">web-app</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>Die Änderung erfolgt in den Zeilen 12–14. Der Webanwendung wird ein <em>Listener</em> hinzugefügt. Beim Start der Webanwendung wird die Klasse, die diesen <em>Listener</em> implementiert, instanziiert. Es handelt sich um eine Spring-Klasse. Diese Klasse verwendet die Datei [WEB-INF/applicationContext.xml]. Die Datei sieht wie folgt aus:</p>
+<p>Die Änderung erfolgt in den Zeilen 12–14. Eine Datei <em>listener</em> wird der Webanwendung hinzugefügt. Beim Start der Webanwendung wird die Klasse instanziiert, die diese Datei <em>listener</em> implementiert. Es handelt sich um eine Spring-Klasse. Diese Klasse nutzt die Datei [WEB-INF/applicationContext.xml]. Diese lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;beans</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.springframework.org/schema/beans</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns:xsi</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.w3.org/2001/XMLSchema-instance</span><span style="color:#800080">&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#008080">       </span><span style="color:#808000">xmlns:tx</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.springframework.org/schema/tx</span><span style="color:#800080">&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#008080">       </span><span style="color:#808000">xsi:schemaLocation</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd</span><span style="color:#800080">&quot;&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- application scope bean configuration --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- Konfiguration der Beans im Anwendungsbereich --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">config</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">example.Config</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">nbMaxUsers</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">10</span><span style="color:#800080">&quot;/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/beans&gt;</span></span>
 </code></pre></div>
 
 <ul>
-  <li>Die Spring-Konfigurationsdatei enthält das Root-Tag <i>&lt;beans&gt; </i>(Zeilen 2 und 11). <i>Beans </i>können als Objekte betrachtet werden. Spring instanziiert alle Objekte (<i>Beans</i>), die in dieser Konfigurationsdatei gefunden werden. Dies geschieht nur einmal, wenn der <i>Spring-Listener </i>beim Start der Webanwendung gestartet wird.
+  <li>Die Spring-Konfigurationsdatei enthält das Stamm-Tag <i>&lt;beans&gt; </i>(Zeilen 2 und 11). Man könnte <i>„beans“ </i>mit „Objekte“ übersetzen. Spring instanziiert alle Objekte (<i>bean</i>), die in dieser Konfigurationsdatei gefunden werden. Dies geschieht nur einmal, wenn Spring beim Start der Webanwendung aufgerufen wird.
   </li>
-  <li>Zeilen 7–9: definieren eine Bean namens <i>config </i>(id). Die config-Bean ist mit der <i>Klasse</i> [example.Config] verknüpft. Spring instanziiert diese Klasse.
+  <li>Zeilen 7–9: Definieren eine Bean mit dem Namen <i>config </i>(ID). Die Konfigurations-Bean ist der Klasse (<i>class</i>) [example.Config] zugeordnet. Spring wird diese Klasse instanziieren.
   </li>
-  <li>Zeile 8: definiert eine Eigenschaft der Klasse [example.Config]. Spring ruft die Methode<i> [example.Config].setNbMaxUsers(10) </i>auf. Daher muss die Methode <i>setNbMaxUsers </i>in der Klasse vorhanden sein. Sie lautet wie folgt:
+  <li>Zeile 8: Definiert eine Eigenschaft der Klasse [example.Config]. Spring ruft die Methode <i>[example.Config].setNbMaxUsers(10) </i>auf. Die Methode <i>setNbMaxUsers</i> muss also in der Klasse vorhanden sein. Diese lautet wie folgt:
   </li>
 </ul>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> example;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Config {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> nbMaxUsers;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> getNbMaxUsers() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> nbMaxUsers;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> setNbMaxUsers(</span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> nbMaxUsers) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.nbMaxUsers = nbMaxUsers;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>Diese Klasse definiert nur ein Feld, <em>nbMaxUsers,</em> mit seinen <em>Get-</em> und Set-Methoden. Wenn Sie den Schritten gefolgt sind, wird beim Start der Webanwendung eine Instanz der Klasse [Config] mit dem Wert 10 für ihr Feld <em>nbMaxUsers</em> instanziiert. Wir haben nur ein einziges Feld definiert, aber das reicht für unsere Demonstration aus. Wir wollen zeigen, dass dieses Feld, das eine maximale Anzahl von Benutzern darstellen könnte, Daten <em>im Anwendungsbereich</em> sind, auf die alle Aktionen zugreifen können. Das werden wir mit der Aktion [Action1] demonstrieren.</p>
-<p><a id="refheading91762522158564"></a></p>
+<p>Diese Klasse definiert lediglich ein Feld <em>nbMaxUsers</em> mit den zugehörigen Feldern <em>get</em> und <em>set</em>. Wenn man den bisherigen Ausführungen richtig gefolgt ist, wird beim Start der Webanwendung eine Instanz der Klasse [Config] instanziiert, deren Feld <em>nbMaxUsers</em> den Wert 10 erhält. Wir haben zwar nur ein einziges Feld definiert, doch das reicht für unsere Demonstration aus. Wir möchten zeigen, dass dieses Feld, das beispielsweise die maximale Anzahl an Benutzern darstellen könnte, eine Variable mit dem Gültigkeitsbereich <em>Application</em> ist, auf die alle Aktionen zugreifen können. Dies werden wir anhand der Aktion [Action1] veranschaulichen.</p>
+<p><span id="refheading91762522158564" name="refheading91762522158564" class="odt-bookmark-anchor"></span></p>
 <h3 id="1722-die-datei-strutsxml">17.2.2. <span style="color: #4f81bd">Die Datei [struts.xml]</span></h3>
-<p>Die Hauptkonfigurationsdatei von Struts sieht wie folgt aus:</p>
+<p>Die Hauptkonfigurationsdatei von Struts lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span> <span style="color:#008080">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">struts</span> <span style="color:#808080">PUBLIC</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#3f7f5f">&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- internationalization --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- Internationalisierung --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">constant</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;struts.custom.i18n.resources&quot;</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;messages&quot;</span> <span style="color:#008080">/&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- spring integration --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- Spring-Integration --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">constant</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;struts.objectFactory.spring.autoWire&quot;</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;name&quot;</span> <span style="color:#008080">/&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">include</span> <span style="color:#7f007f">file</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;example/example.xml&quot;</span><span style="color:#008080">/&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">package</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;default&quot;</span> <span style="color:#7f007f">namespace</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/&quot;</span> <span style="color:#7f007f">extends</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;struts-default&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">default-action-ref</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;index&quot;</span> <span style="color:#008080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;index&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1154,69 +1154,69 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">result</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">action</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">package</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>Nur Zeile 10 unterscheidet sich von früheren Versionen dieser Datei. Sie definiert eine Struts-Konstante. Von Spring instanziierte Objekte können in andere Objekte injiziert werden. Dies ist die Grundlage von Spring. Hier kann eine Referenz auf das von Spring erstellte [Config]-Objekt in Struts-Objekte injiziert werden. Hier kommt das Spring-Plugin für Struts 2 ins Spiel, das die Integration von Spring in Struts gewährleistet.</p>
-<p>Zeile 10 gibt an, dass die Einbindung von Spring-Objekten in ein Struts-Objekt automatisch (<em>Autowiring</em>) anhand des Namens (oder <em>Werts</em>) erfolgt. Kehren wir nun zur Konfigurationsdatei [applicationContext.xml] zurück:</p>
+<p>Nur Zeile 10 unterscheidet sich von früheren Versionen dieser Datei. Sie definiert eine Struts-Konstante. Von Spring instanziierte Objekte können in andere Objekte injiziert werden. Dies ist die Grundlage von Spring. Hier kann eine Referenz auf das von Spring erstellte Objekt vom Typ [Config] in Struts-Objekte injiziert werden. An dieser Stelle kommt das Spring-Plugin für Struts 2 ins Spiel, das die Integration von Spring in Struts gewährleistet.</p>
+<p>Zeile 10 gibt an, dass die Injektion von Spring-Objekten in ein Struts-Objekt automatisch (<em>autowire</em>) anhand des Namens (<em>value</em>) erfolgt. Kehren wir zur Konfigurationsdatei [applicationContext.xml] zurück:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;!-- configuration des beans de portée application --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- Konfiguration von Beans mit Anwendungsbereich --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">config</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">example.Config</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">nbMaxUsers</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">10</span><span style="color:#800080">&quot;/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span></span>
 </code></pre></div>
 
-<p>Was Struts 2 als Bean-Namen bezeichnet, ist hier eigentlich <em>die ID</em>. In diesem Fall heißt die instanziierte [Config]-Bean also <em>config</em>.</p>
-<p>Die Aktion [Action1.java] sieht wie folgt aus:</p>
+<p>Was Struts 2 als Namen des Beans bezeichnet, ist hier tatsächlich <em>id</em>. Das bedeutet, dass das instanziierte Bean vom Typ [Config] hier den Namen <em>config</em> trägt.</p>
+<p>Die Aktion [Action1.java] lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> example;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.opensymphony.xwork2.ActionSupport;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">...</span><span style="color:#000000"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Action1 </span><span style="font-weight:bold;color:#7f0055">extends</span><span style="color:#000000"> ActionSupport </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> SessionAware, RequestAware, ParameterAware {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// constructor without parameters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Konstruktor ohne Parameter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Action1() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#000000"></span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Session, Request, Parametres</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Session, Request, Parameter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Map&lt;String, Object&gt; session;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Map&lt;String, Object&gt; request;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Map&lt;String, String[]&gt; parameters;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Config config;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String execute() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#3f7f5f">....</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// request</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Anfrage</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    request.put(</span><span style="color:#2a00ff">&quot;nbMaxUsers&quot;</span><span style="color:#000000">, config.getNbMaxUsers());</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// display page JSP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Seitenanzeige JSP</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> SUCCESS;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Config getConfig() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> config;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> setConfig(Config config) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.config = config;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>Die Aktion [Action1] ist identisch mit der in der vorherigen Anwendung, mit den folgenden geringfügigen Unterschieden:</p>
+<p>Die Aktion [Action1] ist identisch mit der in der vorherigen Anwendung, abgesehen von den folgenden Details:</p>
 <ul>
-  <li>Zeile 15: Ein Konfigurationsfeld wurde hinzugefügt. Da es den Namen einer von Spring instanziierten Bean trägt, erhält dieses Feld automatisch eine Referenz auf dieses Objekt. Somit hat die Aktion Zugriff auf die Anwendungskonfiguration oder, allgemeiner gesagt, auf Daten <i>im Anwendungsbereich</i>.
+  <li>Zeile 15: Ein Feld <i>config </i>wurde hinzugefügt. Da es den Namen einer von Spring instanziierten Bean trägt, erhält dieses Feld automatisch eine Referenz auf dieses Objekt. Somit hat die Aktion Zugriff auf die Anwendungskonfiguration bzw. allgemeiner auf die Daten im Bereich <i>Application</i>.
   </li>
-  <li>Zeile 31: Spring instanziiert das Konfigurationsfeld über dessen set-Methode. Es muss daher vorhanden sein.
+  <li>Zeile 31: Spring instanziiert das Feld <i>config </i>über seine Methode <i>set</i>. Diese muss daher vorhanden sein.
   </li>
-  <li>Zeile 21: Die Aktion greift auf Informationen <i>im Anwendungsbereich</i> zu. Wir fügen die maximale Anzahl von Benutzern, <i>nbMaxUsers, </i>in die Anfrage ein, damit die Ansicht [Context.jsp] diese anzeigen kann.
+  <li>Zeile 21: Die Aktion greift auf die Informationen des Bereichs <i>Application</i> zu. Die maximale Benutzeranzahl <i>nbMaxUsers</i> wird in die Abfrage aufgenommen, damit die Ansicht [Context.jsp] diese anzeigen kann.
   </li>
 </ul>
 
-<p><a id="refheading91764522158564"></a></p>
+<p><span id="refheading91764522158564" name="refheading91764522158564" class="odt-bookmark-anchor"></span></p>
 <h3 id="1723-die-datei-examplexml">17.2.3. <span style="color: #4f81bd">Die Datei [example.xml]</span></h3>
 <p>Die sekundäre Struts-Konfigurationsdatei ist identisch mit der der vorherigen Version:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -1224,7 +1224,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">struts</span> <span style="color:#808080">PUBLIC</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008080">&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#3f7f5f">&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">package</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;example&quot;</span> <span style="color:#7f007f">namespace</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/example&quot;</span> <span style="color:#7f007f">extends</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;struts-default&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Action1&quot;</span> <span style="color:#7f007f">class</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;example.Action1&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1234,7 +1234,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><a id="refheading91766522158564"></a></p>
+<p><span id="refheading91766522158564" name="refheading91766522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="173-die-ansicht-contextjsp">17.3. <span style="color: #4f81bd">Die Ansicht [Context.jsp]</span></h2>
 <p>Die Ansicht [Context.jsp] sieht wie folgt aus:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1245,7 +1245,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Context.titre&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:head</span><span style="color:#008080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span> <span style="color:#7f007f">background</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/ressources/standard.jpg&quot;</span><span style="color:#008080">/&gt;</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Context.message&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h3</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Context.parameters&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">h3</span><span style="color:#008080">&gt;</span></span></span>
@@ -1259,10 +1259,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><a id="refheading91768522158564"></a></p>
-<h2 id="174-tests">17.4. <span style="color: #4f81bd">Tests</span></h2>
-<p>Ein Beispiel für die Ausführung lautet wie folgt:</p>
-<p><img src="images/10000000000001CF00000194907BA327.png" width="327" height="285" style="width:8.641cm;height:7.541cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001CF00000194907BA327.png" /></p>
+<p><span id="refheading91768522158564" name="refheading91768522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="174-die-tests">17.4. <span style="color: #4f81bd">Die Tests</span></h2>
+<p>Ein Ausführungsbeispiel lautet wie folgt:</p>
+<p><img src="images/10000000000001CF00000194907BA327.png" width="327" height="285" style="width:8.641cm;height:7.539cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001CF00000194907BA327.png" /></p>
 
 
 

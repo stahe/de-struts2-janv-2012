@@ -18,7 +18,7 @@
         <link rel="prev" href="beispiel-12---verschiedene-konvertierungen-und-validierungen.html">
       
       
-        <link rel="next" href="beispiel-15---struts-2--spring-integration.html">
+        <link rel="next" href="beispiel-15---integration-von-struts-2-und-spring.html">
       
       
         
@@ -467,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-05b---navigation-in-einem-dateneingabeformular.html" class="md-nav__link">
+      <a href="beispiel-05b---navigation-in-einem-eingabeformular.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Beispiel 05B – Navigation in einem Dateneingabeformular
+    7. Beispiel 05B – Navigation in einem Eingabeformular
   
 
     
@@ -548,14 +548,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-08---mit-listen-verknupfte-tags.html" class="md-nav__link">
+      <a href="beispiel-08---tags-fur-listen.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Beispiel 08 – Mit Listen verknüpfte Tags
+    10. Beispiel 08 – Tags für Listen
   
 
     
@@ -656,14 +656,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-11---datumsumwandlung-und--validierung.html" class="md-nav__link">
+      <a href="beispiel-11---umwandlung-und-validierung-von-datumsangaben.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Beispiel 11 – Datumsumwandlung und -validierung
+    14. Beispiel 11 – Umwandlung und Validierung von Datumsangaben
   
 
     
@@ -781,10 +781,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#162-konfiguration" class="md-nav__link">
+  <a href="#162-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        16.2. Konfiguration
+        16.2. Configuration
       
     </span>
   </a>
@@ -836,10 +836,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#167-fazit" class="md-nav__link">
+  <a href="#167-conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        16.7. Fazit
+        16.7. Conclusion
       
     </span>
   </a>
@@ -861,14 +861,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-15---struts-2--spring-integration.html" class="md-nav__link">
+      <a href="beispiel-15---integration-von-struts-2-und-spring.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. Beispiel 15 – Struts 2 / Spring-Integration
+    17. Beispiel 15 – Integration von Struts 2 und Spring
   
 
     
@@ -1006,24 +1006,24 @@
 
 
 
-<p><a id="refheading91738522158564"></a></p>
+<p><span id="refheading91738522158564" name="refheading91738522158564" class="odt-bookmark-anchor"></span></p>
 <h1 id="16-beispiel-13-der-kontext-einer-aktion">16. <span style="color: #365f91">Beispiel 13 – Der Kontext einer Aktion</span></h1>
-<p>Diese Anwendung soll veranschaulichen, dass eine Aktion Zugriff auf Folgendes hat:</p>
+<p>Diese Anwendung soll zeigen, dass eine Aktion Zugriff hat auf:</p>
 <ul>
-  <li>Anfrageparameter
+  <li>auf die Parameter der Anfrage
   </li>
-  <li>Anfrageattribute
+  <li>auf die Attribute der Anfrage
   </li>
   <li>auf die Attribute der Benutzersitzung
   </li>
 </ul>
 
 <p><img src="images/10000000000001D1000001B754472AEB.png" width="327" height="308" style="width:8.641cm;height:8.158cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D1000001B754472AEB.png" /></p>
-<p><a id="refheading91740522158564"></a></p>
+<p><span id="refheading91740522158564" name="refheading91740522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="161-das-netbeans-projekt">16.1. <span style="color: #4f81bd">Das NetBeans-Projekt</span></h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000015A000001DDCC02FDDD.png" width="173" height="238" style="display:inline-block; margin:4px;width:4.577cm;height:6.309cm;" class="odt-zoomable" data-zoom-src="images/100000000000015A000001DDCC02FDDD.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000015A000001DDCC02FDDD.png" width="173" height="239" style="display:inline-block; margin:4px;width:4.577cm;height:6.311cm;" class="odt-zoomable" data-zoom-src="images/100000000000015A000001DDCC02FDDD.png" /></td></tr></table>
 
-<p>Das NetBeans-Projekt sieht wie folgt aus:</p>
+<p>Das NetBeans-Projekt lautet wie folgt:</p>
 <ul>
   <li>in [1], die Ansicht [Context.jsp]
   </li>
@@ -1031,15 +1031,15 @@
   </li>
 </ul>
 
-<p><a id="refheading91742522158564"></a></p>
-<h2 id="162-konfiguration">16.2. <span style="color: #4f81bd">Konfiguration</span></h2>
-<p>Die Projektkonfiguration ist in [example.xml] definiert:</p>
+<p><span id="refheading91742522158564" name="refheading91742522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="162-configuration">16.2. <span style="color: #4f81bd">Configuration</span></h2>
+<p>Die Projektkonfiguration erfolgt in [example.xml]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span> <span style="color:#008080">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">struts</span> <span style="color:#808080">PUBLIC</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008080">&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#3f7f5f">&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">package</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;example&quot;</span> <span style="color:#7f007f">namespace</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/example&quot;</span> <span style="color:#7f007f">extends</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;struts-default&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Action1&quot;</span> <span style="color:#7f007f">class</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;example.Action1&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1050,53 +1050,53 @@
 </code></pre></div>
 
 <ul>
-  <li>Zeile 8: Die Anfrage für die URL [/example/Action1] löst die Instanziierung der Klasse [example.Action] aus. Da keine Methode angegeben ist, wird die Methode <i>„execute“ </i>ausgeführt.
+  <li>Zeile 8: Die Anfrage an die URL [/example/Action1] führt zur Instanziierung der Klasse [example.Action]. Da keine Methode angegeben ist, wird die Methode <i>execute </i>ausgeführt.
   </li>
-  <li>Zeile 9: Es wird nur ein Schlüssel akzeptiert. Der Schlüssel <i>„success“ </i>bewirkt, dass die Ansicht [Context.jsp] angezeigt wird.
+  <li>Zeile 9: Es wird nur ein Schlüssel akzeptiert. Der Schlüssel <i>success </i>führt zur Anzeige der Ansicht [Context.jsp].
   </li>
 </ul>
 
-<p>Die vereinfachte Architektur zur Verarbeitung einer Anfrage sieht wie folgt aus:</p>
+<p>Die vereinfachte Architektur zur Bearbeitung einer Anfrage sieht wie folgt aus:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004B10000017DE770B7FC.png" width="601" height="191" style="display:inline-block; margin:4px;width:15.889cm;height:5.041cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B10000017DE770B7FC.png" /></td></tr></table>
 
-<p>Die Anfrage wird von zwei Komponenten der Webanwendung verarbeitet: der Aktion [Action1] [1] und der Ansicht [Context.jsp] [2]. Diese beiden Komponenten haben Zugriff auf unterschiedliche Datentypen:</p>
+<p>Die Anfrage wird von zwei Elementen der Webanwendung verarbeitet: der Aktion [Action1] [1] und der Ansicht [Context.jsp] [2]. Diese beiden Elemente haben Zugriff auf Daten unterschiedlicher Art:</p>
 <ul>
-  <li>Daten <i>im Anwendungsbereich </i>[3], d. h. Daten, auf die alle Anfragen aller Benutzer zugreifen können. Diese sind fast immer schreibgeschützt. Diese Daten enthalten oft die Anfangskonfiguration der Anwendung. Hier haben [Action1] und [Context.jsp] Zugriff auf diese Daten.
+  <li>Daten mit dem Geltungsbereich <i>Application</i>, [3] und c.a.d. Diese Daten sind für alle Anfragen aller Benutzer zugänglich. Sie sind fast immer schreibgeschützt. In diesen Daten findet man häufig die Anfangskonfiguration der Anwendung. Hier haben [Action1] und [Context.jsp] Zugriff auf diese Daten.
   </li>
-  <li>Daten <i>im Sitzungsbereich </i>[4], d. h. Daten, auf die alle Anfragen desselben Benutzers zugreifen können. Diese Daten sind schreib- und lesbar. Hier nutzt [Action1] die Sitzung im Lese-/Schreibmodus, während [Context.jsp] sie im schreibgeschützten Modus nutzt.
+  <li>Daten mit dem Geltungsbereich <i>Session</i>, [4], c.a.d. Diese Daten sind für alle Anfragen desselben Benutzers zugänglich. Sie sind schreib- und lesbar. Hier nutzt [Action1] die Sitzung im Lese-/Schreibmodus, während [Context.jsp] sie im Lesemodus nutzt.
   </li>
-  <li>Daten <i>im Request-Bereich </i>[5], auf die alle Elemente zugreifen können, die die Anfrage verarbeiten. Hier speichert [Action1] Daten in diesem Speicher, und [Context.jsp] ruft sie ab. Daten im Request-Bereich ermöglichen es Element N, Informationen an Element N+1 weiterzugeben.
+  <li>Daten im Bereich <i>Requête </i>[5], die für alle Elemente zugänglich sind, die die Anfrage bearbeiten. Hier wird [Action1] einen Wert in diesen Speicher schreiben und [Context.jsp] ihn abrufen. Daten im Abfrage-Gültigkeitsbereich ermöglichen es einem Element N, Informationen an das Element N+1 weiterzugeben.
   </li>
-  <li>Vom Client gesendete Anfrageparameter [6]. Sie werden von den Komponenten, die die Anfrage verarbeiten, im schreibgeschützten Modus verwendet.
+  <li>Die vom Client gesendeten Parameter der Anfrage [6]. Sie werden von den Elementen, die die Anfrage bearbeiten, nur zum Lesen verwendet.
   </li>
 </ul>
 
-<p><a id="refheading91744522158564"></a></p>
+<p><span id="refheading91744522158564" name="refheading91744522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="163-die-aktion-action1">16.3. <span style="color: #4f81bd">Die Aktion [Action1]</span></h2>
-<p>Der Code für die Klasse [Action1] lautet wie folgt:</p>
+<p>Der Code der Klasse [Action1] lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> example;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.opensymphony.xwork2.ActionSupport;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.Map;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.Set;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.apache.struts2.interceptor.ParameterAware;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.apache.struts2.interceptor.RequestAware;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.apache.struts2.interceptor.SessionAware;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Action1 </span><span style="font-weight:bold;color:#7f0055">extends</span><span style="color:#000000"> ActionSupport </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> SessionAware, RequestAware, ParameterAware {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// constructor without parameters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Konstruktor ohne Parameter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Action1() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Session, Request, Parametres</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Sitzung, Anfrage, Parameter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  Map&lt;String, Object&gt; session;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  Map&lt;String, Object&gt; request;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  Map&lt;String, String[]&gt; parameters;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String execute() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// parameter list</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Liste der Parameter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Paramètres...&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    Set&lt;String&gt; clés = parameters.keySet();</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">for</span><span style="color:#000000"> (String clé : clés) {</span></span></span>
@@ -1104,7 +1104,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        System.out.println(String.format(</span><span style="color:#2a00ff">&quot;[%s,%s]&quot;</span><span style="color:#000000">, clé, valeur));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Sitzung</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Session...&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000"> (session.get(</span><span style="color:#2a00ff">&quot;compteur&quot;</span><span style="color:#000000">) == </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      session.put(</span><span style="color:#2a00ff">&quot;compteur&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> Integer(0));</span></span></span>
@@ -1113,23 +1113,23 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    compteur = compteur + 1;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    session.put(</span><span style="color:#2a00ff">&quot;compteur&quot;</span><span style="color:#000000">, compteur);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(String.format(</span><span style="color:#2a00ff">&quot;compteur=%s&quot;</span><span style="color:#000000">, compteur));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// request</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Anfrage</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    request.put(</span><span style="color:#2a00ff">&quot;info1&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;information1&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// display page JSP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// Seitenanzeige JSP</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> SUCCESS;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Sitzung</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> setSession(Map&lt;String, Object&gt; session) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.session = session;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// request</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Anfrage</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> setRequest(Map&lt;String, Object&gt; request) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.request = request;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// settings</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Parameter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> setParameters(Map&lt;String, String[]&gt; parameters) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.parameters = parameters;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
@@ -1139,35 +1139,35 @@
 <ul>
   <li>Zeile 10: Die Klasse implementiert die folgenden Schnittstellen
   </li>
-  <li><b>SessionAware</b>: für den Zugriff auf das Wörterbuch der Sitzungsattribute (Zeile 16). Diese Schnittstelle hat nur eine Methode, nämlich die in Zeile 46.
+  <li><b>SessionAware</b>: für den Zugriff auf das Attributwörterbuch der Sitzung (Zeile 16). Diese Schnittstelle verfügt nur über eine Methode, nämlich die in Zeile 46.
   </li>
-  <li><b>RequestAware</b>: für den Zugriff auf das Verzeichnis der Anforderungsattribute (Zeile 17). Diese Schnittstelle hat nur eine Methode, nämlich die in Zeile 51.
+  <li><b>RequestAware</b>: für den Zugriff auf das Attributverzeichnis der Abfrage (Zeile 17). Diese Schnittstelle hat nur eine Methode, nämlich die in Zeile 51.
   </li>
-  <li><b>ParameterAware</b>: für den Zugriff auf das Verzeichnis der Anforderungsparameter (Zeile 18). Beachten Sie, dass jeder Schlüssel (der Parametername) einem Array von Werten entspricht. Dies ist notwendig, um Eingabefelder zu verarbeiten, die mehrere Werte übermitteln, wie z. B. eine Mehrfachauswahlliste. Die ParameterAware-Schnittstelle hat nur eine Methode, nämlich die in Zeile 56.
+  <li><b>ParameterAware</b>: für den Zugriff auf das Parameterverzeichnis der Abfrage (Zeile 18). Es ist zu beachten, dass einem Schlüssel (dem Namen des Parameters) ein Wertearray zugeordnet ist. Dies ist erforderlich, um Eingabefelder zu berücksichtigen, die mehrere Werte übermitteln, wie beispielsweise eine Mehrfachauswahlliste. Die Schnittstelle <b>ParameterAware </b>verfügt nur über eine Methode, nämlich die in Zeile 56.
   </li>
-  <li>Zeile 21: die Methode <i>`execute`</i>, die ausgeführt wird, wenn die Aktion [Action1] angefordert wird. Zu diesem Zeitpunkt haben die Interceptors ihre Arbeit bereits erledigt:
+  <li>Zeile 21: Die Methode <i>execute</i>, die ausgeführt wird, wenn die Aktion [Action1] angefordert wird. Bei ihrer Ausführung haben die Interceptoren ihre Arbeit bereits erledigt:
   </li>
-  <li>Die Methode <b>„setParameters“ </b>(Zeile 56) wurde aufgerufen, und das <b>Parameter</b>-Dictionary in Zeile 18 enthält alle Anfrageparameter.
+  <li>Die Methode <b>setParameters </b>(Zeile 56) wurde aufgerufen, und das <b>Parameter-Dictionary </b>in Zeile 18 enthält alle Parameter der Anfrage.
   </li>
-  <li>Die Methode <b>„setSession“ </b>(Zeile 46) wurde aufgerufen, und das <b>Session</b>-Wörterbuch in Zeile 16 enthält alle Session-Attribute.
+  <li>Die Methode <b>setSession </b>(Zeile 46) wurde aufgerufen, und das Dictionary <b>„session“ </b>in Zeile 16 enthält alle Attribute der Sitzung.
   </li>
-  <li>Die Methode <b>`setRequest</b>` (Zeile 51) wurde aufgerufen, und das Request-Dictionary in Zeile 17 enthält alle Request-Attribute.
+  <li>Die Methode <b>setRequest </b>(Zeile 51) wurde aufgerufen, und das Dictionary <b>„request“ </b>in Zeile 17 enthält alle Attribute der Anfrage.
   </li>
-  <li>Zeilen 31–38: Der mit dem Schlüssel `<i>compteur` </i>verknüpfte Wert wird in die Sitzung geschrieben
+  <li>Zeilen 31–38: Der dem Schlüssel <i>compteur</i> zugeordnete Wert wird in die Sitzung geschrieben
   </li>
-  <li>Zeilen 32–34: Der Schlüssel<i> `compteur` </i>wird in der Sitzung gesucht. Wird er nicht gefunden, wird er mit dem ganzzahligen Wert 0 hinzugefügt.
+  <li>Zeilen 32–34: Der Schlüssel <i>compteur </i>wird in der Sitzung gesucht. Ist er dort nicht vorhanden, wird er dort mit dem ganzzahligen Wert 0 verknüpft.
   </li>
-  <li>Zeilen 35–37: Der Schlüssel `<i>counter` </i>wird in der Sitzung gesucht, sein Wert wird erhöht und anschließend wird der Schlüssel wieder in die Sitzung geschrieben.
+  <li>Zeilen 35–37: Der Schlüssel <i>compteur </i>wird in der Sitzung gesucht, sein Wert wird erhöht und anschließend wird der Schlüssel wieder in die Sitzung geschrieben.
   </li>
-  <li>Zeile 38: Der mit dem Schlüssel <i>„counter“</i> verknüpfte Wert wird angezeigt. Da die Inkrementierung bei jeder Anfrage an die Aktion [Action1] erfolgt, sollte der Wert des Zählers mit jeder Anfrage steigen.
+  <li>Zeile 38: Der dem Schlüssel <i>compteur</i> zugeordnete Wert wird angezeigt. Da die Inkrementierung bei jeder Abfrage der Aktion [Action1] erfolgt, sollte man beobachten können, wie der Wert des Zählers im Laufe der Abfragen ansteigt.
   </li>
-  <li>Zeile 40: Ein Attribut mit dem Schlüssel <i>`info1` </i>und dem Wert `<i>information1</i>` wird in das Verzeichnis der Anforderungsattribute eingefügt. Anforderungsattribute unterscheiden sich von Anforderungsparametern. Parameter werden vom Client der Webanwendung gesendet. Anforderungsattribute hingegen ermöglichen die Kommunikation zwischen den verschiedenen Komponenten der Webanwendung, die die Anforderung verarbeiten. Nach der Ausführung von [Action1] wird daher die Ansicht [Context.jsp] angezeigt. Wir werden sehen, dass sie in der Lage ist, die Anforderungsattribute abzurufen.
+  <li>Zeile 40: In das Attributwörterbuch der Anfrage wird ein Attribut mit dem Schlüssel <i>„info1“ </i>und dem Wert <i>„information1“ </i>eingefügt. Die Attribute einer Anfrage unterscheiden sich von ihren Parametern. Die Parameter werden vom Client der Webanwendung gesendet. Die Attribute der Anfrage ermöglichen hingegen die Kommunikation zwischen den verschiedenen Elementen der Webanwendung, die sie verarbeiten. So wird nach der Ausführung von [Action1] die Ansicht [Context.jsp] angezeigt. Wir werden sehen, dass sie in der Lage ist, die Attribute der Anfrage abzurufen.
   </li>
-  <li>Zeile 42: Die Methode <i>`execute` </i>gibt den Schlüssel<i> „success“ </i>zurück.
+  <li>Zeile 42: Die Methode <i>execute </i>gibt den Schlüssel <i>succes</i> zurück.
   </li>
 </ul>
 
-<p><a id="refheading91746522158564"></a></p>
+<p><span id="refheading91746522158564" name="refheading91746522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="164-die-meldungsdatei">16.4. <span style="color: #4f81bd">Die Meldungsdatei</span></h2>
 <p>Die Datei [messages.properties] sieht wie folgt aus:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1178,19 +1178,19 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Context.request=</span><span style="color:#2a00ff">Attributs</span><span style="color:#000000"> </span><span style="color:#2a00ff">de</span><span style="color:#000000"> </span><span style="color:#2a00ff">requ\u00EAte</span></span></span>
 </code></pre></div>
 
-<p><a id="refheading91748522158564"></a></p>
+<p><span id="refheading91748522158564" name="refheading91748522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="165-die-ansicht-contextjsp">16.5. <span style="color: #4f81bd">Die Ansicht [Context.jsp]</span></h2>
-<p>Die Ansicht [Context.jsp] ist verantwortlich für die Anzeige:</p>
+<p>Die Ansicht [Context.jsp] dient dazu, Folgendes anzuzeigen:</p>
 <ul>
-  <li>bestimmte Anfrageparameter
+  <li>bestimmte Parameter der Abfrage
   </li>
-  <li>den Wert des Schlüssel <i>„counter“ </i>in der Sitzung
+  <li>den Wert des Schlüssels <i>compteur </i>in der Sitzung
   </li>
-  <li>den Wert des Schlüssels <i>„info1“ </i>in der Anfrage
+  <li>den Wert des Schlüssels <i>info1 </i>in der Abfrage
   </li>
 </ul>
 
-<p>Der Code lautet wie folgt:</p>
+<p>Ihr Code lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">taglib</span> <span style="color:#7f007f">prefix</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot;</span> <span style="color:#7f007f">uri</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot;</span> <span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1199,7 +1199,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Context.titre&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:head</span><span style="color:#008080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span> <span style="color:#7f007f">background</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/ressources/standard.jpg&quot;</span><span style="color:#008080">/&gt;</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Context.message&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h3</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Context.parameters&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">h3</span><span style="color:#008080">&gt;</span></span></span>
@@ -1221,48 +1221,48 @@
 </code></pre></div>
 
 <ul>
-  <li>Zeilen 12–14: Alle Werte anzeigen, die mit dem Parameter „<i>name“ </i>verknüpft sind
+  <li>Zeilen 12–14: zeigen alle Werte an, die dem Parameter <i>nom</i> zugeordnet sind
   </li>
-  <li>Zeilen 15–17: Zeigt alle Werte an, die mit dem Parameter <i>„first_name“</i> verknüpft sind
+  <li>Zeilen 15–17: zeigen alle Werte an, die dem Parameter <i>prenom</i> zugeordnet sind
   </li>
-  <li>Zeilen 18–20: Zeigt alle Werte an, die mit dem Parameter <i>„age“</i> verknüpft sind
+  <li>Zeilen 18–20: Zeigen alle Werte an, die mit dem Parameter <i>age</i> verknüpft sind
   </li>
-  <li>Zeile 22: Zeigt den Wert an, der mit dem Schlüssel <i>„counter“ </i>in der Sitzung verknüpft ist
+  <li>Zeile 22: Zeigt den Wert an, der dem Schlüssel <i>compteur </i>in der Sitzung zugeordnet ist
   </li>
-  <li>Zeile 24: Zeigt den Wert an, der mit dem Schlüssel <i>„info1“ </i>in der Abfrage verknüpft ist
+  <li>Zeile 24: Zeigt den Wert an, der dem Schlüssel <i>info1 </i>in der Abfrage zugeordnet ist
   </li>
 </ul>
 
-<p><a id="refheading91750522158564"></a></p>
+<p><span id="refheading91750522158564" name="refheading91750522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="166-die-tests">16.6. <span style="color: #4f81bd">Die Tests</span></h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000002360000020948DA9C15.png" width="283" height="261" style="display:inline-block; margin:4px;width:7.488cm;height:6.893cm;" class="odt-zoomable" data-zoom-src="images/10000000000002360000020948DA9C15.png" /></td></tr></table>
 
 <ul>
-  <li>In [1] wird<i> Action1 </i>ohne Parameter aufgerufen
+  <li>in [1], <i>Action1 </i>wird ohne Parameter
   </li>
-  <li>in [2] hat [Context.jsp] keine Parameter gefunden
+  <li>bei [2] wurden für [Context.jsp] keine Parameter gefunden
   </li>
-  <li>In [3] hat [Context.jsp] den Schlüssel <i>„counter“ </i>in der Sitzung gefunden
+  <li>in [3], [Context.jsp] wurde der Schlüssel <i>compteur </i>in der Sitzung gefunden
   </li>
-  <li>in [4] hat [Context.jsp] den Schlüssel <i>„info1“ </i>in der Anfrage gefunden
+  <li>in [4], [Context.jsp] hat den Schlüssel <i>info1 </i>in der Abfrage gefunden
   </li>
 </ul>
 
-<p>Führen wir einen weiteren Test durch:</p>
+<p>Machen wir einen weiteren Test:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000003550000027C124BE9F7.png" width="427" height="318" style="display:inline-block; margin:4px;width:11.285cm;height:8.414cm;" class="odt-zoomable" data-zoom-src="images/10000000000003550000027C124BE9F7.png" /></td></tr></table>
 
 <ul>
-  <li>In [1] wird<i> Action1 </i>mit Parametern angefordert
+  <li>in [1] wird <i>Action1 </i>mit den Parametern
   </li>
-  <li>In [2] zeigt [Context.jsp] diese Parameter an
+  <li>in [2], [Context.jsp] zeigt diese Parameter an
   </li>
-  <li>In [3] fand [Context.jsp] den Schlüssel <i>„compteur“ </i>in der Sitzung. Der Zähler wurde tatsächlich um 1 erhöht, was zeigt, dass die Daten zwischen den beiden Anfragen erfolgreich beibehalten wurden.
+  <li>bei [3] hat [Context.jsp] den Schlüssel <i>compteur </i>in der Sitzung gefunden. Der Zähler wurde tatsächlich um 1 erhöht, was zeigt, dass zwischen den beiden Anfragen tatsächlich eine Speicherung stattgefunden hat.
   </li>
-  <li>In [4] hat [Context.jsp] den Schlüssel<i> „info1“ </i>in der Anfrage gefunden
+  <li>In [4] hat [Context.jsp] den Schlüssel <i>info1 </i>in der Anfrage gefunden
   </li>
 </ul>
 
-<p>Erinnern Sie sich daran, dass die Methode [Action1.execute] in die Webserver-Konsole geschrieben hat. Hier ist ein Beispiel:</p>
+<p>Wir erinnern uns, dass die Methode [Action1.execute] Ausgaben auf die Konsole des Webservers schrieb. Hier ein Beispiel:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -1277,15 +1277,15 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>Session...
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a>compteur=2
 </code></pre></div></td></tr></table></div>
-<p><a id="refheading91752522158564"></a></p>
-<h2 id="167-fazit">16.7. <span style="color: #4f81bd">Fazit</span></h2>
-<p>Beachten Sie bitte folgende Punkte:</p>
+<p><span id="refheading91752522158564" name="refheading91752522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="167-conclusion">16.7. <span style="color: #4f81bd">Conclusion</span></h2>
+<p>Beachten Sie folgende Punkte:</p>
 <ul>
-  <li>Um Informationen zu speichern, die für alle Anfragen aller Benutzer gemeinsam genutzt werden sollen, verwenden wir den Speicher der Anwendung. Wir werden gleich ein Beispiel dafür zeigen.
+  <li>Um Informationen zu speichern, die von allen Anfragen aller Benutzer gemeinsam genutzt werden sollen, verwenden wir den Anwendungsspeicher. Wir werden dazu in Kürze ein Beispiel zeigen.
   </li>
-  <li>Um Informationen zu speichern, die von allen Anfragen desselben Benutzers gemeinsam genutzt werden sollen, verwenden wir die Sitzung dieses Benutzers.
+  <li>Um Informationen zu speichern, die von allen Anfragen desselben Benutzers gemeinsam genutzt werden sollen, verwenden wir dessen Sitzung.
   </li>
-  <li>Um Informationen zu speichern, die von allen Komponenten gemeinsam genutzt werden, die eine Anfrage bearbeiten, verwenden wir den Anfragebereich.
+  <li>Um Informationen zu speichern, die von allen Komponenten, die eine Anfrage bearbeiten, gemeinsam genutzt werden sollen, wird der Speicher der Anfrage verwendet.
   </li>
 </ul>
 

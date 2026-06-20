@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/de-struts2-janv-2012/beispiel-05b---navigation-in-einem-dateneingabeformular.html">
+        <link rel="canonical" href="https://stahe.github.io/de-struts2-janv-2012/beispiel-05b---navigation-in-einem-eingabeformular.html">
       
       
         <link rel="prev" href="beispiel-05---das-eingabeformular.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>7. Beispiel 05B – Navigation in einem Dateneingabeformular - Einführung in Struts 2 anhand von Beispielen</title>
+        <title>7. Beispiel 05B – Navigation in einem Eingabeformular - Einführung in Struts 2 anhand von Beispielen</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#7-beispiel-05b-navigation-in-einem-dateneingabeformular" class="md-skip">
+        <a href="#7-beispiel-05b-navigation-in-einem-eingabeformular" class="md-skip">
           Skip to content
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7. Beispiel 05B – Navigation in einem Dateneingabeformular
+              7. Beispiel 05B – Navigation in einem Eingabeformular
             
           </span>
         </div>
@@ -483,7 +483,7 @@
   <span class="md-ellipsis">
     
   
-    7. Beispiel 05B – Navigation in einem Dateneingabeformular
+    7. Beispiel 05B – Navigation in einem Eingabeformular
   
 
     
@@ -494,14 +494,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="beispiel-05b---navigation-in-einem-dateneingabeformular.html" class="md-nav__link md-nav__link--active">
+      <a href="beispiel-05b---navigation-in-einem-eingabeformular.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Beispiel 05B – Navigation in einem Dateneingabeformular
+    7. Beispiel 05B – Navigation in einem Eingabeformular
   
 
     
@@ -538,10 +538,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#72-konfiguration" class="md-nav__link">
+  <a href="#72-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.2. Konfiguration
+        7.2. Configuration
       
     </span>
   </a>
@@ -549,10 +549,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#73-die-nachrichtendatei" class="md-nav__link">
+  <a href="#73-die-meldungsdatei" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.3. Die Nachrichtendatei
+        7.3. Die Meldungsdatei
       
     </span>
   </a>
@@ -571,10 +571,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#75-aktionen" class="md-nav__link">
+  <a href="#75-die-aktionen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.5. Aktionen
+        7.5. Die Aktionen
       
     </span>
   </a>
@@ -661,14 +661,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-08---mit-listen-verknupfte-tags.html" class="md-nav__link">
+      <a href="beispiel-08---tags-fur-listen.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Beispiel 08 – Mit Listen verknüpfte Tags
+    10. Beispiel 08 – Tags für Listen
   
 
     
@@ -769,14 +769,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-11---datumsumwandlung-und--validierung.html" class="md-nav__link">
+      <a href="beispiel-11---umwandlung-und-validierung-von-datumsangaben.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Beispiel 11 – Datumsumwandlung und -validierung
+    14. Beispiel 11 – Umwandlung und Validierung von Datumsangaben
   
 
     
@@ -850,14 +850,14 @@
   
   
     <li class="md-nav__item">
-      <a href="beispiel-15---struts-2--spring-integration.html" class="md-nav__link">
+      <a href="beispiel-15---integration-von-struts-2-und-spring.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    17. Beispiel 15 – Struts 2 / Spring-Integration
+    17. Beispiel 15 – Integration von Struts 2 und Spring
   
 
     
@@ -995,17 +995,17 @@
 
 
 
-<p><a id="refheading91614522158564"></a></p>
-<h1 id="7-beispiel-05b-navigation-in-einem-dateneingabeformular">7. <span style="color: #365f91">Beispiel 05B – Navigation in einem Dateneingabeformular</span></h1>
-<p>Wir betrachten ein Formular mit mehreren Schaltflächen, um die eingegebenen Daten an eine Aktion zu übermitteln.</p>
-<p><img src="images/100000000000017C000000F0553673BC.png" width="266" height="168" style="width:7.04cm;height:4.447cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000F0553673BC.png" /></p>
-<p><a id="refheading91616522158564"></a></p>
+<p><span id="refheading91614522158564" name="refheading91614522158564" class="odt-bookmark-anchor"></span></p>
+<h1 id="7-beispiel-05b-navigation-in-einem-eingabeformular">7. <span style="color: #365f91">Beispiel 05B – Navigation in einem Eingabeformular</span></h1>
+<p>Wir betrachten ein Formular mit mehreren Schaltflächen, um die eingegebenen Daten an eine Aktion zu übermitteln (Submit).</p>
+<p><img src="images/100000000000017C000000F0553673BC.png" width="266" height="168" style="width:7.04cm;height:4.45cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000F0553673BC.png" /></p>
+<p><span id="refheading91616522158564" name="refheading91616522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="71-das-netbeans-projekt">7.1. <span style="color: #4f81bd">Das NetBeans-Projekt</span></h2>
 <p>Das NetBeans-Projekt sieht wie folgt aus:</p>
-<p><img src="images/10000000000000E000000137EE5DE662.png" width="157" height="218" style="width:4.15cm;height:5.763cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E000000137EE5DE662.png" /></p>
-<p>Die Projektkomponenten sind wie folgt:</p>
+<p><img src="images/10000000000000E000000137EE5DE662.png" width="157" height="218" style="width:4.15cm;height:5.761cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E000000137EE5DE662.png" /></p>
+<p>Das Projekt besteht aus folgenden Elementen:</p>
 <ul>
-  <li>[DoSomething.jsp]: die einzige Ansicht der Anwendung, die die drei Navigationsschaltflächen und einen Link anzeigt.
+  <li>[DoSomething.jsp]: Die einzige Ansicht der Anwendung, die die drei Navigationsschaltflächen sowie einen Link enthält.
   </li>
   <li>[DoSomething.java] und [DoSomethingElse.java]: die beiden Aktionen des Projekts
   </li>
@@ -1015,14 +1015,14 @@
   </li>
 </ul>
 
-<p><a id="refheading91618522158564"></a></p>
-<h2 id="72-konfiguration">7.2. <span style="color: #4f81bd">Konfiguration</span></h2>
-<p>Die folgende [struts.xml]-Datei konfiguriert die Anwendung:</p>
+<p><span id="refheading91618522158564" name="refheading91618522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="72-configuration">7.2. <span style="color: #4f81bd">Configuration</span></h2>
+<p>Die folgende Datei [struts.xml] konfiguriert die Anwendung:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">struts</span> <span style="color:#808080">PUBLIC</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#3f7f5f">&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000"> </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">constant</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;struts.custom.i18n.resources&quot;</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;messages&quot;</span> <span style="color:#008080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000"> </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">package</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;actions&quot;</span> <span style="color:#7f007f">namespace</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/actions&quot;</span> <span style="color:#7f007f">extends</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;struts-default&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1037,15 +1037,15 @@
 </code></pre></div>
 
 <ul>
-  <li>Die Aktion [/actions/DoSomething] instanziiert die Klasse [actions.DoSomething], und ihre Methode <i>„execute“ </i>wird standardmäßig ausgeführt. Dieses Standardverhalten kann überschrieben werden, wenn die an die Aktion [DoSomething] übergebenen Parameter eine andere Methode angeben. Unabhängig davon, welche Methode ausgeführt wird, muss sie den Navigationsschlüssel <i>„success“</i> zurückgeben, da nur dieser Schlüssel definiert wurde. Die Ansicht [DoSomething.jsp] wird dann angezeigt.
+  <li>Die Aktion [/actions/DoSomething] bewirkt die Instanziierung der Klasse [actions.DoSomething], und ihre Methode <i>execute </i>wird standardmäßig ausgeführt. Diese Standardeinstellung kann außer Kraft gesetzt werden, wenn die an die Aktion [Something] übergebenen Parameter eine andere Methode angeben. Unabhängig davon, welche Methode ausgeführt wird, muss sie den Navigationsschlüssel <i>success</i> zurückgeben, da nur dieser Schlüssel definiert wurde. Die Ansicht [DoSomething.jsp] wird dann angezeigt.
   </li>
   <li>Die Konfiguration der Aktion [/actions/DoSomethingElse] ist identisch.
   </li>
 </ul>
 
-<p><a id="refheading91620522158564"></a></p>
-<h2 id="73-die-nachrichtendatei">7.3. <span style="color: #4f81bd">Die Nachrichtendatei</span></h2>
-<p>Die Meldungsdatei [messages.properties] sieht wie folgt aus:</p>
+<p><span id="refheading91620522158564" name="refheading91620522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="73-die-meldungsdatei">7.3. <span style="color: #4f81bd">Die Meldungsdatei</span></h2>
+<p>Die Meldungsdatei [messages.properties] lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">formulaire.titre1=</span><span style="color:#2a00ff">Actions</span><span style="color:#000000"> </span><span style="color:#2a00ff">et</span><span style="color:#000000"> </span><span style="color:#2a00ff">M\u00e9thodes</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">formulaire.titre2=</span><span style="color:#2a00ff">Actions</span><span style="color:#000000"> </span><span style="color:#2a00ff">et</span><span style="color:#000000"> </span><span style="color:#2a00ff">M\u00e9thodes</span></span></span>
@@ -1055,11 +1055,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">formulaire.action3=</span><span style="color:#2a00ff">DoSomething.action3</span></span></span>
 </code></pre></div>
 
-<p><a id="refheading91622522158564"></a></p>
+<p><span id="refheading91622522158564" name="refheading91622522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="74-die-ansicht-dosomethingjsp">7.4. <span style="color: #4f81bd">Die Ansicht [DoSomething.jsp]</span></h2>
 <p>Die Ansicht [DoSomething.jsp] sieht wie folgt aus:</p>
-<p><img src="images/100000000000017C000000F0553673BC.png" width="266" height="168" style="width:7.04cm;height:4.447cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000F0553673BC.png" /></p>
-<p>Der Code lautet wie folgt:</p>
+<p><img src="images/100000000000017C000000F0553673BC.png" width="266" height="168" style="width:7.04cm;height:4.45cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000F0553673BC.png" /></p>
+<p>Ihr Code lautet wie folgt:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span><span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">taglib</span> <span style="color:#7f007f">prefix</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot;</span> <span style="color:#7f007f">uri</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot;</span> <span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1083,15 +1083,15 @@
 </code></pre></div>
 
 <ul>
-  <li>Zeile 11: Das Formular wird an die Aktion [DoSomething] übermittelt. Dies bedeutet nicht zwangsläufig, dass diese Aktion ausgelöst wird. Es hängt von der für den POST-Befehl verwendeten Absenden-Schaltfläche ab.
+  <li>Zeile 11: Das Formular wird an die Aktion [DoSomething] gesendet. Das bedeutet nicht zwangsläufig, dass genau diese Aktion ausgelöst wird. Dies hängt von der Schaltfläche <i>submit</i> ab, die für POST verwendet wird.
   </li>
-  <li>Zeile 12: Die <i>Absenden</i>-Schaltfläche gibt weder eine Aktion noch eine Methode an. Die durch das &lt;form&gt;-Tag angegebene [DoSomething]-Aktion wird instanziiert. Die ausgeführte Methode ist die in der Datei [struts.xml] definierte Methode <i>„execute</i>“.
+  <li>Zeile 12: Die Schaltfläche <i>„submit“ </i>gibt weder eine Aktion noch eine Methode an. Es wird die Aktion „[DoSomething]“ instanziiert, die durch das Tag &lt;form&gt; angegeben wird. Die ausgeführte Methode ist die in der Datei [struts.xml] definierte Methode <i>execute</i>.
   </li>
-  <li>Zeile 13: Die Absenden-Schaltfläche gibt eine Methode an. Die durch das &lt;form&gt;-Tag angegebene [DoSomething]-Aktion wird instanziiert. Die ausgeführte Methode ist die <i>action1</i>-Methode.
+  <li>Zeile 13: Die Schaltfläche <i>submit </i>gibt eine Methode an. Es wird die Aktion [DoSomething] instanziiert, die durch das Tag &lt;form&gt; festgelegt ist. Die ausgeführte Methode ist die Methode <i>action1</i>.
   </li>
-  <li>Zeile 14: Die Schaltfläche <i>„Submit“ </i>gibt eine Aktion und eine Methode an. Die Aktion [DoSomethingElse] wird instanziiert. Die ausgeführte Methode ist <i>action2</i>.
+  <li>Zeile 14: Die Schaltfläche <i>submit </i>gibt eine Aktion und eine Methode an. Es wird die Aktion [DoSomethingElse] instanziiert. Die ausgeführte Methode ist die Methode <i>action2</i>.
   </li>
-  <li>Zeilen 16–17: Ein Link zur Aktion [DoSomething] und zur Methode <i>action3</i>. Die Aktion [DoSomething] wird instanziiert und ihre Methode <i>action3 </i>ausgeführt. Im Gegensatz zu den Absenden-Schaltflächen löst das Klicken auf den Link eine GET-Anfrage statt einer POST-Anfrage aus. Daher werden keine Parameter gesendet.
+  <li>Zeilen 16–17: Ein Link zur Aktion [DoSomething] und zur Methode <i>action3</i>. Die Aktion [DoSomething] wird instanziiert und ihre Methode <i>action3 </i>ausgeführt. Im Gegensatz zu den Schaltflächen <i>submit </i>löst ein Klick auf den Link nicht eine POST, sondern eine GET aus. Es werden also keine Parameter übermittelt.
   </li>
 </ul>
 
@@ -1139,46 +1139,45 @@
 <a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>Zeile 9: Das <i>Formular</i>-Tag für das HTML-Formular. Das Attribut <i>„action“ </i>gibt die URL an, an die die Formularparameter gesendet werden. Diese URL ist die der Aktion [DoSomething].
+  <li>Zeile 9: das HTML-Formular-Tag <i>form</i>. Das Attribut <i>action </i>gibt die URL an, an die die Formularparameter gesendet werden. Diese URL ist die der Aktion [DoSomething].
   </li>
-  <li>Zeilen 11, 13, 15: Die name-Attribute der Schaltflächen werden an die Zielaktion der Absenden-Schaltfläche gesendet. Dadurch kann Struts bestimmen, welche Aktion instanziiert und welche Methode ausgeführt werden soll.
+  <li>Zeilen 11, 13, 15: Die Attribute <i>name </i>der Schaltflächen werden an die Zielaktion der Schaltfläche <i>submit</i> gesendet. Auf diese Weise kann Struts bestimmen, welche Aktion instanziiert und welche Methode ausgeführt werden soll.
   </li>
-  <li>Zeile 13: Das Attribut<i> name=method:action1 </i>gibt an, dass die Methode<i> DoSomething.action1 </i>ausgeführt werden muss.
+  <li>Zeile 13: Das Attribut <i>name=method:action1 </i>gibt an, dass die Methode <i>DoSomething.action1 </i>ausgeführt werden soll.
   </li>
-  <li>Zeile 15: Das Attribut <i>name=action:DoSomethingElse!action2 </i>gibt an, dass die Methode<i> DoSomethingElse.action2 </i>ausgeführt werden muss.
+  <li>Zeile 15: Das Attribut <i>„name= action:DoSomethingElse!action2“ </i>gibt an, dass die Methode <i>„DoSomethingElse.action2“ </i>ausgeführt werden soll.
   </li>
-  <li>Zeile 11: Das Attribut <i>name=&quot;form.execute</i>&quot; gibt weder eine Aktion noch eine Methode an. Daher wird die Methode<i> DoSomething.execute </i>ausgeführt.
+  <li>Zeile 11: Das Attribut <i>„name= formulaire.execute“ </i>gibt weder eine Aktion noch eine Methode an. Daher wird die Methode <i>„DoSomething.execute“ </i>ausgeführt.
   </li>
-  <li>Zeile 19: Der Link fordert explizit die Ausführung der Methode<i> DoSomething.action3 </i>an
+  <li>Zeile 19: Der Link fordert explizit die Ausführung der Methode <i>DoSomething.action3</i> an
   </li>
 </ul>
 
-<p><a id="refheading91624522158564"></a></p>
-<h2 id="75-aktionen">7.5. <span style="color: #4f81bd">Aktionen</span></h2>
+<p><span id="refheading91624522158564" name="refheading91624522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="75-die-aktionen">7.5. <span style="color: #4f81bd">Die Aktionen</span></h2>
 <p>Die Aktion [DoSomething] lautet wie folgt:</p>
-<p><span style="color: #3f7f5f"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> actions;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.opensymphony.xwork2.ActionSupport;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> DoSomething </span><span style="font-weight:bold;color:#7f0055">extends</span><span style="color:#000000"> ActionSupport {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> DoSomething() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomething&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String execute() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomething.execute&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> SUCCESS;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String action1() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomething.action1&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> SUCCESS;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String action3() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomething.action3&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> SUCCESS;</span></span></span>
@@ -1187,31 +1186,31 @@
 </code></pre></div>
 
 <ul>
-  <li>Die Methoden <i>`execute</i>`, <i>`action1` </i>und <i>`action3` </i>schreiben in die Webserver-Konsole und geben den Navigationsschlüssel <i>für den Erfolg</i> zurück.
+  <li>Die Methoden <i>execute</i>, <i>action1 </i>und <i>action3 </i>schreiben in die Konsole des Webservers und geben den Navigationsschlüssel <i>success</i> zurück.
   </li>
-  <li>Zeile 8: Der Konstruktor schreibt ebenfalls in die Webserver-Konsole
+  <li>Zeile 8: Der Konstruktor schreibt ebenfalls in die Konsole des Webservers
   </li>
 </ul>
 
-<p>Anhand der verschiedenen Konsolenausgaben können Sie sehen, welche Methoden während einer Anfrage ausgeführt werden.</p>
-<p>Die Aktion [DoSomethingElse] funktioniert ähnlich:</p>
+<p>Anhand der verschiedenen Einträge in der Konsole lässt sich erkennen, welche Methoden bei einer Anfrage ausgeführt werden.</p>
+<p>Die Aktion [DoSomethingElse] verhält sich ähnlich:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> actions;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.opensymphony.xwork2.ActionSupport;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> DoSomethingElse </span><span style="font-weight:bold;color:#7f0055">extends</span><span style="color:#000000"> ActionSupport {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> DoSomethingElse() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomethingElse&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String execute() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomethingElse.execute&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> SUCCESS;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String action2() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomethingElse.action2&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> SUCCESS;</span></span></span>
@@ -1219,17 +1218,17 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><a id="refheading91626522158564"></a></p>
+<p><span id="refheading91626522158564" name="refheading91626522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="76-die-tests">7.6. <span style="color: #4f81bd">Die Tests</span></h2>
-<p>Die Tests zeigen folgende Ergebnisse (auf der Webserver-Konsole):</p>
+<p>Die Tests zeigen folgende Ergebnisse (in der Konsole des Webservers):</p>
 <ul>
-  <li>Wenn die Schaltfläche [DoSomething.execute] angeklickt wird, wird die Aktion [DoSomething] instanziiert und ihre Methode <i>execute </i>ausgeführt.
+  <li>Beim Klicken auf die Schaltfläche [DoSomething.execute] wird die Aktion [DoSomething] instanziiert und ihre Methode <i>execute </i>ausgeführt.
   </li>
-  <li>Wenn auf die Schaltfläche [DoSomething.action1] geklickt wird, wird die Aktion [DoSomething] instanziiert und ihre Methode <i>action1 </i>ausgeführt.
+  <li>Beim Klicken auf die Schaltfläche „[DoSomething.action1]“ wird die Aktion „[DoSomething]“ instanziiert und ihre Methode <i>„action1“ </i>ausgeführt.
   </li>
-  <li>Wenn auf die Schaltfläche [DoSomethingElse.action2] geklickt wird, wird die Aktion [DoSomethingElse] instanziiert und ihre Methode <i>action2 </i>ausgeführt.
+  <li>Bei einem Klick auf die Schaltfläche [DoSomethingElse.action2] wird die Aktion [DoSomethingElse] instanziiert und ihre Methode <i>action2 </i>ausgeführt.
   </li>
-  <li>Wenn auf den Link [DoSomething.action3] geklickt wird, wird die Aktion [DoSomething] instanziiert und ihre action3-Methode ausgeführt.
+  <li>Bei einem Klick auf den Link [DoSomething.action3] wird die Aktion [DoSomething] instanziiert und ihre Methode <i>action3 </i>ausgeführt.
   </li>
 </ul>
 
